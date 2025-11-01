@@ -1,0 +1,16 @@
+{
+  "$schema": "https://dprint.dev/schemas/v0.json",
+  "incremental": true,
+  "excludes": [
+    "downloads/**",
+    ".git/**",
+    ".dprint/**"
+  ],
+  "plugins": [
+    "https://plugins.dprint.dev/markdown-0.16.4.wasm"
+  ],
+  "markdown": {
+    "lineWidth": 120,
+    "textWrap": "maintain"
+  }
+}

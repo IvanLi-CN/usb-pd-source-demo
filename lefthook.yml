@@ -1,0 +1,6 @@
+pre-commit:
+  parallel: true
+  commands:
+    dprint-markdown:
+      glob: "*.md"
+      run: npx dprint fmt --config dprint.json {files}
