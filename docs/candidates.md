@@ -15,44 +15,153 @@
    - 在候选条目中明确列出可配合的协议 IC 型号（已量产/已验证），并注明调压方式（FB/I2C/其他）。
 
 ## 候选列表（平级）
-- 英集芯 IP2366（SoC，PD3.1/EPR，≤140W，2–6 串，集成同步升降压）
-  - 参考：https://www.chongdiantou.com/archives/1752118989918.html
-- 英集芯 IP2368（SoC，PD3.0，≤100W 典型，2–5 串，四管 H 桥升降压）
-  - 参考：https://www.chongdiantou.com/archives/1752118989918.html
-- 英集芯 IP238? 系（SoC，PD3.1/多串，家族型）
-  - 参考：同系列技术汇总（含 2–6 串/140W 档）https://www.chongdiantou.com/archives/1752118989918.html
-- 英集芯 IP2363（SoC，PD3.1，多串至 140W 级，集成升降压）
-  - 参考：https://www.szjuquan.com/chanpin/lists_43_2.html
-- 英集芯 IP2369（SoC，PD3.1，45–100W 档，2–6 串，集成升降压）
-  - 参考：https://b2b.baidu.com/land?id=5085acf2a30e716fcb8259784fc4580e10
-- 英集芯 IP5383（SoC，PD3.0/UFCS，≤45W，2–5 串，集成 H 桥）
-  - 参考：https://www.chongdiantou.com/archives/1752118989918.html
-- 英集芯 IP5385（SoC，UFCS/PD3.0，2–5 串，多口）
-  - 参考：https://www.sz-dowell.com/a/solution/848.html
-- 英集芯 IP5365（SoC，PD3.0，≤22.5W，1–4 串）
-  - 参考：https://datasheet4u.com/datasheet/Injoinic/IP5365-1549442
-- 英集芯 IP5356M（SoC，PD3.0，≈22.5W 放电，1–4 串）
-  - 参考：https://m.elecfans.com/p/v106855.html
-- 英集芯 IP5328P（SoC，PD3.0/PPS，18W 级，1–4 串，EOL）
-  - 参考：https://item.szlcsc.com/200217.html
-- 智融 SW6306（SoC，PD3.1/UFCS，≤100W，2–6 串 NMC / 2–7 串 LFP）
-  - 参考：https://www.chongdiantou.com/archives/325198.html
-- 智融 SW6206S（SoC，多口，PD/UFCS）
-  - 参考（相关阅读链出）：https://www.chongdiantou.com/archives/325198.html
-- 智融 SW6201 / SW6003（SoC，入门段，PD 多协议）
-  - 参考（微信）：SW6201 https://mp.weixin.qq.com/s?__biz=MzIzNjEwOTA1MA==&mid=2650755876&idx=4#rd；SW6003 https://mp.weixin.qq.com/s?__biz=MzIzNjEwOTA1MA==&mid=2650756318&idx=4#rd
-- 水芯电子 M12269/M12269H（SoC，PD3.1，≤140W 双 C 口，媒体报道）
-  - 参考：https://news.qq.com/rain/a/20241010A02RD500
-- 南芯 SC8815A + 南芯 SC2006A（组合，~100W，双向升降压控制器 + PD 协议）
-  - 参考（拆解/报道）：https://www.chongdiantou.com/archives/1760317355369.html ｜ https://www.ednchina.com/technews/36623.html
-- 南芯 SC8721 + 英集芯 IP2726/南芯 SC200x（组合，18–65W 典型，升降压控制器 + 协议）
-  - 参考（拆解）：https://www.chongdiantou.com/archives/78270.html
-- 南芯 SC8911（组合/全集成充电芯片，家族覆盖 20–100W，配 PD/UFCS 协议）
-  - 参考（企业资讯）：https://www.vertex-icbuy.com/qiyekuaibao/7374.html
-- 南芯 SC8812A（1–4 串）/ SC8902A（1–3 串）+ 协议 IC（组合，20–100W 家族）
-  - 参考（企业资讯）：https://www.vertex-icbuy.com/qiyekuaibao/7374.html
-- 智融 SW7201 + 协议 IC（组合，1–4 串，≤100W，双向同步升降压控制器 + 协议）
-  - 参考（方案文章）：https://blog.csdn.net/zxdzwj/article/details/130993776
+本章节对每一款“候选”单独建节，统一包含：介绍、特性、适用场景、性能指标、案例（若有）。
+
+### 英集芯 IP2366（SoC）
+- 介绍：多串锂/铁锂充放电管理 SoC，集成同步升降压与 PD3.1/EPR 协议，支持双向快充，适合 ≥100W 级移动/便携电源。
+- 特性：2–6 串电池；集成升降压；支持 PD2.0/PD3.0/PD3.1 等；I2C、电量显示接口；高集成单电感方案。
+- 适用场景：笔电级移动电源、便携储能子系统、多口桌面电源的电池侧。
+- 性能指标：最大功率至 140W（公开资料）；多协议输入/输出；典型单电感。
+- 参考链接：充电头网专题 https://www.chongdiantou.com/archives/1752118989918.html
+
+### 英集芯 IP2368（SoC）
+- 介绍：集成同步升降压驱动的充电管理 SoC，支持 PD3.0，定位 2–6 串、百瓦内充电应用。
+- 特性：集成 BUCK-BOOST 驱动；2–6 串；支持 PD3.0、AFC/FCP 等；I2C；LED 电量指示/NTC；多重保护。
+- 适用场景：多串电池充电底板、移动电源电池侧充电管理、工具电池座 PD 自充。
+- 性能指标：最大充电功率 100W；单节满充电压 4.1–4.4V 可设（亦支持 LFP 对应电压）；封装 QFN48 7×7mm。
+- 参考链接：数据手册（ChipSourceTek 托管）https://www.chipsourcetek.com/DataSheet/IP2368_v1.35.pdf
+
+### 英集芯 IP2363（SoC）
+- 介绍：IP236x 家族款，定位 PD3.1 多串高功率场景，覆盖至 140W 档。
+- 特性：多串、集成升降压、PD3.1；家族规格与 IP2366 类似。
+- 适用场景：大功率移动电源/多串电池充放电管理。
+- 性能指标：多串（2–6）；百瓦级功率段。
+- 参考链接：代理技术页 https://www.szjuquan.com/chanpin/lists_43_2.html
+
+### 英集芯 IP2369（SoC）
+- 介绍：PD3.1 多串充放电 SoC，覆盖 45–100W 档位，适合 2–6 串。
+- 特性：多协议输入；集成升降压；I2C 管理。
+- 适用场景：中高功率移动电源、双向快充扩展板。
+- 性能指标：充电 100W、放电可达 140W（渠道页综合信息，需以原厂规格为准）。
+- 参考链接：B2B 规格页 https://b2b.baidu.com/land?id=5085acf2a30e716fcb8259784fc4580e10
+
+### 英集芯 IP5383（SoC）
+- 介绍：移动电源 SoC，集成双向同步升降压、锂电充管、PD3.0/UFCS 等多协议，适合 2–5 串中功率移动电源。
+- 特性：QC2.0/QC3.0/SCP/UFCS 输出；AFC/FCP 输入/输出；PD2.0/PD3.0 输入/输出；PD3.0 PPS 输出；BC1.2/Apple；集成双向升降压与电量指示。
+- 适用场景：2–5 串移动电源、桌面多口电源内置电池版。
+- 性能指标：45W 档典型（家族档位）；集成 H 桥；SoC 单芯片方案。
+- 参考链接：Datasheet4U https://datasheet4u.com/datasheet/Injoinic/IP5383-1549436 ，Dowell PDF http://www.sz-dowell.com/a/products/chanpinpdf/IP5383.pdf
+
+### 英集芯 IP5385（SoC）
+- 介绍：支持 UFCS/PD3.0 的多串 SoC，适配 2–5 串。
+- 特性：集成 H 桥升降压，多协议多口应用。
+- 适用场景：中功率多口移动电源。
+- 性能指标：家族中功率段；详见原厂/代理资料。
+- 参考链接：方案页 https://www.sz-dowell.com/a/solution/848.html
+
+### 英集芯 IP5365（SoC）
+- 介绍：入门/中低功率移动电源 SoC，集成升降压与充电管理，PD3.0。
+- 特性：同步升/降压；电量显示；多协议兼容。
+- 适用场景：单串/小容量移动电源、工具附件电源。
+- 性能指标：≤22.5W 档；1–4 串；QFN48。
+- 参考链接：Datasheet4U https://datasheet4u.com/datasheet/Injoinic/IP5365-1549442
+
+### 英集芯 IP5356M（SoC）
+- 介绍：双向 PD3.0、多协议移动电源 SoC，集成升降压与充管。
+- 特性：双向快充；多协议；I2C（家族特性）。
+- 适用场景：单串小体积高性价比移动电源。
+- 性能指标：放电≈22.5W、充电≈18W 档。
+- 参考链接：电子发烧友介绍 https://m.elecfans.com/p/v106855.html
+
+### 英集芯 IP5328P（SoC，EOL）
+- 介绍：经典移动电源 SoC（已停产），集成 PD3.0/PPS 与升降压/充管、I2C、电量计。
+- 特性：单电感升/降压；多口支持；PPS 输出；I2C/14bit ADC。
+- 适用场景：存量/维护项目；参考旧案。
+- 性能指标：18W 级典型；1–4 串。
+- 参考链接：立创商城 https://item.szlcsc.com/200217.html
+
+### 智融 SW6306（SoC）
+- 介绍：四口多协议升降压移动电源 SoC，PD3.1/UFCS，双向升降压，库仑计，I2C，可 2–6 串（NMC）/2–7 串（LFP）。
+- 特性：输入 4–26V；输出 3.3–27.3V；10mV 步进；45µA Iq；I2C/MPPT/电量显示；多协议（PD3.1/UFCS/...）。
+- 适用场景：≤100W 多口移动电源、磁吸/无线组合移动电源。
+- 性能指标：≤100W；细粒度 AVS；多电池化学体系支持。
+- 参考链接：充电头网 https://www.chongdiantou.com/archives/325198.html
+
+#### 案例
+- 倍思 2024 BUFF 礼盒 30W 磁吸移动电源（采用 SW6306）
+  - 来源：充电头网分解文（同上链接）
+
+### 智融 SW6206S（SoC）
+- 介绍：多口移动电源 SoC，支持 PD/UFCS 等多协议，主打多口任意口快充。
+- 特性：多口配置（A+A+C+C）家族常见；协议丰富；SoC 方案。
+- 适用场景：30–65W 多口移动电源。
+- 性能指标：家族 22.5–65W 档（以具体版本为准）。
+- 参考链接：相关阅读集合 https://www.chongdiantou.com/archives/325198.html
+
+### 智融 SW6201 / SW6003（SoC）
+- 介绍：入门功率段双向快充 SoC，适合 20–30W 档移动电源。
+- 特性：SW6201 典型 22.5W，输入 4.5–13.5V、充电 5A 档（渠道页）；多协议；多口配置。
+- 适用场景：小体积、低成本移动电源/定制礼赠类。
+- 性能指标：20–30W 档，QFN40 5×5mm。
+- 参考链接：B2B 规格页（SW6201）https://b2b.baidu.com/land?id=73aceccbe0466a1c60b3775c356b72c710
+
+### 水芯电子 M12269/M12269H（SoC）
+- 介绍：媒体报道的 PD3.1 双向 140W 多口 SoC，用于双 C 口 140W 场景。
+- 特性：多口双向；PD3.1；SoC 方案。
+- 适用场景：大功率移动电源/便携储能子系统。
+- 性能指标：≤140W（报道口径）。
+- 参考链接：腾讯新闻行业稿 https://news.qq.com/rain/a/20241010A02RD500
+
+### 南芯 SC8815A（升降压控制器，需协议 IC）
+- 介绍：高效双向同步升降压控制器，支持 1–6 串、电池充电管理，I2C 可调，配 PD 协议 IC（如南芯 SC2006A）构成 PD 方案。
+- 特性：I2C 调压与限流；10bit ADC；充电状态指示；欠压/过压/过流/短路/过温保护；QFN32。
+- 适用场景：100W 级以上多口移动电源/便携电源（与协议 IC 组合）。
+- 性能指标：1–6 串；双向升降压；系统功率随外围与热设计。
+- 调压方式：I2C（支持协议 IC 侧 AVS 控制）；FB：按参考设计可接收外部设定。
+- 可配协议 IC：南芯 SC2006A、英集芯/英飞凌等 PD 协议器件（视方案）。
+- 参考链接：与非网/充电头网拆解 https://www.eefocus.com/article/1891360.html ，ChargerLAB https://www.chargerlab.com/teardown-of-huawei-superpower-100w-12000mah-power-bank-p0020/
+
+#### 案例
+- 华为 100W 12000mAh 全能充移动电源：双向快充（SC8815A + SC2006A）
+  - 来源：充电头网 https://www.chongdiantou.com/archives/1760317355369.html ，EDN China https://www.ednchina.com/technews/36623.html
+- EcoFlow RAPID Pro 230W：多路设计中 USB-C2 采用 SC8815A
+  - 来源：ChargerLAB https://www.chargerlab.com/teardown-of-ecoflow-rapid-pro-230w-20000mah-power-bank-with-built-in-cable-ef-hb-100/
+
+### 南芯 SC8721（升降压控制器，需协议 IC）
+- 介绍：同步 4 开关升降压控制器，输入/输出 2.7–22V，支持 I2C 调压与限流，亦支持外部电阻设定，常配 PD 协议 IC 实现源端。
+- 特性：I2C、电流检测、线损补偿、保护完备。
+- 适用场景：18–65W 多口方案、适配器二次变换。
+- 性能指标：2.7–22V I/O；功率依赖 MOS/电感与热设计。
+- 调压方式：I2C / 外部电阻（FB）。
+- 可配协议 IC：英集芯 IP2726、南芯 SC200x 等。
+- 参考链接：联想相关拆解（充电头网）https://www.chongdiantou.com/archives/78270.html ，技术文 https://www.mwwr.cn/news/61908.html
+
+### 南芯 SC8911（双向升降压充电芯片，需协议 IC）
+- 介绍：全集成双向升降压充电芯片，面向 20–100W 家族功率段，配 PD/UFCS 协议构建设备端/源端。
+- 特性：支持多模式切换与精细调压。
+- 适用场景：多口移动电源、储能小模块。
+- 性能指标：20–100W（家族覆盖）。
+- 调压方式：I2C/FB（以具体版本为准）。
+- 可配协议 IC：南芯 SC2006A/其它 PD 控制器。
+- 参考链接：企业资讯 https://www.vertex-icbuy.com/qiyekuaibao/7374.html
+
+### 南芯 SC8812A（1–4 串）/ SC8902A（1–3 串）（升降压控制器，需协议 IC）
+- 介绍：面向 20–100W 档的双向升降压控制器，分别覆盖 1–4 串/1–3 串。
+- 特性：双向升降压控制；I2C/FB；保护完备。
+- 适用场景：中功率多串充放电管理。
+- 性能指标：家族功率 20–100W。
+- 调压方式：I2C/FB。
+- 可配协议 IC：南芯 SC2006A、英集芯 IP27xx 等。
+- 参考链接：企业资讯 https://www.vertex-icbuy.com/qiyekuaibao/7374.html
+
+### 智融 SW7201（升降压控制器，需协议 IC）
+- 介绍：高效率双向同步升降压控制器，1–4 串，支持 I2C，配协议 IC 可实现 ≤100W 双向快充。
+- 特性：4 管架构、I2C、多路通路驱动、充电管理与升降压输出合一。
+- 适用场景：35–100W 定制移动电源、工具电池座。
+- 性能指标：≤100W、1–4 串。
+- 调压方式：I2C（可配协议侧 AVS）。
+- 可配协议 IC：智融 SW25xx/英集芯 IP27xx/英飞凌 CYPD 等（依方案）。
+- 参考链接：方案文 https://blog.csdn.net/zxdzwj/article/details/130993776
 
 ## 对比表（统一，平级比较）
 
