@@ -27,6 +27,10 @@
 - 性能指标：最大功率至 140W（公开资料）；多协议输入/输出；典型单电感。
 - 参考链接：充电头网专题 https://www.chongdiantou.com/archives/1752118989918.html
 
+#### 开源项目
+
+- [【已验证】IP2366-EVM 评估板](https://oshwhub.com/yizhidianzi/ip2366-evm)：通用评估平台，拉出全部测试点与 I/O，兼容 BZ/I2C 版本，附带规格书与寄存器手册，支持快速性能验证。
+
 #### 淘宝价格
 
 | 型号            | 单价 (¥) | 运费       | 店铺             | 链接                                             | 备注                                                                         |
@@ -53,6 +57,10 @@
 - 适用场景：多串电池充电底板、移动电源电池侧充电管理、工具电池座 PD 自充。
 - 性能指标：最大充电功率 100W；单节满充电压 4.1–4.4V 可设（亦支持 LFP 对应电压）；封装 QFN48 7×7mm。
 - 参考链接：数据手册（ChipSourceTek 托管）https://www.chipsourcetek.com/DataSheet/IP2368_v1.35.pdf
+
+#### 开源项目
+
+- [IP2368 2–6 串万能锂电充电模块](https://oshwhub.com/wzw666/ip2368)：基于 IP2368-NACT 的多串充电板，集成多协议输入/输出，提供原理图、BOM 与固件资料，适合复刻验证。
 
 #### 淘宝价格
 
@@ -91,6 +99,10 @@
 - 适用场景：中高功率移动电源、双向快充扩展板。
 - 性能指标：充电 100W、放电可达 140W（渠道页综合信息，需以原厂规格为准）。
 - 参考链接：B2B 规格页 https://b2b.baidu.com/land?id=5085acf2a30e716fcb8259784fc4580e10
+
+#### 开源项目
+
+- [【已验证】IP2369-EVM 评估板](https://oshwhub.com/yizhidianzi/ip2369-evm)：完整引出测试点与 I/O，附带数据手册与寄存器手册，适合多串 PD 快充方案验证与调试。
 
 #### 淘宝价格
 
@@ -171,6 +183,10 @@
 - 性能指标：放电≈22.5W、充电≈18W 档。
 - 参考链接：电子发烧友介绍 https://m.elecfans.com/p/v106855.html
 
+#### 开源项目
+
+- [IP5356 双向多协议快充移动电源](https://oshwhub.com/bluetea/ip5356)：面向 IP5358 平替的 22.5W 双向移动电源设计，4 灯电量显示 + Type-A/Type-C，提供 PCB / BOM 与调试经验，适合参考 IP5356 应用。
+
 #### 淘宝价格
 
 | 型号           | 单价 (¥) | 运费       | 店铺                   | 链接                                             | 备注                                                     |
@@ -189,6 +205,10 @@
 - 性能指标：18W 级典型；1–4 串。
 - 参考链接：立创商城 https://item.szlcsc.com/200217.html
 
+#### 开源项目
+
+- [IP5328P 支持快充的 18650 电池盒](https://oshwhub.com/jed.liu/ip5328p)：Type-C 充放电、5/9/12V 18W 输出，兼容多协议并预留 LED/手电筒，含原理图、BOM 与装配提示，可直接复刻。
+
 #### 淘宝价格
 
 | 型号          | 单价 (¥) | 运费       | 店铺               | 链接                                             | 备注                                                    |
@@ -206,6 +226,10 @@
 - 适用场景：≤100W 多口移动电源、磁吸/无线组合移动电源。
 - 性能指标：≤100W；细粒度 AVS；多电池化学体系支持。
 - 参考链接：充电头网 https://www.chongdiantou.com/archives/325198.html
+
+#### 开源项目
+
+- [基于 SW6306 的 3S1P 多协议移动电源](https://oshwhub.com/jeremy_li/3s1p-21700-yi-dong-dian-yuan)：整合 3×21700 电池、UFCS/SVOOC/高压 SCP 协议与 MCU 控制，开源固件及结构件配置说明，适合复刻调试。
 
 #### 案例
 
@@ -226,6 +250,10 @@
 - 适用场景：30–65W 多口移动电源。
 - 性能指标：家族 22.5–65W 档（以具体版本为准）。
 - 参考链接：相关阅读集合 https://www.chongdiantou.com/archives/325198.html
+
+#### 开源项目
+
+- [SW6206 的充电宝方案复刻](https://oshwhub.com/mumuc0311/ip5356)：参考罗仕 SENSE6F 结构重新布板，提供原理图、板框尺寸与焊接注意事项，方便自制修复与二次开发。
 
 #### 淘宝价格
 
@@ -298,6 +326,10 @@
 - 可配协议 IC：英集芯 IP2736U（PowerPi D140C 140W 方案）https://www.chongdiantou.com/archives/1754478170544.html。
 - 参考链接：充电头网 https://www.chongdiantou.com/archives/1755859864832.html
 
+#### 开源项目
+
+- [PL5501 可调升降压模块](https://oshwhub.com/hanzify/pl5501-ke-diao-sheng-jiang-ya-mo-kuai)：以 PL5501 为功率级，搭配 PY32 MCU 与 HLK-B25 蓝牙，实现电压电流远程设置并提供 Arduino 源码与调试提示，可用于桌面可调电源评估。
+
 #### 案例
 
 - PowerPi D140C PD3.1 140W 快充模块（PL5501 + IP2736U）https://www.chongdiantou.com/archives/1754478170544.html
@@ -331,6 +363,10 @@
 - 调压方式：VADJ/IADJ 模拟设定 + 外部反馈，支持离线配置。
 - 可配协议 IC：英集芯 IP2756（C1 口 PD3.1 EPR）、慧能泰 HUSB382（C2/A）https://www.chongdiantou.com/archives/1751961283312.html。
 - 参考链接：充电头网 https://www.chongdiantou.com/archives/1755859864832.html
+
+#### 开源项目
+
+- [桌面快充电源模块（PL5500）](https://oshwhub.com/yx88/zhuo-mian-kuai-chong-dian-yuan-m)：基于 PL5500 四管升降压控制器的桌面电源设计，提供 0.8–30V 输出与多重保护，可作为 PL5500H 家族电路拓扑参考与调试模板。
 
 #### 案例
 
@@ -405,6 +441,10 @@
 - 可配协议 IC：英集芯 IP2726、南芯 SC200x 等。
 - 参考链接：联想相关拆解（充电头网）https://www.chongdiantou.com/archives/78270.html ，技术文 https://www.mwwr.cn/news/61908.html
 
+#### 开源项目
+
+- [CH224K + SC8721 可调电源验证板](https://oshwhub.com/small_da/CH224K-SC8721ke-diao-dian-yuan-y)：通过 CH224K 诱骗 + SC8721 升降压实现可调输出，提供 I2C 控制/外阻设定、电压档跳线、3.3V 辅源以及 MCU 演示代码，适合作为 SC8721 评估平台。
+
 #### 淘宝价格
 
 | 型号                    | 单价 (¥) | 运费       | 店铺               | 链接                                             | 备注                                                                |
@@ -434,6 +474,10 @@
 - 调压方式：I2C 配置 + 外部电阻预设（支持 Standalone）。
 - 可配协议 IC：南芯 SC2001（双向 Type-C/PD DRP）https://www.chongdiantou.com/archives/347221.html。
 - 参考链接：充电头网 https://www.chongdiantou.com/archives/390901.html
+
+#### 开源项目
+
+- [SC8808 Demo 测试板](https://oshwhub.com/shiskzkz/sc8808_demo)：集成 I2C/Standalone 配置接口、拨码电压/频率/死区调节与 MPPT 例程的 SC8708/SC8808 双向升降压实验板，附测试点与调试提示，便于高压方案验证。
 
 #### 淘宝价格（SC8808 升降压控制器）
 
@@ -483,6 +527,10 @@
 - 可配协议 IC：南芯 SC2006A、英集芯 IP27xx 等。
 - 参考链接：企业资讯 https://www.vertex-icbuy.com/qiyekuaibao/7374.html
 
+#### 开源项目
+
+- [基于 SC8902QDHR 的小功率后备 UPS](https://oshwhub.com/adminismk/xiao-gong-shuai-ups-plus)：2S 电池、36W 双向充放电后备电源，内置均衡、理想二极管与电感/电流限制调校记录，可直接复刻验证 SC8902A 控制器的充放设计。
+
 #### 淘宝价格（SC8812A）
 
 | 型号                       | 单价 (¥) | 运费       | 店铺                               | 链接                                             | 备注                                           |
@@ -517,6 +565,10 @@
 - 调压方式：I2C（可配协议侧 AVS）。
 - 可配协议 IC：智融 SW25xx/英集芯 IP27xx/英飞凌 CYPD 等（依方案）。
 - 参考链接：方案文 https://blog.csdn.net/zxdzwj/article/details/130993776、[数据手册（本地）](datasheets/sw7201-datasheet.md)
+
+#### 开源项目
+
+- [“土豆雷炸弹”-基于智融 SW7201 的双向快充](https://oshwhub.com/viewofnature/april-fools-day-project)：以 SW7201 驱动 100W 级双向升降压快充模块，集成 HUSB238 诱骗 20V 输入，项目提供实测带载视频与附件，可直接复刻。
 
 #### 淘宝价格
 
@@ -600,6 +652,10 @@
 - 调压方式：FB 分压（误差放大器）+ 外部补偿；支持电流限流/软启动。
 - 功率能力：>100W（外置 MOSFET 与磁性件选型可达 100W+）。
 - 参考：TI 产品页 <https://www.ti.com/product/LM5176-Q1>
+
+#### 开源项目
+
+- [LM5176 自动升降压模块（9–47V 输入，14V/15A 输出）](https://oshwhub.com/Ismartware/LM5176zi-dong-sheng-xiang-ya-mu-)：基于 TI LM5176 的高功率 Buck-Boost 模块，提供 PCB、BOM 与调试参数，可作为汽车/储能前级的开源原型。
 
 #### 淘宝价格
 
