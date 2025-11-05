@@ -1,39 +1,3 @@
-# SW7201 Datasheet Digest (DS107_2_v1.0)
-
-- Source: [SW7201_Datasheet_Release_DS107_2_V1.0.pdf](source/SW7201_Datasheet_Release_DS107_2_V1.0.pdf)
-- Language: English
-- Notes: Four-switch bidirectional buck-boost controller for 1-4 lithium cells with I2C configurability and integrated MOS path drivers.
-
-## Highlights
-
-- Supports buck and boost operation up to 100 W with seamless mode switching.
-- Programmable via I2C for charge/discharge current limits, voltage targets, fault reporting, and telemetry.
-- Integrates three NMOS gate drivers, ADC monitoring, NTC sensing, and protections (OVP, OCP, SCP, OTP).
-
-## Applications
-
-- High-power power banks and portable energy storage.
-- Multi-string battery packs for tools, robotics, or industrial handhelds.
-- Systems requiring bidirectional fast-charging paired with an external PD protocol controller.
-
-## Key Electrical Specifications
-
-| Parameter                | Value                           |
-| ------------------------ | ------------------------------- |
-| Battery cells            | 1-4 lithium cells               |
-| Input voltage            | 4-24 V                          |
-| Charge target voltage    | 3-19.2 V (programmable)         |
-| Discharge output voltage | 3-22 V (programmable)           |
-| Maximum power            | 100 W (buck/boost)              |
-| Switching frequency      | 200 / 300 / 400 / 800 kHz       |
-| Interface                | I2C (0x3C / 0x38 / 0x1C / 0x18) |
-| Package                  | QFN-32 (4 mm x 4 mm)            |
-
-![Functional Block Diagram](../assets/sw7201-datasheet-en/7f7101bbe5232ae42e954d97df115d093bf2b164ba9beb3258d0b6db17f2eb08.jpg)
-
-<details>
-<summary>Full Extract</summary>
-
 # I2C High-efficiency Bidirectional Buck-Boost Charge-Discharge Controller
 
 # 1. Description
@@ -42,9 +6,9 @@ SW7201 is a high-efficiency synchronous 4-transistor bidirectional buck-boost ch
 
 # 2. Applications
 
-• Power Banks\
-• Power Tools\
-• Industrial Equipment\
+• Power Banks   
+• Power Tools   
+• Industrial Equipment   
 • Equipment with Rechargeable Batteries
 
 # 3. Features
@@ -55,8 +19,8 @@ SW7201 is a high-efficiency synchronous 4-transistor bidirectional buck-boost ch
 
 # • Reverse Buck-boost Discharge
 
-➢ Support 100W output power\
-➢ Support 3V-22V output voltage Flexible selection of FB/I2C voltage regulation mode Support I2C programming to control Output current limit\
+➢ Support 100W output power   
+➢ Support 3V-22V output voltage Flexible selection of FB/I2C voltage regulation mode Support I2C programming to control Output current limit   
 ➢ Automatic PFM/PWM mode
 
 • 12bit High Precision ADC
@@ -109,7 +73,7 @@ SW7201 is a high-efficiency synchronous 4-transistor bidirectional buck-boost ch
 
 # Quiescent Current
 
-Switching
+Switching   
 
 <table><tr><td rowspan=2 colspan=1>Shutdown current</td><td rowspan=2 colspan=1>IQ_SHUTDOWN</td><td rowspan=1 colspan=1>Disable Load InsertingdetectionDisable standbymode</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>40</td><td rowspan=1 colspan=1>80</td><td rowspan=1 colspan=1>uA</td></tr><tr><td rowspan=1 colspan=1>Enable Load InsertingdetectionDisable standbymode</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>50</td><td rowspan=1 colspan=1>100</td><td rowspan=1 colspan=1>uA</td></tr><tr><td rowspan=2 colspan=1>Standby current</td><td rowspan=2 colspan=1>IQ_STANDBY</td><td rowspan=1 colspan=1>Disable Load InsertingdetectionEaable standby mode</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>520</td><td rowspan=1 colspan=1>900</td><td rowspan=1 colspan=1>uA</td></tr><tr><td rowspan=1 colspan=1>Enable Load InsertingdetectionEaable standby mode</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>530</td><td rowspan=1 colspan=1>920</td><td rowspan=1 colspan=1>uA</td></tr><tr><td rowspan=3 colspan=1>Quiescent current without loadin discharge mode</td><td rowspan=3 colspan=1>IDISchG_NOLOaD</td><td rowspan=1 colspan=1>VBAT=12VVBUS=5V800KHzQg=5.5nC</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>1.9</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>mA</td></tr><tr><td rowspan=1 colspan=1>VBAT=12VVBUS=12V800KHzQg=5.5nC</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>2.3</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>mA</td></tr><tr><td rowspan=1 colspan=1>VBAT=12VVBUS=20V.800KHzQg=5.5nC</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>3.4</td><td rowspan=1 colspan=1>−</td><td rowspan=1 colspan=1>mA</td></tr></table>
 
@@ -209,8 +173,8 @@ The SW7201 supports the external FB voltage regulation and internal I2C voltage 
 
 You can start discharging by following the steps below:
 
-(1) Set the output voltage. (This step can be ignored in the case of external FB voltage regulation) (2) Set the VBUS/VBAT output current limit value.\
-(3) Set the battery undervoltage threshold and battery undervoltage hysteresis.\
+(1) Set the output voltage. (This step can be ignored in the case of external FB voltage regulation) (2) Set the VBUS/VBAT output current limit value.   
+(3) Set the battery undervoltage threshold and battery undervoltage hysteresis.   
 (4) Enable the discharge.
 
 # 10.4.2. FB voltage regulation
@@ -229,7 +193,7 @@ I2C voltage regulation" for details.
 
 In the internal I2C voltage regulation mode, the FB pin is in the floating state, and there is no need to add an FB resistor. After setting the output voltage, output current limit and battery undervoltage threshold, the output can be turned on by enabling the discharge enable bit.
 
-The VBUS output voltage can be set through the register discchg_vbus[10:0] in the range of 3V22V (10mV/step). When discchg_vbus[10:0] $\scriptstyle = 0 \mathrm { x } 0 0 0$ , the VBUS output voltage is set to 3V. When the set value of the register is greater than 22V, the VBUS output voltage remains unchanged at 22V.
+The VBUS output voltage can be set through the register discchg_vbus[10:0] in the range of 3V22V (10mV/step). When discchg_vbus[10:0] $\scriptstyle  = 0 \mathrm { x } 0 0 0$ , the VBUS output voltage is set to 3V. When the set value of the register is greater than 22V, the VBUS output voltage remains unchanged at 22V.
 
 The VBUS current limit can be set through the register discchg_ibus_limit[6:0] in the range of 0.5A-6.85A (50mA/step). When dischg_ibus_ $\operatorname* { l i m i t } [ 6 { : } 0 ] { = } 0 \mathrm { x } 0 0$ , the VBUS current limit is set to 0.5A.
 
@@ -257,9 +221,9 @@ In the discharging state, when the battery temperature is detected to be lower t
 
 The following protection thresholds are optional:
 
-(1) Charging low temperature protection threshold: $1 0 \mathrm { { ^ \circ C } }$ , $5 \mathrm { { } ^ { \circ } C }$ , $0 \%$ , $- 5 \mathrm { { } ^ { \circ } C }$ .\
-(2) Charging high temperature protection threshold: $4 0 \%$ , $4 5 \mathrm { { ^ \circ C } }$ , $5 0 \mathrm { { } ^ { \circ } C }$ , $5 5 \mathrm { { ^ \circ C } }$ .\
-(3) Discharging low temperature protection threshold: $- 2 0 \mathrm { { } ^ { \circ } C }$ , $- 1 0 \mathrm { { } ^ { \circ } C }$ , $- 5 \mathrm { { } ^ { \circ } C }$ , $0 \%$ .\
+(1) Charging low temperature protection threshold: $1 0 \mathrm { { ^ \circ C } }$ , $5 \mathrm { { } ^ { \circ } C }$ , $0 \%$ , $- 5 \mathrm { { } ^ { \circ } C }$ .   
+(2) Charging high temperature protection threshold: $4 0 \%$ , $4 5 \mathrm { { ^ \circ C } }$ , $5 0 \mathrm { { } ^ { \circ } C }$ , $5 5 \mathrm { { ^ \circ C } }$ .   
+(3) Discharging low temperature protection threshold: $- 2 0 \mathrm { { } ^ { \circ } C }$ , $- 1 0 \mathrm { { } ^ { \circ } C }$ , $- 5 \mathrm { { } ^ { \circ } C }$ , $0 \%$ .   
 (4) Discharging high temperature protection threshold: $5 0 \mathrm { { } ^ { \circ } C }$ , $5 5 \mathrm { { ^ \circ C } }$ , $6 0 \mathrm { { } ^ { \circ } C }$ , $6 5 \mathrm { { ^ \circ C } }$ .
 
 If the NTC protection is not needed, please replace the 103AT with a 10K resistor or turn off the NTC protection function through the register. When the NTC function is turned off through the register, the 62368 temperature protection needs to be turned off at the same time.
@@ -338,8 +302,8 @@ For the setting of the charging target voltage, please refer to "10.3.4 Constant
 
 The SW7201 supports charge timeout protection, which can prohibit the charge in the case of charge timeout. The charge timeout is divided into trickle charging timeout and constant current charging timeout, and different thresholds can be set respectively:
 
-(1) Trickle charging timeout threshold: $3 0 \mathrm { { m i n } / 1 \mathrm { { h } } / 2 \mathrm { { h } } / 4 \mathrm { { h } } }$ .\
-(2) Constant current charge timeout threshold: $1 2 \mathrm { h } / 2 4 \mathrm { h } / 4 8 \mathrm { h } / 7 2 \mathrm { h }$ .\
+(1) Trickle charging timeout threshold: $3 0 \mathrm { { m i n } / 1 \mathrm { { h } } / 2 \mathrm { { h } } / 4 \mathrm { { h } } }$ .   
+(2) Constant current charge timeout threshold: $1 2 \mathrm { h } / 2 4 \mathrm { h } / 4 8 \mathrm { h } / 7 2 \mathrm { h }$ .   
 The charge timeout protection function can be turned off through the register.
 
 # 10.6. ADC
@@ -384,10 +348,10 @@ The SW7201 integrates 3 NMOS power path transistor drivers, each of which can be
 
 The SW7201 supports I2C interface and 100K-400K transmission rate. The master can read the status information of the chip through the I2C interface. And the SW7201 supports 4 different I2C addresses: $0 \mathrm { x } 3 \mathrm { C } / 0 \mathrm { x } 3 8 / 0 \mathrm { x } 1 \mathrm { C } / 0 \mathrm { x } 1 8$ .
 
-I2C does not support continuous read/write. Read:\
-Slave address: 0x3C (read 0x79, write 0x78) Register address: $0 \mathrm { x B 0 }$\
-Write:\
-Slave address: $\mathrm { 0 } \mathrm { x } 3 \mathrm { C }$ (read 0x79, write 0x78)\
+I2C does not support continuous read/write. Read:   
+Slave address: 0x3C (read 0x79, write 0x78) Register address: $0 \mathrm { x B 0 }$   
+Write:   
+Slave address: $\mathrm { 0 } \mathrm { x } 3 \mathrm { C }$ (read 0x79, write 0x78)   
 Register address: $0 \mathrm { x B 0 }$
 
 ![](../assets/sw7201-datasheet-en/de3b288d39047b2ec68cd005dab9bc92485984d8db440099426d56d6bf0ba91e.jpg)
@@ -426,11 +390,11 @@ COMP compensation circuit:
 
 ![](../assets/sw7201-datasheet-en/718719dda5fed858edf662c46a6caea695180037d1ea951149803f0f40f53dca.jpg)
 
-Specific settings of COMP1:
+Specific settings of COMP1:   
 
 <table><tr><td rowspan=1 colspan=1>Inductor value</td><td rowspan=1 colspan=1>R1</td><td rowspan=1 colspan=1>C1</td><td rowspan=1 colspan=1>C2</td></tr><tr><td rowspan=1 colspan=1>1uH</td><td rowspan=1 colspan=1>60K</td><td rowspan=1 colspan=1>16pF</td><td rowspan=1 colspan=1>4.7nF</td></tr><tr><td rowspan=1 colspan=1>2.2 uH</td><td rowspan=1 colspan=1>40K</td><td rowspan=1 colspan=1>16pF</td><td rowspan=1 colspan=1>4.7nF</td></tr><tr><td rowspan=1 colspan=1>3.3 uH</td><td rowspan=1 colspan=1>30K</td><td rowspan=1 colspan=1>16pF</td><td rowspan=1 colspan=1>4.7nF</td></tr><tr><td rowspan=1 colspan=1>4.7 uH</td><td rowspan=1 colspan=1>20K</td><td rowspan=1 colspan=1>16pF</td><td rowspan=1 colspan=1>4.7nF</td></tr></table>
 
-Specific settings of COMP2:
+Specific settings of COMP2:   
 
 <table><tr><td rowspan=1 colspan=1>Inductor value</td><td rowspan=1 colspan=1>R1</td><td rowspan=1 colspan=1>C1</td><td rowspan=1 colspan=1>C2</td></tr><tr><td rowspan=1 colspan=1>1uH</td><td rowspan=1 colspan=1>8K</td><td rowspan=1 colspan=1>8pF</td><td rowspan=1 colspan=1>4.7nF</td></tr><tr><td rowspan=1 colspan=1>2.2 uH</td><td rowspan=1 colspan=1>16K</td><td rowspan=1 colspan=1>8pF</td><td rowspan=1 colspan=1>4.7nF</td></tr><tr><td rowspan=1 colspan=1>3.3 uH</td><td rowspan=1 colspan=1>24K</td><td rowspan=1 colspan=1>8pF</td><td rowspan=1 colspan=1>4.7nF</td></tr><tr><td rowspan=1 colspan=1>4.7 uH</td><td rowspan=1 colspan=1>32K</td><td rowspan=1 colspan=1>8pF</td><td rowspan=1 colspan=1>4.7nF</td></tr></table>
 
@@ -488,4 +452,4 @@ ISmartWare assumes no obligation for application assistance or customers’ prod
 
 When customers resell ISmartWare’s products, if there are discrepancies or false information compared with the product parameters and statements, all express or implied authorizations given by ISmartWare for related products will be automatically forfeited, and ISmartWare reserves the right to take all legal measures to protect its rights against such improper and fraudulent business practices. ISmartWare assumes no responsibility or liability for any such misrepresentation.
 
-This document is allowed to be reproduced only without any tampering with the content and with relevant authorizations, conditions, restrictions and statements, otherwise ISmartWare has the right to pursue legal responsibility of the reproducer. ISmartWare assumes no responsibility or liability for such tampered documents. Reproduction of information involving third parties should be subject to additional restrictions.</details>
+This document is allowed to be reproduced only without any tampering with the content and with relevant authorizations, conditions, restrictions and statements, otherwise ISmartWare has the right to pursue legal responsibility of the reproducer. ISmartWare assumes no responsibility or liability for such tampered documents. Reproduction of information involving third parties should be subject to additional restrictions.

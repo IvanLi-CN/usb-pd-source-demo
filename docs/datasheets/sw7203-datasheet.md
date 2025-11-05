@@ -1,40 +1,3 @@
-# SW7203 Datasheet Digest (DS107_1_V1.0)
-
-- Source: [SW7203_Datasheet_Release_DS107_1_V1.0.pdf](source/SW7203_Datasheet_Release_DS107_1_V1.0.pdf)
-- Language: English
-- Notes: NVDC-capable four-switch bidirectional buck-boost controller with integrated path drivers and I2C telemetry.
-
-## Highlights
-
-- Adds NVDC system power-path support with VSYS regulation and dead-battery startup.
-- Delivers up to 100 W charge/discharge power for 1-4 series lithium packs with programmable limits via I2C.
-- Provides ADC monitoring, port detection, NTC protection, and fault coverage (OVP/OCP/SCP/OTP).
-
-## Applications
-
-- Notebook and tablet battery systems using NVDC architectures.
-- Drones, robotics, and industrial equipment needing bidirectional fast charge.
-- High-power power banks and docking stations requiring external PD protocol pairing.
-
-## Key Electrical Specifications
-
-| Parameter                | Value                           |
-| ------------------------ | ------------------------------- |
-| Battery cells            | 1-4 lithium cells               |
-| NVDC support             | Yes, adjustable VSYS            |
-| Input voltage            | 4-24 V                          |
-| Charge target voltage    | 3-19.2 V (programmable)         |
-| Discharge output voltage | 3-22 V (programmable)           |
-| Maximum power            | 100 W (buck/boost)              |
-| Switching frequency      | 200 / 300 / 400 / 800 kHz       |
-| Interface                | I2C (0x3C / 0x38 / 0x1C / 0x18) |
-| Package                  | QFN-32 (4 mm x 4 mm)            |
-
-![Functional Block Diagram](../assets/sw7203-datasheet-en/0e4388af5e68ad6487ab33b2f51895d74c0c753309a0bec15ceaa198d141d649.jpg)
-
-<details>
-<summary>Full Extract</summary>
-
 # Narrow VDC High-efficiency Bidirectional BuckBoost Charge-Discharge Controller
 
 # 1. Description
@@ -43,25 +6,25 @@ SW7203 is a high-efficiency synchronous 4-transistor bidirectional buck-boost ch
 
 # 2. Applications
 
-• Notebooks, Tablet PCs\
-• Power Banks\
-• Drones，Robot Vacuum\
-• Industrial Equipment\
+• Notebooks, Tablet PCs   
+• Power Banks   
+• Drones，Robot Vacuum   
+• Industrial Equipment   
 • Equipment with Rechargeable Batteries
 
 # 3. Features
 
 # • High-efficiency Buck-boost Charger
 
-Support buck-boost charging of 1 to 4 cells battery\
-Support 3V-19.2V charging target voltage setting Support 100W input power Support 4V-24V input voltage\
-/ Support I2C programming to control input/battery current limit\
+Support buck-boost charging of 1 to 4 cells battery   
+Support 3V-19.2V charging target voltage setting Support 100W input power Support 4V-24V input voltage   
+/ Support I2C programming to control input/battery current limit   
 / Seamless switching between boost and buck
 
 # • Reverse Buck-boost Discharge
 
-➢ Support 100W output power\
-➢ Support 3V-22V output voltage Flexible selection of FB/I2C voltage regulation mode Support I2C programming to control Output current limit\
+➢ Support 100W output power   
+➢ Support 3V-22V output voltage Flexible selection of FB/I2C voltage regulation mode Support I2C programming to control Output current limit   
 ➢ Automatic PFM/PWM mode
 
 # • NVDC Power Path Management
@@ -76,7 +39,7 @@ The battery can power the system when the adapter is fully loaded
 
 # • Port Connect Detection
 
-1 adapter inserting detection point\
+1 adapter inserting detection point   
 2 load inserting detection points
 
 • Low Quiescent Input Current ➢ Shutdown current down to $4 0 \mathrm { u A }$
@@ -127,7 +90,7 @@ The battery can power the system when the adapter is fully loaded
 
 # Quiescent Current
 
-Switching
+Switching   
 
 <table><tr><td rowspan=4 colspan=1>Switching frequency</td><td rowspan=4 colspan=1>Fsw</td><td rowspan=1 colspan=1>Buck-Boost operatingfreq=0x1</td><td rowspan=1 colspan=1>150</td><td rowspan=1 colspan=1>200</td><td rowspan=1 colspan=1>250</td><td rowspan=1 colspan=1>kHz</td></tr><tr><td rowspan=1 colspan=1>Buck-Boost operatingfreq=0x0</td><td rowspan=1 colspan=1>230</td><td rowspan=1 colspan=1>300</td><td rowspan=1 colspan=1>370</td><td rowspan=1 colspan=1>kHz</td></tr><tr><td rowspan=1 colspan=1>Buck-Boost operatingfreq=0x2</td><td rowspan=1 colspan=1>300</td><td rowspan=1 colspan=1>400</td><td rowspan=1 colspan=1>500</td><td rowspan=1 colspan=1>kHz</td></tr><tr><td rowspan=1 colspan=1>Buck-Boost operatingfreq=0x3</td><td rowspan=1 colspan=1>650</td><td rowspan=1 colspan=1>800</td><td rowspan=1 colspan=1>900</td><td rowspan=1 colspan=1>kHz</td></tr></table>
 
@@ -215,10 +178,10 @@ When external power is connected, you can set and enter the charging state by th
 
 (1) Set the charging target voltage and the constant current charging current on the VBUS/VBAT side.
 
-(2) Set the VSYSMIN threshold and LDO mode charging current.\
-(3) Set the trickle charging threshold and trickle charging current.\
-(4) Set the input voltage limiting threshold.\
-(5) Make sure INDTB and VBUS are shorted.\
+(2) Set the VSYSMIN threshold and LDO mode charging current.   
+(3) Set the trickle charging threshold and trickle charging current.   
+(4) Set the input voltage limiting threshold.   
+(5) Make sure INDTB and VBUS are shorted.   
 (6) Enable the charging.
 
 # 10.4.2. Trickle charging
@@ -277,8 +240,8 @@ The SW7203 supports the external FB voltage regulation and internal I2C voltage 
 
 You can start discharging by following the steps below:
 
-(1) Set the output voltage. (This step can be ignored in the case of external FB voltage regulation) (2) Set the VBUS/VBAT output current limit value.\
-(3) Set the battery undervoltage threshold and battery undervoltage hysteresis.\
+(1) Set the output voltage. (This step can be ignored in the case of external FB voltage regulation) (2) Set the VBUS/VBAT output current limit value.   
+(3) Set the battery undervoltage threshold and battery undervoltage hysteresis.   
 (4) Enable the discharge.
 
 # 10.5.2. FB voltage regulation
@@ -305,7 +268,7 @@ The VBAT current limit can be set through the register discchg_ibat_limit[6:0] i
 
 The battery undervoltage threshold can be set through the register bat_uvlo[6:0] in the range of 2.7V-13.2V, 0.1V/step. When bat_uvlo[6:0 $\scriptstyle 1 = 0 \mathrm { x } 0 0$ , the battery undervoltage threshold is set to 2.5V. When the set value of the register is greater than 13.2V, the battery undervoltage threshold remains unchanged at 13.2V. When the chip is powered on, the battery undervoltage threshold is automatically set to 3.0V.
 
-The battery undervoltage hysteresis can be set through the register bat_uvlo_hys[1:0], and the settable value is 0.4V-2V (0.1V/step) . When bat_uvlo_hys[1:0 $\scriptstyle \phantom { \frac { 1 } { 2 } } \mathbf { \partial \phantom { | } | } = 0 \mathbf { x } 0 0$ , the battery undervoltage hysteresis is set to 0.4V.
+The battery undervoltage hysteresis can be set through the register bat_uvlo_hys[1:0], and the settable value is 0.4V-2V (0.1V/step) . When bat_uvlo_hys[1:0 $\scriptstyle \phantom { \frac { 1 } { 2 } } \mathbf {  \partial \phantom { | } | } = 0 \mathbf { x } 0 0$ , the battery undervoltage hysteresis is set to 0.4V.
 
 # 10.6. Abnormality protection
 
@@ -325,9 +288,9 @@ In the discharging state, when the battery temperature is detected to be lower t
 
 The following protection thresholds are optional:
 
-(1) Charging low temperature protection threshold: $1 0 \mathrm { { ^ \circ C } }$ , $5 \mathrm { { } ^ { \circ } C }$ , $0 \%$ , $- 5 \mathrm { { } ^ { \circ } C }$ .\
-(2) Charging high temperature protection threshold: $4 0 \mathrm { { } ^ { \circ } C }$ , $4 5 \mathrm { { ^ \circ C } }$ , $5 0 \%$ , $5 5 \mathrm { { ^ \circ C } }$ .\
-(3) Discharging low temperature protection threshold: $- 2 0 \mathrm { { } ^ { \circ } C }$ , - $1 0 \mathrm { { ^ \circ C } }$ , $- 5 \mathrm { { } ^ { \circ } C }$ , $0 \%$ .\
+(1) Charging low temperature protection threshold: $1 0 \mathrm { { ^ \circ C } }$ , $5 \mathrm { { } ^ { \circ } C }$ , $0 \%$ , $- 5 \mathrm { { } ^ { \circ } C }$ .   
+(2) Charging high temperature protection threshold: $4 0 \mathrm { { } ^ { \circ } C }$ , $4 5 \mathrm { { ^ \circ C } }$ , $5 0 \%$ , $5 5 \mathrm { { ^ \circ C } }$ .   
+(3) Discharging low temperature protection threshold: $- 2 0 \mathrm { { } ^ { \circ } C }$ , - $1 0 \mathrm { { ^ \circ C } }$ , $- 5 \mathrm { { } ^ { \circ } C }$ , $0 \%$ .   
 (4) Discharging high temperature protection threshold: $5 0 \mathrm { { } ^ { \circ } C }$ , $5 5 \mathrm { { ^ \circ C } }$ , $6 0 \mathrm { { } ^ { \circ } C }$ , $6 5 \mathrm { { ^ \circ C } }$ .
 
 If the NTC protection is not needed, please replace the 103AT with a 10K resistor or turn off the NTC protection function through the register. When the NTC function is turned off through the register, the 62368 temperature protection needs to be turned off at the same time.
@@ -418,8 +381,8 @@ The VSYS OVP2 threshold is bound to the number of battery cells. The VSYS OVP2 p
 
 The SW7203 supports charge timeout protection, which can prohibit the charge in the case of charge timeout. The charge timeout is divided into trickle charging timeout and constant current charging timeout, and different thresholds can be set respectively:
 
-(1) Trickle charging timeout threshold: $3 0 \mathrm { { m i n } / 1 \mathrm { { h } } / 2 \mathrm { { h } } / 4 \mathrm { { h } } }$ .\
-(2) Constant current charge timeout threshold: $1 2 \mathrm { h } / 2 4 \mathrm { h } / 4 8 \mathrm { h } / 7 2 \mathrm { h }$ .\
+(1) Trickle charging timeout threshold: $3 0 \mathrm { { m i n } / 1 \mathrm { { h } } / 2 \mathrm { { h } } / 4 \mathrm { { h } } }$ .   
+(2) Constant current charge timeout threshold: $1 2 \mathrm { h } / 2 4 \mathrm { h } / 4 8 \mathrm { h } / 7 2 \mathrm { h }$ .   
 The charge timeout protection function can be turned off through the register.
 
 # 10.7. ADC
@@ -464,7 +427,7 @@ The SW7203 integrates 3 NMOS power path transistor drivers, each of which can be
 
 The SW7203 supports I2C interface and 100K-400K transmission rate. The master can read the status information of the chip through the I2C interface. And the SW7203 supports 4 different I2C addresses: $0 \mathrm { x } 3 \mathrm { C } / 0 \mathrm { x } 3 8 / 0 \mathrm { x } 1 \mathrm { C } / 0 \mathrm { x } 1 8$ .
 
-I2C does not support continuous read/write. Read:\
+I2C does not support continuous read/write. Read:   
 Slave address: $\mathrm { 0 } \mathrm { x } 3 \mathrm { C }$ (read 0x79, write 0x78) Register address: 0xB0
 
 ![](../assets/sw7203-datasheet-en/17a35f714f29735458c42453c0e693c401d3d436ba020f3e79bfeb605bd34b5c.jpg)
@@ -509,7 +472,7 @@ Specific settings of COMP1:
 
 <table><tr><td rowspan=1 colspan=1>Inductor value</td><td rowspan=1 colspan=1>R1</td><td rowspan=1 colspan=1>C1</td><td rowspan=1 colspan=1>C2</td></tr><tr><td rowspan=1 colspan=1>1uH</td><td rowspan=1 colspan=1>60K</td><td rowspan=1 colspan=1>16pF</td><td rowspan=1 colspan=1>4.7nF</td></tr><tr><td rowspan=1 colspan=1>2.2 uH</td><td rowspan=1 colspan=1>40K</td><td rowspan=1 colspan=1>16pF</td><td rowspan=1 colspan=1>4.7nF</td></tr><tr><td rowspan=1 colspan=1>3.3 uH</td><td rowspan=1 colspan=1>30K</td><td rowspan=1 colspan=1>16pF</td><td rowspan=1 colspan=1>4.7nF</td></tr><tr><td rowspan=1 colspan=1>4.7 uH</td><td rowspan=1 colspan=1>20K</td><td rowspan=1 colspan=1>16pF</td><td rowspan=1 colspan=1>4.7nF</td></tr></table>
 
-Specific settings of COMP2:
+Specific settings of COMP2:   
 
 <table><tr><td rowspan=1 colspan=1>Inductor value</td><td rowspan=1 colspan=1>R1</td><td rowspan=1 colspan=1>C1</td><td rowspan=1 colspan=1>C2</td></tr><tr><td rowspan=1 colspan=1>1uH  </td><td rowspan=1 colspan=1>8K</td><td rowspan=1 colspan=1>8pF</td><td rowspan=1 colspan=1>4.7nF</td></tr><tr><td rowspan=1 colspan=1>2.2 uH</td><td rowspan=1 colspan=1>16K</td><td rowspan=1 colspan=1>8pF</td><td rowspan=1 colspan=1>4.7nF</td></tr><tr><td rowspan=1 colspan=1>3.3 uH</td><td rowspan=1 colspan=1>24K</td><td rowspan=1 colspan=1>8pF</td><td rowspan=1 colspan=1>4.7nF</td></tr><tr><td rowspan=1 colspan=1>4.7 uH</td><td rowspan=1 colspan=1>32K</td><td rowspan=1 colspan=1>8pF</td><td rowspan=1 colspan=1>4.7nF</td></tr></table>
 
@@ -567,4 +530,4 @@ ISmartWare assumes no obligation for application assistance or customers’ prod
 
 When customers resell ISmartWare’s products, if there are discrepancies or false information compared with the product parameters and statements, all express or implied authorizations given by ISmartWare for related products will be automatically forfeited, and ISmartWare reserves the right to take all legal measures to protect its rights against such improper and fraudulent business practices. ISmartWare assumes no responsibility or liability for any such misrepresentation.
 
-This document is allowed to be reproduced only without any tampering with the content and with relevant authorizations, conditions, restrictions and statements, otherwise ISmartWare has the right to pursue legal responsibility of the reproducer. ISmartWare assumes no responsibility or liability for such tampered documents. Reproduction of information involving third parties should be subject to additional restrictions.</details>
+This document is allowed to be reproduced only without any tampering with the content and with relevant authorizations, conditions, restrictions and statements, otherwise ISmartWare has the right to pursue legal responsibility of the reproducer. ISmartWare assumes no responsibility or liability for such tampered documents. Reproduction of information involving third parties should be subject to additional restrictions.

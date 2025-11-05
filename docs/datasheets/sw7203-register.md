@@ -1,24 +1,3 @@
-# SW7203 Register Manual (v1.0)
-
-- Source: [SW7203_Register_EN.pdf](source/SW7203_Register_EN.pdf)
-- Language: English
-- Notes: Complete register map for SW7203, covering interrupts, protections, NVDC control, and ADC telemetry.
-
-## Contents Overview
-
-- IRQ enable and pending registers for VSYS/VBUS/NTC/thermal events.
-- Charge/discharge control, VSYS regulation, current limit tuning, PPS ratio configuration.
-- ADC channel selection, scaling factors, and NVDC path management registers.
-
-## Usage Tips
-
-- Preserve reserved bits on every write.
-- Clear pending IRQ bits by writing 1 after servicing events to restart charging.
-- Coordinate NVDC path control (reg0x19) with adapter detection to avoid unintended power backfeed.
-
-<details>
-<summary>Full Register Tables</summary>
-
 # SW7203 Register List
 
 # 1. History
@@ -93,7 +72,7 @@ Note: reserved bits should not be modified
 
 <table><tr><td rowspan=1 colspan=1>Bit</td><td rowspan=1 colspan=1>Description</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>Default</td></tr><tr><td rowspan=1 colspan=1>7-6</td><td rowspan=1 colspan=1>pwm_freqSwitch frequency setting in charger mode and discharge mode.0: 300KHz1: 200KHz2: 400KHz3: 800KHz</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x0</td></tr><tr><td rowspan=1 colspan=1>5</td><td rowspan=1 colspan=1>force_pwm0: pfm mode in light load1: force pwm mode in light load</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x0</td></tr><tr><td rowspan=1 colspan=1>4-3</td><td rowspan=1 colspan=1>|</td><td rowspan=1 colspan=1>/</td><td rowspan=1 colspan=1>/</td></tr><tr><td rowspan=1 colspan=1>20</td><td rowspan=1 colspan=1>ntc_disNtc over temp protection enable.0: enable ntc over temp protection1: disable ntc over temp protection</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x0</td></tr><tr><td rowspan=1 colspan=1>1</td><td rowspan=1 colspan=1>mintonSet minton for power mos.0:Low side mos minimal passthrough time is 112nS, high sidemos minimal passthrough time is 133nS.1: Low side mos minimal passthrough time is 58nS, high sidemos minimal passthrough time is 81nS.</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x0</td></tr><tr><td rowspan=1 colspan=1>0</td><td rowspan=1 colspan=1>fb_ext_setVbus output voltage mode selection0: I2c set1: Fb set</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x0</td></tr></table>
 
-2.17. REG 0x21: Discharge Setting 2
+2.17. REG 0x21: Discharge Setting 2   
 
 <table><tr><td rowspan=1 colspan=1>Bit</td><td rowspan=1 colspan=1>Description</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>Default</td></tr><tr><td rowspan=1 colspan=1>7-6</td><td rowspan=1 colspan=1>deadtime_HS10:60nS1:20nS2:40nS3:80nS</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x2</td></tr><tr><td rowspan=1 colspan=1>5-4</td><td rowspan=1 colspan=1>deadtime_LS10:60nS1:20nS2:40nS3:60nS</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x2</td></tr><tr><td rowspan=1 colspan=1>3-2</td><td rowspan=1 colspan=1>deadtimeHS2                          wa0:60nS1:20nS2:40nS3:80nS</td><td rowspan=1 colspan=1>R/Wwa</td><td rowspan=1 colspan=1>0x2</td></tr><tr><td rowspan=1 colspan=1>1-0</td><td rowspan=1 colspan=1>deadtimeLS20:60nS1:20nS2:40nS3:60nS</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x2</td></tr></table>
 
@@ -101,7 +80,7 @@ Note: reserved bits should not be modified
 
 <table><tr><td rowspan=1 colspan=1>Bit</td><td rowspan=1 colspan=1>Description</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>Default</td></tr><tr><td rowspan=1 colspan=1>7-60</td><td rowspan=1 colspan=1>M2_rdson_set2.5mR1: 5mR2:7.5mR3: 10mR</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x3</td></tr><tr><td rowspan=1 colspan=1>5-4</td><td rowspan=1 colspan=1>LsetSet by LSET pin resistance for first power on.0: 1uH1:2.2uH2: 3.3uH3:4.7uH</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x0</td></tr><tr><td rowspan=1 colspan=1>3-0</td><td rowspan=1 colspan=1>/</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr></table>
 
-2.19. REG 0x23: Discharge Vbus Vol High 8 Bits
+2.19. REG 0x23: Discharge Vbus Vol High 8 Bits   
 
 <table><tr><td>Bit</td><td>Description</td><td>R/W</td><td>Default</td></tr><tr><td rowspan="3">7-0</td><td>dischg_vbus[10:3] To set the discharge output voltage limit, write to REG0x23() and</td><td>R/W</td><td rowspan="3">0x00</td></tr><tr><td>REG0x24() using the data with 10mV/step. There is fixed offset voltage 3V for all codes. The range is clamped in digital core at minimal 3V and maximum</td><td></td></tr><tr><td>22V during normal discharge operation. Any write above 22 V is ignored. Write dischg_vbus[10:3] first and write dischg_vbus[2:0] next.</td><td></td></tr></table>
 
@@ -143,7 +122,7 @@ Note: reserved bits should not be modified
 
 <table><tr><td rowspan=1 colspan=1>Bit</td><td rowspan=1 colspan=1>Description</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>Default</td></tr><tr><td rowspan=1 colspan=1>7-6</td><td rowspan=1 colspan=1>62368_cold_chg_cur_reduce62368 reduce charger current when in cold.0: ibus and ibat reduce to 1/21: ibus and ibat reduce to 1/42: nothing3: no use</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x0</td></tr><tr><td rowspan=1 colspan=1>5-4</td><td rowspan=1 colspan=1>62368_hot_chg_cur_reduce62368 reduce charger current when in hot.0: ibus and ibat reduce to 1/21: ibus and ibat reduce to 1/42: nothing3: no use</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x0</td></tr><tr><td rowspan=1 colspan=1>3</td><td rowspan=1 colspan=1>62368_cold_chg_vol_reduce62368 reduce chargevoltage when in cold.0: charger voltage reduce cell number * 0.1V1: nothing</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x0</td></tr><tr><td rowspan=1 colspan=1>2</td><td rowspan=1 colspan=1>62368_hot_chg_vol_reduce62368 reduce chargevoltage when in hot.0: charger voltage reduce cell number * 0.1V1: nothing</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x0</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>62368_cold_temp_hys0: 51: 10</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x0</td></tr><tr><td rowspan=1 colspan=1>0</td><td rowspan=1 colspan=1>62368_hot_temp_hys0: 51: 10</td><td rowspan=1 colspan=1>R/W</td><td rowspan=1 colspan=1>0x0</td></tr></table>
 
-2.29. REG 0x34: Charger Vbat Vol High 8 Bits
+2.29. REG 0x34: Charger Vbat Vol High 8 Bits   
 
 <table><tr><td>Bit 7-0</td><td>Description</td><td>R/W</td><td>Default</td></tr><tr><td></td><td>chg_vol[10:3] To set the output charge voltage, write a 11-bit ChargeVoltage register command (REG0x34() and REG0x35() using the data with 10mV/step. There is fixed offset voltage 3V for all codes. The charger provides charge voltage range from 3 V to 19.2 V, Any write above19.2 V is ignored. Upon POR, REG0x34() and REG0x35() is by default set as 4.2V for 1 cell, 8.4V for 2 cells, 12.6V for 3 cells or 16.8V for 4 cells. Write chg_vol [10:3] first and write chg_vol [2:0] next.</td><td>R/W</td><td>0x00</td></tr></table>
 
@@ -203,4 +182,4 @@ iSmartWare assumes no obligation for application assistance or customer product 
 
 When resale of iSmartWare products, if there are differences or false components compared with the product parameters and their statements, all express or implied authorizations of iSmartWare related products will be automatically lost, and this is unfair and fraudulent. For business behavior, iSmartWare reserves the right to protect its rights in all legal ways. iSmartWare assumes no responsibility or liability for any such misrepresentation.
 
-This document is only allowed to be reproduced without any tampering with the content and with relevant authorizations, conditions, restrictions and statements, otherwise iSmartWare has the right to pursue its legal responsibility. iSmartWare assumes no responsibility or liability for such tampered documents. Reproduction of information involving third parties is subject to additional restrictions.</details>
+This document is only allowed to be reproduced without any tampering with the content and with relevant authorizations, conditions, restrictions and statements, otherwise iSmartWare has the right to pursue its legal responsibility. iSmartWare assumes no responsibility or liability for such tampered documents. Reproduction of information involving third parties is subject to additional restrictions.

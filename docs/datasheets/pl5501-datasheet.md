@@ -1,37 +1,3 @@
-# PL5501 Datasheet Digest (DS-PL5501-Rev.1.0)
-
-- Source: [PL5501-datasheet.pdf](source/PL5501-datasheet.pdf)
-- Language: English
-- Notes: Four-switch buck-boost PD controller with analog/PWM programmable voltage and current control for USB PD designs.
-
-## Highlights
-
-- 3.6-32 V input range with seamless buck, boost, and buck-boost transition using constant on-time control.
-- External IADJ/VADJ pins allow analog or PWM control of voltage reference and current limit with integrated 5 V/55 mA LDO for host MCU supply.
-- Supports 150/300/600/1200 kHz switching, programmable soft-start, comprehensive protections, and dual current-sense loops for VIN and VBUS regulation.
-
-## Applications
-
-- USB Power Delivery car chargers and HUB power.  
-- Industrial PC and embedded systems power.  
-- Automotive start-stop auxiliary conversion.
-
-## Key Electrical Specifications
-
-| Parameter | Value |
-| --- | --- |
-| Input voltage | 3.6 – 32 V (36 V max) |
-| Output voltage | 2 – 32 V programmable |
-| Gate driver current | 2 A source / sink |
-| Switching frequency | 150 / 300 / 600 / 1200 kHz |
-| LDO output | 5 V / 55 mA |
-| Package | QFN-32 (4 mm × 4 mm) |
-
-![Typical Application](../assets/pl5501-datasheet/ff24827b452ee6fb9768677dfaeb969c92e7ba62bfc3e747aed433f8c7e8ef7e.jpg)
-
-<details>
-<summary>Full Extract</summary>
-
 # High Efficiency 4-Switch Buck-Boost Controller
 
 # 1 Features
@@ -317,4 +283,3 @@ SIDE VIEW
 # IMPORTANT NOTICE
 
 Powlicon Inc. assumes no responsibility for any error which may appear in this document. Powlicon Inc. reserves the right to change devices or specifications detailed herein at any time without notice. Powlicon Inc. does not assume any liability arising out of the application or use of any product described herein; neither it does it convey any license under its patent rights, nor the rights of others. Powlicon Inc. products are not authorized for use as critical components in life support devices or systems without written approval letter from the Chief Executive Officer of Powlicon Inc. The use of products in such applications shall assume all risks of such use and will agree to not hold against Powlicon Inc. for any damage.
-</details>

@@ -1,24 +1,3 @@
-# SW7201 Software Flow Guide (SW106_2_v1.0)
-
-- Source: [SW7201_Software_CN.pdf](source/SW7201_Software_CN.pdf)
-- Language: Chinese (firmware checklist)
-- Notes: Recommended sequencing for enabling discharge/charge, ADC polling, and detection logic on SW7201.
-
-## Highlights
-
-- Emphasizes maintaining SDA/SCL high for >2 s during power-up before initiating I2C transactions.
-- Provides step-by-step register programming for discharge enable, charge enable, current/voltage limits, and undervoltage thresholds.
-- Documents ADC channel scaling factors (7.5 mV per LSB for voltage, 5 mA per LSB for current, die temperature conversion) and detection interrupts.
-
-## Firmware Checklist
-
-- Discharge control: select regulation type (reg0x20[0]), program VBUS/VBAT limits (reg0x23-0x27), and toggle reg0x0D[0].
-- Charge control: configure target voltage (reg0x34-0x35), current limits (reg0x39/0x3A), trickle thresholds (reg0x36-0x37), adapter detection (reg0x04[3]), and reg0x0D[4].
-- ADC sampling: set filter window (reg0x10[7:6]), channel select (reg0x10[3:0]), read reg0x11/0x12, apply scaling formulas.
-
-<details>
-<summary>Full Extract (CN)</summary>
-
 # SW7201 软件流程指导
 
 # 1. 初始化设置
@@ -69,7 +48,7 @@
 
 除此状态；
 
-9） 设置 $\scriptstyle \mathrm { r e g 0 x 1 9 } [ 2 ] = 1$ ，打开 B 口通路管；\
+9） 设置 $\scriptstyle \mathrm { r e g 0 x 1 9 } [ 2 ] = 1$ ，打开 B 口通路管；  
 10） 打开充电，通过 $\mathrm { r e g 0 x 0 D [ 4 ] }$ 设置为 1，打开充电。
 
 # 3.2. 关闭充电
@@ -80,17 +59,17 @@
 
 # 4. ADC 数据读取
 
-1） ADC 滤波时间设置，通过 reg0x10[7:6]设置 ADC 滤波时间；\
-2） ADC 通道选择，通过 reg0x10[3:0]选择需要读取的 ADC 数据类型；\
-3） ADC 数据读取，通过 reg0x11/reg0x12 读取 ADC 数据，并根据如下公式换算成实际值。\
-Vbat $\mathrm { \Omega } = \mathrm { N } ^ { \ast } { 7 } . 5 \mathrm { m V }$ ；\
-Vbus $\mathrm { = } \mathrm { N } ^ { \ast } 7 . 5 \mathrm { m V }$ ；\
-Ibat_ch $\mathrm { g } { = } \mathrm { N } { } ^ { * } 5 \mathrm { m A }$ ；\
-Ibat_dischg ${ \bf \Lambda } = { \bf N } ^ { * } 5 { \bf m } { \bf A }$ ；\
-Ibus_chg ${ \bf \Lambda } _ { \mathrm { 5 } } { \bf \Lambda } = { \bf N } ^ { * } 5 \mathrm { m A }$ ；\
-Ibus_dischg $\mathrm { = N ^ { \ast } } 5 \mathrm { m A }$ ；\
-Tdie=(N-1839) $/ 6 . 8 2 ^ { \circ } \mathrm { C }$ ；\
-Rntc $= \mathrm { N } ^ { \ast } 1 . 1 ~ / 4 0 ~ \mathrm { K } \Omega .$ ；\
+1） ADC 滤波时间设置，通过 reg0x10[7:6]设置 ADC 滤波时间；  
+2） ADC 通道选择，通过 reg0x10[3:0]选择需要读取的 ADC 数据类型；  
+3） ADC 数据读取，通过 reg0x11/reg0x12 读取 ADC 数据，并根据如下公式换算成实际值。  
+Vbat $\mathrm { \Omega } = \mathrm { N } ^ { \ast } { 7 } . 5 \mathrm { m V }$ ；  
+Vbus $\mathrm { = } \mathrm { N } ^ { \ast } 7 . 5 \mathrm { m V }$ ；  
+Ibat_ch $\mathrm { g } { = } \mathrm { N } { } ^ { * } 5 \mathrm { m A }$ ；  
+Ibat_dischg ${ \bf \Lambda } = { \bf N } ^ { * } 5 { \bf m } { \bf A }$ ；  
+Ibus_chg ${ \bf \Lambda } _ { \mathrm { 5 } } { \bf \Lambda } = { \bf N } ^ { * } 5 \mathrm { m A }$ ；  
+Ibus_dischg $\mathrm { = N ^ { \ast } } 5 \mathrm { m A }$ ；  
+Tdie=(N-1839) $/ 6 . 8 2 ^ { \circ } \mathrm { C }$ ；  
+Rntc $= \mathrm { N } ^ { \ast } 1 . 1 ~ / 4 0 ~ \mathrm { K } \Omega .$ ；  
 算出NTC 对应电阻值后查表获取NTC 对应温度。
 
 # 5. 接入检测
@@ -139,37 +118,37 @@ SW7201 有一路适配器接入及移出检测及两路负载接入检测，并�
 
 # 6.1. A1 口泄放电控制
 
-1）通过控制 reg0x0C[1]可使能 A1 口泄放电状态；\
-2）使能之后打开 INDTA1 泄放电功能 $5 0 0 \mathrm { m S }$ ， $5 0 0 \mathrm { m S }$ 后自动结束，但此 bit 不会自动清\
-0；\
+1）通过控制 reg0x0C[1]可使能 A1 口泄放电状态；  
+2）使能之后打开 INDTA1 泄放电功能 $5 0 0 \mathrm { m S }$ ， $5 0 0 \mathrm { m S }$ 后自动结束，但此 bit 不会自动清  
+0；  
 3）此功能打开不到 $5 0 0 \mathrm { m S }$ 时，可以写 0 提前结束 INDTA1 泄放电功能。
 
 # 6.2. A2 口泄放电控制
 
 1）通过控制 $\mathrm { r e g 0 x 0 C [ 0 ] }$ 可使能 A2 口泄放电状态；
 
-2）使能之后打开 INDTA2 泄放电功能 $5 0 0 \mathrm { m S }$ ， $5 0 0 \mathrm { m S }$ 后自动结束，但此 bit 不会自动清\
+2）使能之后打开 INDTA2 泄放电功能 $5 0 0 \mathrm { m S }$ ， $5 0 0 \mathrm { m S }$ 后自动结束，但此 bit 不会自动清  
 0；
 
 3）此功能打开不到 $5 0 0 \mathrm { m S }$ 时，可以写 0 提前结束 INDTA2 泄放电功能。
 
 # 6.3. B 口泄放电控制
 
-1）通过控制 $\mathrm { r e g 0 x 0 C } [ 2 ]$ 可使能 B 口泄放电状态；\
-2）使能之后打开 INDTB 泄放电功能 $5 0 0 \mathrm { m S }$ ， $5 0 0 \mathrm { m S }$ 后自动结束，但此 bit 不会自动清 0；\
+1）通过控制 $\mathrm { r e g 0 x 0 C } [ 2 ]$ 可使能 B 口泄放电状态；  
+2）使能之后打开 INDTB 泄放电功能 $5 0 0 \mathrm { m S }$ ， $5 0 0 \mathrm { m S }$ 后自动结束，但此 bit 不会自动清 0；  
 3）此功能打开不到 $5 0 0 \mathrm { m S }$ 时，可以写 0 提前结束 INDTB 泄放电功能。
 
 # 6.4. VBUS 泄放电控制
 
-1）通过控制 $\mathrm { r e g 0 x 0 C } [ 3 ]$ 可使能 VBUS 泄放电状态；\
-2）使能之后打开 VBUS 泄放电功能 $5 0 0 \mathrm { m S }$ ， $5 0 0 \mathrm { m S }$ 后自动结束，但此 bit 不会自动清 0；\
+1）通过控制 $\mathrm { r e g 0 x 0 C } [ 3 ]$ 可使能 VBUS 泄放电状态；  
+2）使能之后打开 VBUS 泄放电功能 $5 0 0 \mathrm { m S }$ ， $5 0 0 \mathrm { m S }$ 后自动结束，但此 bit 不会自动清 0；  
 3）此功能打开不到 $5 0 0 \mathrm { m S }$ 时，可以写0提前结束 VBUS 泄放电功能。
 
 # 7. 外部事件及异常保护
 
 如果发生外部事件（如适配器接入等），或是异常（如 NTC 过温等），需要读取相应寄存器来获得当前发生的外部事件或异常，读完写 1清0。具体寄存器地址与对应的外部事件或是异常，如下表所示：
 
-<table><tr><td rowspan=1 colspan=1>14</td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Reg0x04[5]</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Reg0x04[4]</td></tr><tr><td rowspan=1 colspan=1>B</td><td rowspan=1 colspan=1>Reg0x04[3]</td></tr><tr><td rowspan=1 colspan=1>BH</td><td rowspan=1 colspan=1>Reg0x04[2]</td></tr><tr><td rowspan=1 colspan=1>A2</td><td rowspan=1 colspan=1>Reg0x04[1]</td></tr><tr><td rowspan=1 colspan=1>A1</td><td rowspan=1 colspan=1>Reg0x04[0]</td></tr><tr><td rowspan=1 colspan=1>H</td><td rowspan=1 colspan=1>Reg0x05[7]</td></tr><tr><td rowspan=1 colspan=1>NTC</td><td rowspan=1 colspan=1>Reg0x05[6]</td></tr><tr><td rowspan=1 colspan=1>VBUS E</td><td rowspan=1 colspan=1>Reg0x05[5]</td></tr><tr><td rowspan=1 colspan=1>VBAT E</td><td rowspan=1 colspan=1>Reg0x05[4]</td></tr><tr><td rowspan=1 colspan=1>UVLO</td><td rowspan=1 colspan=1>Reg0x05[3]</td></tr><tr><td rowspan=1 colspan=1>VBUS </td><td rowspan=1 colspan=1>Reg0x05[2]</td></tr><tr><td rowspan=1 colspan=1>VBUS</td><td rowspan=1 colspan=1>Reg0x05[1]</td></tr></table>
+<table><tr><td rowspan=1 colspan=1>事件描述</td><td rowspan=1 colspan=1>寄存器地址</td></tr><tr><td rowspan=1 colspan=1>充电超时</td><td rowspan=1 colspan=1>Reg0x04[5]</td></tr><tr><td rowspan=1 colspan=1>充电充满</td><td rowspan=1 colspan=1>Reg0x04[4]</td></tr><tr><td rowspan=1 colspan=1>B口接入</td><td rowspan=1 colspan=1>Reg0x04[3]</td></tr><tr><td rowspan=1 colspan=1>B口拔出</td><td rowspan=1 colspan=1>Reg0x04[2]</td></tr><tr><td rowspan=1 colspan=1>A2口负载接入</td><td rowspan=1 colspan=1>Reg0x04[1]</td></tr><tr><td rowspan=1 colspan=1>A1口负载接入</td><td rowspan=1 colspan=1>Reg0x04[0]</td></tr><tr><td rowspan=1 colspan=1>芯片过温</td><td rowspan=1 colspan=1>Reg0x05[7]</td></tr><tr><td rowspan=1 colspan=1>NTC 高低温保护</td><td rowspan=1 colspan=1>Reg0x05[6]</td></tr><tr><td rowspan=1 colspan=1>VBUS 过压</td><td rowspan=1 colspan=1>Reg0x05[5]</td></tr><tr><td rowspan=1 colspan=1>VBAT过压</td><td rowspan=1 colspan=1>Reg0x05[4]</td></tr><tr><td rowspan=1 colspan=1>UVLO</td><td rowspan=1 colspan=1>Reg0x05[3]</td></tr><tr><td rowspan=1 colspan=1>VBUS 短路</td><td rowspan=1 colspan=1>Reg0x05[2]</td></tr><tr><td rowspan=1 colspan=1>VBUS 过载</td><td rowspan=1 colspan=1>Reg0x05[1]</td></tr></table>
 
 # 责任及版权申明
 
@@ -181,4 +160,4 @@ SW7201 有一路适配器接入及移出检测及两路负载接入检测，并�
 
 在转售智融科技产品时，如果对该产品参数及其陈述相比存在差异或虚假成分，则会自动丧失智融科技相关产品的所有明示或暗示授权，且对此不正当的、欺诈性商业行为，智融科技保留采取一切合法方式维权。智融科技对任何此类虚假陈述均不承担任何责任或义务。
 
-本文件仅在没有对内容进行任何篡改且带有相关授权、条件、限制和声明的情况下才允许进行复制，否则智融科技有权追究其法律责任。智融科技对此类篡改过的文件不承担任何责任或义务。复制如涉及第三方的信息应当服从额外的限制条件。</details>
+本文件仅在没有对内容进行任何篡改且带有相关授权、条件、限制和声明的情况下才允许进行复制，否则智融科技有权追究其法律责任。智融科技对此类篡改过的文件不承担任何责任或义务。复制如涉及第三方的信息应当服从额外的限制条件。
