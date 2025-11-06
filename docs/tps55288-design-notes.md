@@ -152,44 +152,51 @@
   - 若后续在 PPS 或低压档位（<1.67 V）工作，可按公式将 $\min(1,0.6V_{OUT})$ 替换为 $0.6 \times V_{OUT}$ 重新评估。
   - 样机调试时，通过 I²C 读取平均电感电流寄存器，确认硬件限流与软件 OCP 设置一致，并记录结温表现。
 
-## 5. 输入 / 输出电容规划
+## 5. CDC 引脚配置策略（Demo 阶段）
+
+- **阶段性策略**：演示板暂不启用线缆压降补偿，维持寄存器 05h 默认值 `CDC_OPTION=0`、`CDC[2:0]=000`，对应内部补偿模式且抬升量为 0；在未更改寄存器的情况下，CDC 引脚悬空即不会影响输出设定值【docs/datasheets/tps55288-datasheet.md:398】【docs/datasheets/tps55288-datasheet.md:1086】。
+- **布线与占位**：CDC 引脚默认提供与 ISP/ISN 电流感测成比例的电压输出（`V_CDC = 20 × (V_ISP - V_ISN)`），只有当通过电阻回灌到 FB 上拉电阻时才会提升 VOUT【docs/datasheets/tps55288-datasheet.md:796】【docs/datasheets/tps55288-datasheet.md:1076】【docs/datasheets/tps55288-datasheet.md:1082】。现阶段仅在 CDC 与 AGND 之间预留一颗 `NC` 标记的贴片电阻位，后续若需要外部补偿可直接焊接。
+- **固件约束**：保持 I²C 初始化流程中不写入非零的 `CDC[2:0]`，也不要将 `CDC_OPTION` 置 1，以免在硬件仍悬空时误启补偿造成输出漂移。
+- **后续扩展指引**：若未来需要补偿线缆压降，可按照 `ΔV_OUT = 3 × R_FB_UP × ((V_ISP - V_ISN) / R_CDC)` 计算目标补偿量，选择合适 R_CDC（推荐保持 `R_FB_UP ≈ 100 kΩ`），并视需求改写寄存器启用内部阶梯或外部补偿通道【docs/datasheets/tps55288-datasheet.md:1089】。
+
+## 6. 输入 / 输出电容规划
 
 > 估算基于默认开关频率 `f_SW = 600 kHz`（位于设计笔记建议的 400–800 kHz 中段）；若调试阶段调整 `f_SW`，按数据手册公式 (17) 对输出端最小等效电容进行成比例修正。`docs/datasheets/tps55288-datasheet.md:566`, `docs/datasheets/tps55288-datasheet.md:594`
 
-### 5.1 输入端（VIN↔PGND）
+### 6.1 输入端（VIN↔PGND）
 
 - 高频陶瓷堆栈：2×22 µF/35 V X7R（1210）+ 1 µF + 0.1 µF X7R，贴近 `VIN–HS–LS–PGND` 环路压缩高 di/dt 面积；考虑 24 V 直流偏压后有效电容仍约 20 µF，符合手册 4.7–22 µF 的推荐范围与 “20 µF 起步” 指南。`docs/datasheets/tps55288-datasheet.md:42`–`46`, `docs/datasheets/tps55288-datasheet.md:566`, `docs/datasheets/tps55288-datasheet.md:820`
 - 母线补偿：在输入连接器附近并联 100 µF/35 V 低 ESR 铝聚合物或电解电容，满足第 9 章所述的 bulk capacitance 要求并抑制远端母线扰动。`docs/datasheets/tps55288-datasheet.md:38`
 - 纹波电流校核：Buck 场景（24 V→20 V@5 A）下利用式 (14) 估算 `I_CIN(RMS) ≈ 1.86 A`，选型时保证并联陶瓷的额定 RMS ≥2 A，必要时放大封装或增片延长寿命。`docs/datasheets/tps55288-datasheet.md:556`
 
-### 5.2 输出端分区（检流电阻 ISP/ISN 两侧）
+### 6.2 输出端分区（检流电阻 ISP/ISN 两侧）
 
-#### 5.2.1 转换器侧（TPS → 检流电阻上游）
+#### 6.2.1 转换器侧（TPS → 检流电阻上游）
 
 - 目标：提供 Boost 高频环路低阻抗回路，同时避免脉动压降落在检流电阻上，确保 ISP/ISN 读取干净。
 - 推荐：≥3×22 µF/25 V X7R + 1 µF + 0.1 µF X7R，全部紧贴 VOUT/PGND。直流偏压后有效电容约 30 µF，可承受 12→20 V@5 A 的 4.1 A RMS 电流（式 15）。`docs/datasheets/tps55288-datasheet.md:40`, `docs/datasheets/tps55288-datasheet.md:48`, `docs/datasheets/tps55288-datasheet.md:578`
 - 布局要点：陶瓷正负极直接跨接 SW2→VOUT 铜皮与 PGND，必要时在 SW2 外沿布地过孔围栏抑制 dv/dt。
 
-#### 5.2.2 负载侧（检流电阻下游 → 外部负载）
+#### 6.2.2 负载侧（检流电阻下游 → 外部负载）
 
 - 目标：吸收 USB-PD 阶跃能量并配合电缆压降补偿。
 - 推荐：≥150 µF/25 V 低 ESR 聚合物 + 22 µF + 1 µF X7R。按式 (17) 在 1 % 纹波（0.2 V）下得到 `C_min ≈ 16.7 µF`；聚合物容量设置为 150–220 µF 可把突发压降控制在 <0.3 V，同时覆盖线缆压降补偿幅度。`docs/datasheets/tps55288-datasheet.md:594`
 - Kelvin 连接：ISP/ISN 需分别以独立、紧邻的差分走线取样；大电流铜皮只允许从 Sense 电阻负载端引出，避免测量偏移。`docs/datasheets/tps55288-datasheet.md:48`, `docs/datasheets/tps55288-datasheet.md:602`
 
-### 5.3 实施与验证要点
+### 6.3 实施与验证要点
 
 - 选用 X7R/X7S 等电介质时需查看直流偏压曲线；聚合物电容确认 100 kHz 阻抗与纹波额定。
 - 输入、输出陶瓷尽量与 MOSFET/电感同层布置，PGND 面使用密集过孔回流并避免跨越模拟地。
 - 样机验证：在 12 V→20 V/5 A（Boost）与 24 V→5 V/5 A（Buck）工况下测量输入/输出纹波、ISP/ISN 差分电压及限流触发；若调整 `f_SW`，按式 (17) 重新评估输出侧总等效电容后复测。
 
-## 6. 关键器件选型清单
+## 7. 关键器件选型清单
 
 - `Buck` 高边 / 低边 MOSFET：默认采用 **NCEP4090GU**，满足低阻抗与适中门极电荷；若验证低边热阻允许，也可组合 **NCEP4045GU** 作为同步整流管以改善 dv/dt。
 - `Buck` 小封装 MOSFET：高边指定 **NCEP3040Q**、低边指定 **NCE3035Q**（DFN-8，3.3×3.3 mm，V<sub>DS</sub>=30 V，R<sub>DS(on)</sub> 分别为 6.8 mΩ / 7.0 mΩ @10 V），测试重点记录 12 V→5 V /5 A 工况下的效率、SW dv/dt 与结温，确保与 5×6 mm 方案形成并行对比数据。
 - `主电感`：首选 **Sumida HPC1250-4R7MT**（4.7 µH，DCR_typ ≈ 10.5 mΩ，连续电流 13 A，饱和 20 A）；高度受限时可对比 HPC1250，需额外温升验证时可引入 HPC1770 方案。对外出 BOM 默认沿用 16.5×16.0 mm 方案（等效封装 MPX1D1650L4R7），17×17 mm 版本仅在极端低温升评估中作为“备用的备用”，无需常规验证。
 - `ILIM` 设置：使用 31.6 kΩ（E96、1%）贴片电阻，置于 ILIM 与 AGND 之间确保电流限幅目标。
-- 输入电容网络：参见 5.1 节，按默认 `f_SW = 600 kHz` 堆叠 2×22 µF X7R + 1 µF + 0.1 µF，并配合 100 µF Bulk；按式 (14) 校核 `I_CIN(RMS)`。
-- 输出电容网络：参见 5.2 节，转换器侧堆叠陶瓷、负载侧采用 ≥150 µF 聚合物 + 陶瓷，按式 (15)/(17) 校核并保持 Kelvin 走线。
+- 输入电容网络：参见 6.1 节，按默认 `f_SW = 600 kHz` 堆叠 2×22 µF X7R + 1 µF + 0.1 µF，并配合 100 µF Bulk；按式 (14) 校核 `I_CIN(RMS)`。
+- 输出电容网络：参见 6.2 节，转换器侧堆叠陶瓷、负载侧采用 ≥150 µF 聚合物 + 陶瓷，按式 (15)/(17) 校核并保持 Kelvin 走线。
 - `验证重点`：沿用第 2 节建议，完成 Boost / Buck 满载结温与 SW 波形测试，并在 12→20 V/5 A、24→5 V/5 A 两端工况验证输入 / 输出纹波与 ISP/ISN 差分，确认与设计假设匹配后再冻结 BOM。
 
 | 器件型号 | 用途 | 数量 | [单价](购买链接) |
