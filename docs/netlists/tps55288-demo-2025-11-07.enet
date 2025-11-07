@@ -1,0 +1,2938 @@
+{
+    "version": "2.0.0",
+    "components": {
+        "gge100": {
+            "props": {
+                "Unique ID": "gge100",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "78d9b4564aaf357d",
+                "Designator": "U1",
+                "Device": "55f87eee23015349",
+                "Footprint": "076b866e14432288",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I2",
+                "LCSC Part Name": "36V、16A降压/升压转换器",
+                "Supplier Part": "C2864583",
+                "Manufacturer": "TI(德州仪器)",
+                "Manufacturer Part": "TPS55288RPMR",
+                "Supplier Footprint": "VQFN-26-HR(3.5x4)",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://www.ti.com/cn/lit/gpn/tps55288",
+                "Supplier": "LCSC",
+                "3D Model": "e28b6a475ddf41a5b20ac23e41cee3ea",
+                "3D Model Title": "VQFN-HR-26_L4.0-W3.5_TPS55288RPMR",
+                "3D Model Transform": "158.267,138.5824,0,0,0,0,0,0,0",
+                "Function": "升降压型",
+                "Output Type": "-",
+                "Voltage - Supply": "2.7V~36V",
+                "Output Voltage": "-",
+                "Output Current": "16A",
+                "Frequency - Switching": "2.2MHz",
+                "Operating Temperature": "-40℃~+125℃@(TJ)",
+                "Synchronous Rectifier": "是",
+                "Number of Outputs": "1",
+                "Topology": "降压-升压式",
+                "Quiescent Current": "-",
+                "Switch tube (built-in/external)": "内置",
+                "Description": "功能类型:升降压型;输出类型:-;工作电压:2.7V~36V;输出电压:-;输出电流:16A;",
+                "DeviceName": "TPS55288RPMR",
+                "FootprintName": "VQFN-HR-26_L4.0-W3.5_TPS55288RPMR"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "DR1L",
+                    "number": "1",
+                    "net": "$1N17",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "DR1H",
+                    "number": "2",
+                    "net": "$1N16",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                },
+                "3": {
+                    "name": "VIN",
+                    "number": "3",
+                    "net": "$1N11",
+                    "props": {
+                        "Pin Number": "3"
+                    }
+                },
+                "4": {
+                    "name": "EN/UVLO",
+                    "number": "4",
+                    "net": "$1N9",
+                    "props": {
+                        "Pin Number": "4"
+                    }
+                },
+                "5": {
+                    "name": "SCL",
+                    "number": "5",
+                    "net": "SCL_TPS",
+                    "props": {
+                        "Pin Number": "5"
+                    }
+                },
+                "6": {
+                    "name": "SDA",
+                    "number": "6",
+                    "net": "SDA_TPS",
+                    "props": {
+                        "Pin Number": "6"
+                    }
+                },
+                "7": {
+                    "name": "DITH/SYNC",
+                    "number": "7",
+                    "net": "$1N51",
+                    "props": {
+                        "Pin Number": "7"
+                    }
+                },
+                "8": {
+                    "name": "FSW",
+                    "number": "8",
+                    "net": "$1N47",
+                    "props": {
+                        "Pin Number": "8"
+                    }
+                },
+                "9": {
+                    "name": "PGND",
+                    "number": "9",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "9"
+                    }
+                },
+                "10": {
+                    "name": "AGND",
+                    "number": "10",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "10"
+                    }
+                },
+                "11": {
+                    "name": "VOUT",
+                    "number": "11",
+                    "net": "ISP_TPS",
+                    "props": {
+                        "Pin Number": "11"
+                    }
+                },
+                "12": {
+                    "name": "ISP",
+                    "number": "12",
+                    "net": "ISP_TPS",
+                    "props": {
+                        "Pin Number": "12"
+                    }
+                },
+                "13": {
+                    "name": "ISN",
+                    "number": "13",
+                    "net": "ISN_TPS",
+                    "props": {
+                        "Pin Number": "13"
+                    }
+                },
+                "14": {
+                    "name": "FB/INT",
+                    "number": "14",
+                    "net": "FB",
+                    "props": {
+                        "Pin Number": "14"
+                    }
+                },
+                "15": {
+                    "name": "MODE",
+                    "number": "15",
+                    "net": "$1N31",
+                    "props": {
+                        "Pin Number": "15"
+                    }
+                },
+                "16": {
+                    "name": "CDC",
+                    "number": "16",
+                    "net": "$1N32",
+                    "props": {
+                        "Pin Number": "16"
+                    }
+                },
+                "17": {
+                    "name": "ILIM",
+                    "number": "17",
+                    "net": "$1N30",
+                    "props": {
+                        "Pin Number": "17"
+                    }
+                },
+                "18": {
+                    "name": "COMP",
+                    "number": "18",
+                    "net": "$1N28",
+                    "props": {
+                        "Pin Number": "18"
+                    }
+                },
+                "19": {
+                    "name": "VCC",
+                    "number": "19",
+                    "net": "$1N25",
+                    "props": {
+                        "Pin Number": "19"
+                    }
+                },
+                "20": {
+                    "name": "BOOT2",
+                    "number": "20",
+                    "net": "$1N24",
+                    "props": {
+                        "Pin Number": "20"
+                    }
+                },
+                "21": {
+                    "name": "SW2",
+                    "number": "21",
+                    "net": "$1N22",
+                    "props": {
+                        "Pin Number": "21"
+                    }
+                },
+                "22": {
+                    "name": "BOOT1",
+                    "number": "22",
+                    "net": "$1N23",
+                    "props": {
+                        "Pin Number": "22"
+                    }
+                },
+                "23": {
+                    "name": "SW1",
+                    "number": "23",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "23"
+                    }
+                },
+                "24": {
+                    "name": "PGND",
+                    "number": "24",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "24"
+                    }
+                },
+                "25": {
+                    "name": "SW2",
+                    "number": "25",
+                    "net": "NET4",
+                    "props": {
+                        "Pin Number": "25"
+                    }
+                },
+                "26": {
+                    "name": "VOUT",
+                    "number": "26",
+                    "net": "ISP_TPS",
+                    "props": {
+                        "Pin Number": "26"
+                    }
+                }
+            }
+        },
+        "gge301_1": {
+            "props": {
+                "Unique ID": "gge301_1",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "d16c1eaf6f1fe12e",
+                "Designator": "C12",
+                "Device": "5b55fe492060d02a",
+                "Voltage Rating": "35V",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I4",
+                "LCSC Part Name": "100uF ±20% 35V",
+                "Supplier Part": "",
+                "Manufacturer": "捷而瑞",
+                "Manufacturer Part": "MA35V100M6X8",
+                "Supplier Footprint": "SMD,D6.3xL7.7mm",
+                "JLCPCB Part Class": "扩展库",
+                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20250507/5FE3DCC8DD77416CA868B53585912B92.pdf",
+                "Supplier": "LCSC",
+                "Footprint": "6a590671b7a878dc",
+                "3D Model": "901941a22e384f799727a46cfda77174",
+                "3D Model Title": "CAP-SMD_L6.6-W6.6-H7.0-LS7.2",
+                "3D Model Transform": "307.086,259.842,0,0,0,0,0,0,0",
+                "Value": "n.c.",
+                "Tolerance": "±20%",
+                "Ripple Current": "2.9A@100Hz",
+                "Equivalent Series Resistance(ESR)": "30mΩ@100kHz",
+                "Type": "-",
+                "Diameter": "6.3mm",
+                "Height - Seated (Max)": "7mm",
+                "Lifetime": "2000hrs@105℃",
+                "Operating Temperature": "-55℃~+105℃",
+                "Description": "容值:100uF;精度:±20%;额定电压:35V;纹波电流:2.9A@100Hz;等效串联电阻(ESR):30mΩ@100kHz;类型:-;",
+                "DeviceName": "MA35V100M6X8",
+                "FootprintName": "CAP-SMD_BD6.3-L6.6-W6.6-RD"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N11",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge301_3": {
+            "props": {
+                "Unique ID": "gge301_3",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "d16c1eaf6f1fe12e",
+                "Designator": "C18",
+                "Device": "5b55fe492060d02a",
+                "Voltage Rating": "35V",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I12",
+                "LCSC Part Name": "100uF ±20% 35V",
+                "Supplier Part": "C46550467",
+                "Manufacturer": "捷而瑞",
+                "Manufacturer Part": "MA35V100M6X8",
+                "Supplier Footprint": "SMD,D6.3xL7.7mm",
+                "JLCPCB Part Class": "扩展库",
+                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20250507/5FE3DCC8DD77416CA868B53585912B92.pdf",
+                "Supplier": "LCSC",
+                "Footprint": "6a590671b7a878dc",
+                "3D Model": "901941a22e384f799727a46cfda77174",
+                "3D Model Title": "CAP-SMD_L6.6-W6.6-H7.0-LS7.2",
+                "3D Model Transform": "307.086,259.842,0,0,0,0,0,0,0",
+                "Value": "100uF",
+                "Tolerance": "±20%",
+                "Ripple Current": "2.9A@100Hz",
+                "Equivalent Series Resistance(ESR)": "30mΩ@100kHz",
+                "Type": "-",
+                "Diameter": "6.3mm",
+                "Height - Seated (Max)": "7mm",
+                "Lifetime": "2000hrs@105℃",
+                "Operating Temperature": "-55℃~+105℃",
+                "Description": "容值:100uF;精度:±20%;额定电压:35V;纹波电流:2.9A@100Hz;等效串联电阻(ESR):30mΩ@100kHz;类型:-;",
+                "DeviceName": "MA35V100M6X8",
+                "FootprintName": "CAP-SMD_BD6.3-L6.6-W6.6-RD"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N11",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge101": {
+            "props": {
+                "Unique ID": "gge101",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "a41f5d85d64430fc",
+                "Designator": "R1",
+                "Device": "35293efd91a0c76f",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I14",
+                "LCSC Part Name": "820kΩ ±1% 62.5mW 厚膜电阻",
+                "Supplier Part": "C67558",
+                "Manufacturer": "UNI-ROYAL(厚声)",
+                "Manufacturer Part": "0402WGF8203TCE",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/0402WGF8203TCE/68654.html",
+                "Supplier": "LCSC",
+                "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
+                "3D Model Title": "R0402_L1.0-W0.5-H0.4",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Type": "厚膜电阻",
+                "Value": "820kΩ",
+                "Tolerance": "±1%",
+                "Power(Watts)": "62.5mW",
+                "Voltage-Supply(Max)": "50V",
+                "Temperature Coefficient": "±100ppm/℃",
+                "Operating Temperature": "-55℃~+155℃",
+                "Description": "电阻类型:厚膜电阻;阻值:820kΩ;精度:±1%;功率:62.5mW;工作电压:50V;温度系数:±100ppm/℃;",
+                "DeviceName": "0402WGF8203TCE",
+                "FootprintName": "R0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N9",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N11",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge102": {
+            "props": {
+                "Unique ID": "gge102",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "2947c4305bb4f63f",
+                "Designator": "R2",
+                "Device": "2d54b21bb5bfe471",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I15",
+                "LCSC Part Name": "100kΩ ±1% 62.5mW 厚膜电阻",
+                "Supplier Part": "C25741",
+                "Manufacturer": "UNI-ROYAL(厚声)",
+                "Manufacturer Part": "0402WGF1003TCE",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Basic Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/0402WGF1003TCE/26484.html",
+                "Supplier": "LCSC",
+                "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
+                "3D Model Title": "R0402_L1.0-W0.5-H0.4",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Type": "厚膜电阻",
+                "Value": "100kΩ",
+                "Tolerance": "±1%",
+                "Power(Watts)": "62.5mW",
+                "Voltage-Supply(Max)": "50V",
+                "Temperature Coefficient": "±100ppm/℃",
+                "Operating Temperature": "-55℃~+155℃",
+                "Description": "电阻类型:厚膜电阻;阻值:100kΩ;精度:±1%;功率:62.5mW;工作电压:50V;温度系数:±100ppm/℃;",
+                "DeviceName": "0402WGF1003TCE",
+                "FootprintName": "R0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N9",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge103": {
+            "props": {
+                "Unique ID": "gge103",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "e48d3fea825698a6",
+                "Designator": "Q1",
+                "Device": "c398495ae107ca31",
+                "Footprint": "3ce9dc2c23a2cbb9",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I19",
+                "LCSC Part Name": "1个N沟道 耐压:40V 电流:90A",
+                "Supplier Part": "C502976",
+                "Manufacturer": "NCE(无锡新洁能)",
+                "Manufacturer Part": "NCEP4090GU",
+                "Supplier Footprint": "DFN5x6-8L",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/NCEP4090GU/515497.html",
+                "Supplier": "LCSC",
+                "3D Model": "178189b27e7544aca50c111426555358",
+                "3D Model Title": "PDFN-8_L4.9-W5.8-H1.0-P1.27",
+                "3D Model Transform": "200.787,240.157,0,0,0,0,0,0,0",
+                "Number": "1个N沟道",
+                "Drain to Source Voltage": "40V",
+                "Current - Continuous Drain(Id)": "90A",
+                "RDS(on)": "2.2mΩ@10V,20A",
+                "Pd - Power Dissipation": "-",
+                "Gate Threshold Voltage (Vgs(th))": "1.5V",
+                "Gate Charge(Qg)": "40nC@20V",
+                "Input Capacitance(Ciss)": "2.3nF@20V",
+                "Reverse Transfer Capacitance (Crss@Vds)": "38pF",
+                "Operating Temperature": "-55℃~+150℃",
+                "Description": "数量:1个N沟道;漏源电压(Vdss):40V;连续漏极电流(Id):90A;导通电阻(RDS(on)):2.2mΩ@10V,20A;耗散功率(Pd):-;阈值电压(Vgs(th)):1.5V;",
+                "DeviceName": "NCEP4090GU",
+                "FootprintName": "PDFN-8_L5.8-W5.1-P1.27-LS6.1-BL"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "S",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "S",
+                    "number": "2",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                },
+                "3": {
+                    "name": "S",
+                    "number": "3",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "3"
+                    }
+                },
+                "4": {
+                    "name": "G",
+                    "number": "4",
+                    "net": "$1N17",
+                    "props": {
+                        "Pin Number": "4"
+                    }
+                },
+                "5": {
+                    "name": "D",
+                    "number": "5",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "5"
+                    }
+                },
+                "6": {
+                    "name": "D",
+                    "number": "6",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "6"
+                    }
+                },
+                "7": {
+                    "name": "D",
+                    "number": "7",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "7"
+                    }
+                },
+                "8": {
+                    "name": "D",
+                    "number": "8",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "8"
+                    }
+                },
+                "9": {
+                    "name": "D",
+                    "number": "9",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "9"
+                    }
+                }
+            }
+        },
+        "gge104": {
+            "props": {
+                "Unique ID": "gge104",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "e48d3fea825698a6",
+                "Designator": "Q2",
+                "Device": "c398495ae107ca31",
+                "Footprint": "3ce9dc2c23a2cbb9",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I20",
+                "LCSC Part Name": "1个N沟道 耐压:40V 电流:90A",
+                "Supplier Part": "C502976",
+                "Manufacturer": "NCE(无锡新洁能)",
+                "Manufacturer Part": "NCEP4090GU",
+                "Supplier Footprint": "DFN5x6-8L",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/NCEP4090GU/515497.html",
+                "Supplier": "LCSC",
+                "3D Model": "178189b27e7544aca50c111426555358",
+                "3D Model Title": "PDFN-8_L4.9-W5.8-H1.0-P1.27",
+                "3D Model Transform": "200.787,240.157,0,0,0,0,0,0,0",
+                "Number": "1个N沟道",
+                "Drain to Source Voltage": "40V",
+                "Current - Continuous Drain(Id)": "90A",
+                "RDS(on)": "2.2mΩ@10V,20A",
+                "Pd - Power Dissipation": "-",
+                "Gate Threshold Voltage (Vgs(th))": "1.5V",
+                "Gate Charge(Qg)": "40nC@20V",
+                "Input Capacitance(Ciss)": "2.3nF@20V",
+                "Reverse Transfer Capacitance (Crss@Vds)": "38pF",
+                "Operating Temperature": "-55℃~+150℃",
+                "Description": "数量:1个N沟道;漏源电压(Vdss):40V;连续漏极电流(Id):90A;导通电阻(RDS(on)):2.2mΩ@10V,20A;耗散功率(Pd):-;阈值电压(Vgs(th)):1.5V;",
+                "DeviceName": "NCEP4090GU",
+                "FootprintName": "PDFN-8_L5.8-W5.1-P1.27-LS6.1-BL"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "S",
+                    "number": "1",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "S",
+                    "number": "2",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                },
+                "3": {
+                    "name": "S",
+                    "number": "3",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "3"
+                    }
+                },
+                "4": {
+                    "name": "G",
+                    "number": "4",
+                    "net": "$1N16",
+                    "props": {
+                        "Pin Number": "4"
+                    }
+                },
+                "5": {
+                    "name": "D",
+                    "number": "5",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "5"
+                    }
+                },
+                "6": {
+                    "name": "D",
+                    "number": "6",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "6"
+                    }
+                },
+                "7": {
+                    "name": "D",
+                    "number": "7",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "7"
+                    }
+                },
+                "8": {
+                    "name": "D",
+                    "number": "8",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "8"
+                    }
+                },
+                "9": {
+                    "name": "D",
+                    "number": "9",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "9"
+                    }
+                }
+            }
+        },
+        "gge105": {
+            "props": {
+                "Unique ID": "gge105",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "994e73b40bd06a0f",
+                "Designator": "L2",
+                "Device": "2c3015961971dfc7",
+                "Footprint": "50a185cae80fcafc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I23",
+                "LCSC Part Name": "4.7uH ±20% 24A",
+                "Supplier Part": "C5349638",
+                "Manufacturer": "APV(爱普微)",
+                "Manufacturer Part": "APH1265T4R7M",
+                "Supplier Footprint": "SMD,13.5x12.8mm",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/APH1265T4R7M/6135053.html",
+                "Supplier": "LCSC",
+                "3D Model": "caa0881146944bf0a3649b2890608610",
+                "3D Model Title": "IND-SMD_L12.8-W13.5-H6.5",
+                "3D Model Transform": "531.495,503.936,0,0,0,0,0,0,0",
+                "Value": "4.7uH",
+                "Tolerance": "±20%",
+                "Current Rating": "16A",
+                "Current - Saturation(Isat)": "24A",
+                "DC Resistance(DCR)": "8.5mΩ",
+                "Type": "一体成型电感",
+                "Ratings": "-",
+                "Description": "电感值:4.7uH;精度:±20%;额定电流:16A;饱和电流(Isat):24A;类型:一体成型电感;",
+                "DeviceName": "APH1265T4R7M",
+                "FootprintName": "IND-SMD_L13.5-W12.8"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N22",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge106": {
+            "props": {
+                "Unique ID": "gge106",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "2f5404b1cf526abc",
+                "Designator": "L1",
+                "Device": "c7e7b2c1540b0134",
+                "Footprint": "57ecdd774922a8a9",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I24",
+                "LCSC Part Name": "一体成型电感1770 4.7uH ±20% 50A 5.5mΩ",
+                "Supplier Part": "C46595913",
+                "Manufacturer": "YJYCOIN(益嘉源)",
+                "Manufacturer Part": "YSPI1770T-4R7M",
+                "Supplier Footprint": "SMD,17.5x17mm",
+                "JLCPCB Part Class": "",
+                "Datasheet": "https://item.szlcsc.com/datasheet/YSPI1770T-4R7M/48734983.html",
+                "Supplier": "LCSC",
+                "Value": "4.7uH",
+                "Tolerance": "±20%",
+                "Type": "一体成型电感",
+                "Description": "电感值:4.7uH;精度:±20%;类型:一体成型电感;",
+                "DeviceName": "YSPI1770T-4R7M",
+                "FootprintName": "IND-SMD_YSPI1770T-4R7M"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N22",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge107": {
+            "props": {
+                "Unique ID": "gge107",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "e5253fd4af5b638f",
+                "Designator": "C21",
+                "Device": "9d72e2c71ee69b39",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I25",
+                "LCSC Part Name": "100nF ±10% 50V",
+                "Supplier Part": "C77020",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GRM155R71H104KE14D",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GRM155R71H104KE14D/78147.html",
+                "Supplier": "LCSC",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "100nF",
+                "Tolerance": "±10%",
+                "Voltage Rating": "50V",
+                "Temperature Coefficient": "X7R",
+                "Description": "容值:100nF;精度:±10%;额定电压:50V;温度系数:X7R;",
+                "DeviceName": "GRM155R71H104KE14D",
+                "FootprintName": "C0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N23",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge108": {
+            "props": {
+                "Unique ID": "gge108",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "e5253fd4af5b638f",
+                "Designator": "C22",
+                "Device": "9d72e2c71ee69b39",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I26",
+                "LCSC Part Name": "100nF ±10% 50V",
+                "Supplier Part": "C77020",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GRM155R71H104KE14D",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GRM155R71H104KE14D/78147.html",
+                "Supplier": "LCSC",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "100nF",
+                "Tolerance": "±10%",
+                "Voltage Rating": "50V",
+                "Temperature Coefficient": "X7R",
+                "Description": "容值:100nF;精度:±10%;额定电压:50V;温度系数:X7R;",
+                "DeviceName": "GRM155R71H104KE14D",
+                "FootprintName": "C0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N24",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N22",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge109": {
+            "props": {
+                "Unique ID": "gge109",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "5de05bfcf0c7f876",
+                "Designator": "C23",
+                "Device": "35a732fea5fdfc7a",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I27",
+                "LCSC Part Name": "4.7uF ±10% 10V",
+                "Supplier Part": "C77004",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GRM155R61A475KEAAD",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GRM155R61A475KEAAD/78131.html",
+                "Supplier": "LCSC",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "4.7uF",
+                "Tolerance": "±10%",
+                "Voltage Rating": "10V",
+                "Temperature Coefficient": "X5R",
+                "Description": "容值:4.7uF;精度:±10%;额定电压:10V;温度系数:X5R;",
+                "DeviceName": "GRM155R61A475KEAAD",
+                "FootprintName": "C0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N25",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge110": {
+            "props": {
+                "Unique ID": "gge110",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "6e855bab73ffc907",
+                "Designator": "C24",
+                "Device": "6638687d7a049f8e",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I29",
+                "LCSC Part Name": "±0.1pF 5.6pF 50V",
+                "Supplier Part": "C161329",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GJM1555C1H5R6BB01D",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GJM1555C1H5R6BB01D/172710.html",
+                "Supplier": "LCSC",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "5.6pF",
+                "Voltage Rating": "50V",
+                "Temperature Coefficient": "C0G",
+                "Description": "容值:5.6pF;额定电压:50V;温度系数:C0G;",
+                "DeviceName": "GJM1555C1H5R6BB01D",
+                "FootprintName": "C0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N27",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N28",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge111": {
+            "props": {
+                "Unique ID": "gge111",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "ba3aa6ae090e7905",
+                "Designator": "C25",
+                "Device": "b006692efca20ba4",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I30",
+                "LCSC Part Name": "15pF ±5% 50V",
+                "Supplier Part": "C88877",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GJM1555C1H150JB01D",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GJM1555C1H150JB01D/90057.html",
+                "Supplier": "LCSC",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "15pF",
+                "Tolerance": "±5%",
+                "Voltage Rating": "50V",
+                "Temperature Coefficient": "C0G",
+                "Description": "容值:15pF;精度:±5%;额定电压:50V;温度系数:C0G;",
+                "DeviceName": "GJM1555C1H150JB01D",
+                "FootprintName": "C0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N28",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge112": {
+            "props": {
+                "Unique ID": "gge112",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "9655ef76ab720e84",
+                "Designator": "R3",
+                "Device": "a1a9ce09a056df5b",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I31",
+                "LCSC Part Name": "30.9kΩ ±1% 62.5mW 厚膜电阻",
+                "Supplier Part": "C270615",
+                "Manufacturer": "UNI-ROYAL(厚声)",
+                "Manufacturer Part": "0402WGF3092TCE",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/0402WGF3092TCE/259995.html",
+                "Supplier": "LCSC",
+                "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
+                "3D Model Title": "R0402_L1.0-W0.5-H0.4",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Type": "厚膜电阻",
+                "Value": "30.9kΩ",
+                "Tolerance": "±1%",
+                "Power(Watts)": "62.5mW",
+                "Voltage-Supply(Max)": "50V",
+                "Temperature Coefficient": "±100ppm/℃",
+                "Operating Temperature": "-55℃~+155℃",
+                "Description": "电阻类型:厚膜电阻;阻值:30.9kΩ;精度:±1%;功率:62.5mW;工作电压:50V;温度系数:±100ppm/℃;",
+                "DeviceName": "0402WGF3092TCE",
+                "FootprintName": "R0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N27",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge113": {
+            "props": {
+                "Unique ID": "gge113",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "09e03173e8d5a2f6",
+                "Designator": "R4",
+                "Device": "8b8d62953dbb62a1",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I32",
+                "LCSC Part Name": "31.6kΩ ±1% 62.5mW 厚膜电阻",
+                "Supplier Part": "C11463",
+                "Manufacturer": "UNI-ROYAL(厚声)",
+                "Manufacturer Part": "0402WGF3162TCE",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/0402WGF3162TCE/12017.html",
+                "Supplier": "LCSC",
+                "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
+                "3D Model Title": "R0402_L1.0-W0.5-H0.4",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Type": "厚膜电阻",
+                "Value": "31.6kΩ",
+                "Tolerance": "±1%",
+                "Power(Watts)": "62.5mW",
+                "Voltage-Supply(Max)": "50V",
+                "Temperature Coefficient": "±100ppm/℃",
+                "Operating Temperature": "-55℃~+155℃",
+                "Description": "电阻类型:厚膜电阻;阻值:31.6kΩ;精度:±1%;功率:62.5mW;工作电压:50V;温度系数:±100ppm/℃;",
+                "DeviceName": "0402WGF3162TCE",
+                "FootprintName": "R0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N30",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge114": {
+            "props": {
+                "Unique ID": "gge114",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "c398ef48ec1f57c4",
+                "Designator": "R5",
+                "Device": "2fe41b9135afa4f0",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I33",
+                "LCSC Part Name": "0Ω ±1% 62.5mW 厚膜电阻",
+                "Supplier Part": "C17168",
+                "Manufacturer": "UNI-ROYAL(厚声)",
+                "Manufacturer Part": "0402WGF0000TCE",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Basic Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/0402WGF0000TCE/17853.html",
+                "Supplier": "LCSC",
+                "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
+                "3D Model Title": "R0402_L1.0-W0.5-H0.4",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Type": "厚膜电阻",
+                "Value": "0Ω",
+                "Tolerance": "±1%",
+                "Power(Watts)": "62.5mW",
+                "Voltage-Supply(Max)": "50V",
+                "Temperature Coefficient": "±800ppm/℃",
+                "Operating Temperature": "-55℃~+155℃",
+                "Description": "电阻类型:厚膜电阻;阻值:0Ω;精度:±1%;功率:62.5mW;工作电压:50V;温度系数:±800ppm/℃;",
+                "DeviceName": "0402WGF0000TCE",
+                "FootprintName": "R0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N31",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge115": {
+            "props": {
+                "Unique ID": "gge115",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "c398ef48ec1f57c4",
+                "Designator": "R6",
+                "Device": "2fe41b9135afa4f0",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I34",
+                "Value": "n.c.",
+                "Supplier Part": "",
+                "LCSC Part Name": "0Ω ±1% 62.5mW 厚膜电阻",
+                "Manufacturer": "UNI-ROYAL(厚声)",
+                "Manufacturer Part": "0402WGF0000TCE",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Basic Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/0402WGF0000TCE/17853.html",
+                "Supplier": "LCSC",
+                "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
+                "3D Model Title": "R0402_L1.0-W0.5-H0.4",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Type": "厚膜电阻",
+                "Tolerance": "±1%",
+                "Power(Watts)": "62.5mW",
+                "Voltage-Supply(Max)": "50V",
+                "Temperature Coefficient": "±800ppm/℃",
+                "Operating Temperature": "-55℃~+155℃",
+                "Description": "电阻类型:厚膜电阻;阻值:0Ω;精度:±1%;功率:62.5mW;工作电压:50V;温度系数:±800ppm/℃;",
+                "DeviceName": "0402WGF0000TCE",
+                "FootprintName": "R0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N32",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge116": {
+            "props": {
+                "Unique ID": "gge116",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "09e03173e8d5a2f6",
+                "Designator": "R7",
+                "Device": "8b8d62953dbb62a1",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I35",
+                "LCSC Part Name": "31.6kΩ ±1% 62.5mW 厚膜电阻",
+                "Supplier Part": "C11463",
+                "Manufacturer": "UNI-ROYAL(厚声)",
+                "Manufacturer Part": "0402WGF3162TCE",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/0402WGF3162TCE/12017.html",
+                "Supplier": "LCSC",
+                "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
+                "3D Model Title": "R0402_L1.0-W0.5-H0.4",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Type": "厚膜电阻",
+                "Value": "31.6kΩ",
+                "Tolerance": "±1%",
+                "Power(Watts)": "62.5mW",
+                "Voltage-Supply(Max)": "50V",
+                "Temperature Coefficient": "±100ppm/℃",
+                "Operating Temperature": "-55℃~+155℃",
+                "Description": "电阻类型:厚膜电阻;阻值:31.6kΩ;精度:±1%;功率:62.5mW;工作电压:50V;温度系数:±100ppm/℃;",
+                "DeviceName": "0402WGF3162TCE",
+                "FootprintName": "R0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "FB",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge117": {
+            "props": {
+                "Unique ID": "gge117",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "2947c4305bb4f63f",
+                "Designator": "R8",
+                "Device": "2d54b21bb5bfe471",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I36",
+                "LCSC Part Name": "100kΩ ±1% 62.5mW 厚膜电阻",
+                "Supplier Part": "C25741",
+                "Manufacturer": "UNI-ROYAL(厚声)",
+                "Manufacturer Part": "0402WGF1003TCE",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Basic Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/0402WGF1003TCE/26484.html",
+                "Supplier": "LCSC",
+                "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
+                "3D Model Title": "R0402_L1.0-W0.5-H0.4",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Type": "厚膜电阻",
+                "Value": "100kΩ",
+                "Tolerance": "±1%",
+                "Power(Watts)": "62.5mW",
+                "Voltage-Supply(Max)": "50V",
+                "Temperature Coefficient": "±100ppm/℃",
+                "Operating Temperature": "-55℃~+155℃",
+                "Description": "电阻类型:厚膜电阻;阻值:100kΩ;精度:±1%;功率:62.5mW;工作电压:50V;温度系数:±100ppm/℃;",
+                "DeviceName": "0402WGF1003TCE",
+                "FootprintName": "R0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "FB",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "ISP_TPS",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge3": {
+            "props": {
+                "Unique ID": "gge3",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "cec05fbdf0d068b8",
+                "Designator": "C4",
+                "Device": "a120e88182a8ab2b",
+                "Voltage Rated": "35V",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I38",
+                "LCSC Part Name": "22uF ±20% 35V",
+                "Supplier Part": "C6119901",
+                "Manufacturer": "HRE(芯声)",
+                "Manufacturer Part": "CGA0805X5R226M350MT",
+                "Supplier Footprint": "0805",
+                "JLCPCB Part Class": "扩展库",
+                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20231129/D589D0CC4D260F7AC3A77E53B455CCB3.pdf",
+                "Supplier": "LCSC",
+                "Footprint": "575d12570b9b242a",
+                "3D Model": "1ba041120af144c991958decab20d241",
+                "3D Model Title": "C0805_L2.0-W1.3-H1.3",
+                "3D Model Transform": "78.74,51.181,0,0,0,0,0,0.0005,0",
+                "Value": "22uF",
+                "Tolerance": "±20%",
+                "Temperature Coefficient": "X5R",
+                "Description": "容值:22uF;精度:±20%;额定电压:35V;材质(温度系数):X5R;",
+                "DeviceName": "CGA0805X5R226M350MT",
+                "FootprintName": "C0805_1"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N11",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge4": {
+            "props": {
+                "Unique ID": "gge4",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "cec05fbdf0d068b8",
+                "Designator": "C5",
+                "Device": "a120e88182a8ab2b",
+                "Voltage Rated": "35V",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I39",
+                "LCSC Part Name": "22uF ±20% 35V",
+                "Supplier Part": "C6119901",
+                "Manufacturer": "HRE(芯声)",
+                "Manufacturer Part": "CGA0805X5R226M350MT",
+                "Supplier Footprint": "0805",
+                "JLCPCB Part Class": "扩展库",
+                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20231129/D589D0CC4D260F7AC3A77E53B455CCB3.pdf",
+                "Supplier": "LCSC",
+                "Footprint": "575d12570b9b242a",
+                "3D Model": "1ba041120af144c991958decab20d241",
+                "3D Model Title": "C0805_L2.0-W1.3-H1.3",
+                "3D Model Transform": "78.74,51.181,0,0,0,0,0,0.0005,0",
+                "Value": "22uF",
+                "Tolerance": "±20%",
+                "Temperature Coefficient": "X5R",
+                "Description": "容值:22uF;精度:±20%;额定电压:35V;材质(温度系数):X5R;",
+                "DeviceName": "CGA0805X5R226M350MT",
+                "FootprintName": "C0805_1"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N11",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge5": {
+            "props": {
+                "Unique ID": "gge5",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "cec05fbdf0d068b8",
+                "Designator": "C6",
+                "Device": "a120e88182a8ab2b",
+                "Voltage Rated": "35V",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I40",
+                "LCSC Part Name": "22uF ±20% 35V",
+                "Supplier Part": "C6119901",
+                "Manufacturer": "HRE(芯声)",
+                "Manufacturer Part": "CGA0805X5R226M350MT",
+                "Supplier Footprint": "0805",
+                "JLCPCB Part Class": "扩展库",
+                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20231129/D589D0CC4D260F7AC3A77E53B455CCB3.pdf",
+                "Supplier": "LCSC",
+                "Footprint": "575d12570b9b242a",
+                "3D Model": "1ba041120af144c991958decab20d241",
+                "3D Model Title": "C0805_L2.0-W1.3-H1.3",
+                "3D Model Transform": "78.74,51.181,0,0,0,0,0,0.0005,0",
+                "Value": "22uF",
+                "Tolerance": "±20%",
+                "Temperature Coefficient": "X5R",
+                "Description": "容值:22uF;精度:±20%;额定电压:35V;材质(温度系数):X5R;",
+                "DeviceName": "CGA0805X5R226M350MT",
+                "FootprintName": "C0805_1"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N11",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge3_1": {
+            "props": {
+                "Unique ID": "gge3_1",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "cec05fbdf0d068b8",
+                "Designator": "C26",
+                "Device": "a120e88182a8ab2b",
+                "Voltage Rated": "35V",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I42",
+                "LCSC Part Name": "22uF ±20% 35V",
+                "Supplier Part": "C6119901",
+                "Manufacturer": "HRE(芯声)",
+                "Manufacturer Part": "CGA0805X5R226M350MT",
+                "Supplier Footprint": "0805",
+                "JLCPCB Part Class": "扩展库",
+                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20231129/D589D0CC4D260F7AC3A77E53B455CCB3.pdf",
+                "Supplier": "LCSC",
+                "Footprint": "575d12570b9b242a",
+                "3D Model": "1ba041120af144c991958decab20d241",
+                "3D Model Title": "C0805_L2.0-W1.3-H1.3",
+                "3D Model Transform": "78.74,51.181,0,0,0,0,0,0.0005,0",
+                "Value": "22uF",
+                "Tolerance": "±20%",
+                "Temperature Coefficient": "X5R",
+                "Description": "容值:22uF;精度:±20%;额定电压:35V;材质(温度系数):X5R;",
+                "DeviceName": "CGA0805X5R226M350MT",
+                "FootprintName": "C0805_1"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N39",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "ISP_TPS",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge4_1": {
+            "props": {
+                "Unique ID": "gge4_1",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "cec05fbdf0d068b8",
+                "Designator": "C27",
+                "Device": "a120e88182a8ab2b",
+                "Voltage Rated": "35V",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I43",
+                "LCSC Part Name": "22uF ±20% 35V",
+                "Supplier Part": "C6119901",
+                "Manufacturer": "HRE(芯声)",
+                "Manufacturer Part": "CGA0805X5R226M350MT",
+                "Supplier Footprint": "0805",
+                "JLCPCB Part Class": "扩展库",
+                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20231129/D589D0CC4D260F7AC3A77E53B455CCB3.pdf",
+                "Supplier": "LCSC",
+                "Footprint": "575d12570b9b242a",
+                "3D Model": "1ba041120af144c991958decab20d241",
+                "3D Model Title": "C0805_L2.0-W1.3-H1.3",
+                "3D Model Transform": "78.74,51.181,0,0,0,0,0,0.0005,0",
+                "Value": "22uF",
+                "Tolerance": "±20%",
+                "Temperature Coefficient": "X5R",
+                "Description": "容值:22uF;精度:±20%;额定电压:35V;材质(温度系数):X5R;",
+                "DeviceName": "CGA0805X5R226M350MT",
+                "FootprintName": "C0805_1"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N39",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "ISP_TPS",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge5_1": {
+            "props": {
+                "Unique ID": "gge5_1",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "cec05fbdf0d068b8",
+                "Designator": "C28",
+                "Device": "a120e88182a8ab2b",
+                "Voltage Rated": "35V",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I44",
+                "LCSC Part Name": "22uF ±20% 35V",
+                "Supplier Part": "C6119901",
+                "Manufacturer": "HRE(芯声)",
+                "Manufacturer Part": "CGA0805X5R226M350MT",
+                "Supplier Footprint": "0805",
+                "JLCPCB Part Class": "扩展库",
+                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20231129/D589D0CC4D260F7AC3A77E53B455CCB3.pdf",
+                "Supplier": "LCSC",
+                "Footprint": "575d12570b9b242a",
+                "3D Model": "1ba041120af144c991958decab20d241",
+                "3D Model Title": "C0805_L2.0-W1.3-H1.3",
+                "3D Model Transform": "78.74,51.181,0,0,0,0,0,0.0005,0",
+                "Value": "22uF",
+                "Tolerance": "±20%",
+                "Temperature Coefficient": "X5R",
+                "Description": "容值:22uF;精度:±20%;额定电压:35V;材质(温度系数):X5R;",
+                "DeviceName": "CGA0805X5R226M350MT",
+                "FootprintName": "C0805_1"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N39",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "ISP_TPS",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge99": {
+            "props": {
+                "Unique ID": "gge99",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "df56d838872de244",
+                "Designator": "C55",
+                "Device": "b9a823d8abaa6ce1",
+                "Voltage Rated": "50V",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I46",
+                "LCSC Part Name": "100nF ±10% 50V",
+                "Supplier Part": "C307331",
+                "Manufacturer": "SAMSUNG(三星)",
+                "Manufacturer Part": "CL05B104KB54PNC",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "基础库",
+                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf",
+                "Supplier": "LCSC",
+                "Footprint": "ebc0536728f921f8",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "100nF",
+                "Tolerance": "±10%",
+                "Temperature Coefficient": "X7R",
+                "Description": "容值:100nF;精度:±10%;额定电压:50V;材质(温度系数):X7R;",
+                "DeviceName": "CL05B104KB54PNC",
+                "FootprintName": "C0402_1"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N11",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge118": {
+            "props": {
+                "Unique ID": "gge118",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "14a7690941c1b57d",
+                "Designator": "C56",
+                "Device": "7144a73f04455c85",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I48",
+                "LCSC Part Name": "1uF ±10% 50V",
+                "Supplier Part": "C1518208",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GRM155R61H105KE05D",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GRM155R61H105KE05D/1609005.html",
+                "Supplier": "LCSC",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "1uF",
+                "Tolerance": "±10%",
+                "Voltage Rating": "50V",
+                "Temperature Coefficient": "X5R",
+                "Description": "容值:1uF;精度:±10%;额定电压:50V;温度系数:X5R;",
+                "DeviceName": "GRM155R61H105KE05D",
+                "FootprintName": "C0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N11",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge99_1": {
+            "props": {
+                "Unique ID": "gge99_1",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "df56d838872de244",
+                "Designator": "C57",
+                "Device": "b9a823d8abaa6ce1",
+                "Voltage Rated": "50V",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I50",
+                "LCSC Part Name": "100nF ±10% 50V",
+                "Supplier Part": "C307331",
+                "Manufacturer": "SAMSUNG(三星)",
+                "Manufacturer Part": "CL05B104KB54PNC",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "基础库",
+                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf",
+                "Supplier": "LCSC",
+                "Footprint": "ebc0536728f921f8",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "100nF",
+                "Tolerance": "±10%",
+                "Temperature Coefficient": "X7R",
+                "Description": "容值:100nF;精度:±10%;额定电压:50V;材质(温度系数):X7R;",
+                "DeviceName": "CL05B104KB54PNC",
+                "FootprintName": "C0402_1"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N39",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "ISP_TPS",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge119": {
+            "props": {
+                "Unique ID": "gge119",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "14a7690941c1b57d",
+                "Designator": "C58",
+                "Device": "7144a73f04455c85",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I51",
+                "Voltage Rating": "50V",
+                "LCSC Part Name": "1uF ±10% 50V",
+                "Supplier Part": "C1518208",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GRM155R61H105KE05D",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GRM155R61H105KE05D/1609005.html",
+                "Supplier": "LCSC",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "1uF",
+                "Tolerance": "±10%",
+                "Temperature Coefficient": "X5R",
+                "Description": "容值:1uF;精度:±10%;额定电压:50V;温度系数:X5R;",
+                "DeviceName": "GRM155R61H105KE05D",
+                "FootprintName": "C0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N39",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "ISP_TPS",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge120": {
+            "props": {
+                "Unique ID": "gge120",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "07408dfcb36bf1e0",
+                "Designator": "C59",
+                "Device": "499546df7b6d9ad4",
+                "LCSC Part Name": "220uF ±20% 25V",
+                "Supplier Part": "C46550404",
+                "Manufacturer": "JIERR(捷而瑞)",
+                "Manufacturer Part": "JVJ25V220M6x8",
+                "Supplier Footprint": "SMD,D6.3xL7.7mm",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/JVJ25V220M6x8/48680098.html",
+                "Supplier": "LCSC",
+                "Footprint": "92f7acef2c53ce1d",
+                "3D Model": "ccbda52dceed4b139172c40f75c9da3f",
+                "3D Model Title": "CAP-SMD_BD6.3-L6.6-W6.6-LS7.3-FD-H7.7",
+                "3D Model Transform": "287.401,259.842,0,0,0,0,0,0,0",
+                "Value": "220uF",
+                "Tolerance": "±20%",
+                "Voltage Rating": "25V",
+                "Ripple Current": "120mA@120Hz",
+                "Diameter": "6.3mm",
+                "Height - Seated (Max)": "7.7mm",
+                "Lifetime": "2000hrs@105℃",
+                "Operating Temperature": "-55℃~+105℃",
+                "Name": "={Value}",
+                "Description": "容值:220uF;精度:±20%;额定电压:25V;纹波电流:120mA@120Hz;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I52",
+                "DeviceName": "JVJ25V220M6x8",
+                "FootprintName": "CAP-SMD_BD6.3-L6.6-W6.6-LS7.3-FD-H7.7"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "ISN_TPS",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge121": {
+            "props": {
+                "Unique ID": "gge121",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "07408dfcb36bf1e0",
+                "Designator": "C60",
+                "Device": "499546df7b6d9ad4",
+                "LCSC Part Name": "220uF ±20% 25V",
+                "Supplier Part": "",
+                "Manufacturer": "JIERR(捷而瑞)",
+                "Manufacturer Part": "JVJ25V220M6x8",
+                "Supplier Footprint": "SMD,D6.3xL7.7mm",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/JVJ25V220M6x8/48680098.html",
+                "Supplier": "LCSC",
+                "Footprint": "92f7acef2c53ce1d",
+                "3D Model": "ccbda52dceed4b139172c40f75c9da3f",
+                "3D Model Title": "CAP-SMD_BD6.3-L6.6-W6.6-LS7.3-FD-H7.7",
+                "3D Model Transform": "287.401,259.842,0,0,0,0,0,0,0",
+                "Value": "n.c.",
+                "Tolerance": "±20%",
+                "Voltage Rating": "25V",
+                "Ripple Current": "120mA@120Hz",
+                "Diameter": "6.3mm",
+                "Height - Seated (Max)": "7.7mm",
+                "Lifetime": "2000hrs@105℃",
+                "Operating Temperature": "-55℃~+105℃",
+                "Name": "={Value}",
+                "Description": "容值:220uF;精度:±20%;额定电压:25V;纹波电流:120mA@120Hz;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I53",
+                "DeviceName": "JVJ25V220M6x8",
+                "FootprintName": "CAP-SMD_BD6.3-L6.6-W6.6-LS7.3-FD-H7.7"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "ISN_TPS",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge5_2": {
+            "props": {
+                "Unique ID": "gge5_2",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "cec05fbdf0d068b8",
+                "Designator": "C61",
+                "Device": "a120e88182a8ab2b",
+                "Voltage Rated": "35V",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I54",
+                "LCSC Part Name": "22uF ±20% 35V",
+                "Supplier Part": "",
+                "Manufacturer": "HRE(芯声)",
+                "Manufacturer Part": "CGA0805X5R226M350MT",
+                "Supplier Footprint": "0805",
+                "JLCPCB Part Class": "扩展库",
+                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20231129/D589D0CC4D260F7AC3A77E53B455CCB3.pdf",
+                "Supplier": "LCSC",
+                "Footprint": "575d12570b9b242a",
+                "3D Model": "1ba041120af144c991958decab20d241",
+                "3D Model Title": "C0805_L2.0-W1.3-H1.3",
+                "3D Model Transform": "78.74,51.181,0,0,0,0,0,0.0005,0",
+                "Value": "n.c.",
+                "Tolerance": "±20%",
+                "Temperature Coefficient": "X5R",
+                "Description": "容值:22uF;精度:±20%;额定电压:35V;材质(温度系数):X5R;",
+                "DeviceName": "CGA0805X5R226M350MT",
+                "FootprintName": "C0805_1"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N39",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "ISP_TPS",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge122": {
+            "props": {
+                "Unique ID": "gge122",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "14a7690941c1b57d",
+                "Designator": "C62",
+                "Device": "7144a73f04455c85",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I55",
+                "Voltage Rating": "50V",
+                "LCSC Part Name": "1uF ±10% 50V",
+                "Supplier Part": "",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GRM155R61H105KE05D",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GRM155R61H105KE05D/1609005.html",
+                "Supplier": "LCSC",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "n.c.",
+                "Tolerance": "±10%",
+                "Temperature Coefficient": "X5R",
+                "Description": "容值:1uF;精度:±10%;额定电压:50V;温度系数:X5R;",
+                "DeviceName": "GRM155R61H105KE05D",
+                "FootprintName": "C0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "ISN_TPS",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge123": {
+            "props": {
+                "Unique ID": "gge123",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "14a7690941c1b57d",
+                "Designator": "C63",
+                "Device": "7144a73f04455c85",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I56",
+                "Voltage Rating": "50V",
+                "LCSC Part Name": "1uF ±10% 50V",
+                "Supplier Part": "C1518208",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GRM155R61H105KE05D",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GRM155R61H105KE05D/1609005.html",
+                "Supplier": "LCSC",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "1uF",
+                "Tolerance": "±10%",
+                "Temperature Coefficient": "X5R",
+                "Description": "容值:1uF;精度:±10%;额定电压:50V;温度系数:X5R;",
+                "DeviceName": "GRM155R61H105KE05D",
+                "FootprintName": "C0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "ISN_TPS",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge124": {
+            "props": {
+                "Unique ID": "gge124",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "30d7a44b2f2648d5",
+                "Designator": "C64",
+                "Device": "852dd68d832bc902",
+                "LCSC Part Name": "100uF ±20% 6.3V",
+                "Supplier Part": "",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GRM32ER60J107ME20L",
+                "Supplier Footprint": "1210",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GRM32ER60J107ME20L/89332.html",
+                "Supplier": "LCSC",
+                "Footprint": "a1da69c64471b496",
+                "3D Model": "833068e7fe044595a6eec77c56179455",
+                "3D Model Title": "C1210_L3.2-W2.5-H2.5",
+                "3D Model Transform": "125.984,98.425,0,0,0,0,0,0,0",
+                "Value": "n.c.",
+                "Tolerance": "±20%",
+                "Voltage Rating": "6.3V",
+                "Temperature Coefficient": "X5R",
+                "Name": "={Value}",
+                "Description": "容值:100uF;精度:±20%;额定电压:6.3V;温度系数:X5R;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I57",
+                "DeviceName": "GRM32ER60J107ME20L",
+                "FootprintName": "C1210"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$1N39",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "ISP_TPS",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge125": {
+            "props": {
+                "Unique ID": "gge125",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "30d7a44b2f2648d5",
+                "Designator": "C65",
+                "Device": "852dd68d832bc902",
+                "LCSC Part Name": "100uF ±20% 6.3V",
+                "Supplier Part": "",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GRM32ER60J107ME20L",
+                "Supplier Footprint": "1210",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GRM32ER60J107ME20L/89332.html",
+                "Supplier": "LCSC",
+                "Footprint": "a1da69c64471b496",
+                "3D Model": "833068e7fe044595a6eec77c56179455",
+                "3D Model Title": "C1210_L3.2-W2.5-H2.5",
+                "3D Model Transform": "125.984,98.425,0,0,0,0,0,0,0",
+                "Value": "n.c.",
+                "Tolerance": "±20%",
+                "Voltage Rating": "6.3V",
+                "Temperature Coefficient": "X5R",
+                "Name": "={Value}",
+                "Description": "容值:100uF;精度:±20%;额定电压:6.3V;温度系数:X5R;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I59",
+                "DeviceName": "GRM32ER60J107ME20L",
+                "FootprintName": "C1210"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "ISN_TPS",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge126": {
+            "props": {
+                "Unique ID": "gge126",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "36c22ae24e05a774",
+                "Designator": "U3",
+                "Device": "640ac2ae60bbc7dc",
+                "LCSC Part Name": "10mΩ ±1% 1W",
+                "Supplier Part": "C2924503",
+                "Manufacturer": "Milliohm(毫欧)",
+                "Manufacturer Part": "HoJLR1206-1W-10mR-1%-75ppm",
+                "Supplier Footprint": "1206",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/HoJLR1206-1W-10mR-1%2525-75ppm/3241069.html",
+                "Supplier": "LCSC",
+                "Footprint": "18fe0afe327ce21d",
+                "3D Model": "89a1f13db2384da588040e0b3c55bf66",
+                "3D Model Title": "R1206_L3.2-W1.6-H0.6",
+                "3D Model Transform": "125.984,62.992,0,0,0,0,0,0,0",
+                "Type": "采样电阻",
+                "Value": "10mΩ",
+                "Tolerance": "±1%",
+                "Power(Watts)": "1W",
+                "Mounting Type": "贴片",
+                "Name": "={Value}",
+                "Description": "电阻类型:采样电阻;阻值:10mΩ;精度:±1%;功率:1W;安装方式:贴片;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I60",
+                "DeviceName": "HoJLR1206-1W-10mR-1%-75ppm",
+                "FootprintName": "R1206"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "ISP_TPS",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "ISN_TPS",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge127": {
+            "props": {
+                "Unique ID": "gge127",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "66024a813a842209",
+                "Designator": "R9",
+                "Device": "43f3ba8d0f063108",
+                "LCSC Part Name": "43kΩ ±1% 62.5mW 厚膜电阻",
+                "Supplier Part": "C8329",
+                "Manufacturer": "UNI-ROYAL(厚声)",
+                "Manufacturer Part": "0402WGF4302TCE",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
+                "Supplier": "LCSC",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
+                "3D Model Title": "R0402_L1.0-W0.5-H0.4",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Type": "厚膜电阻",
+                "Value": "43kΩ",
+                "Tolerance": "±1%",
+                "Power(Watts)": "62.5mW",
+                "Overload Voltage (Max)": "50V",
+                "Temperature Coefficient": "±100ppm/℃",
+                "Operating Temperature Range": "-55℃~+155℃",
+                "Name": "={Value}",
+                "Description": "电阻类型:厚膜电阻;阻值:43kΩ;精度:±1%;功率:62.5mW;最大工作电压:50V;温度系数:±100ppm/℃;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I63",
+                "DeviceName": "0402WGF4302TCE",
+                "FootprintName": "R0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N47",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge128": {
+            "props": {
+                "Unique ID": "gge128",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "0075d15caf8600ce",
+                "Designator": "C20",
+                "Device": "dd64db262f5e347f",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I64",
+                "LCSC Part Name": "8.2nF ±10% 50V",
+                "Supplier Part": "C161172",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GCM155R71H822KA55D",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20191226/C475964_3FAF76C90CD8FFB09F50C7480ADA926F.pdf",
+                "Supplier": "LCSC",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "8.2nF",
+                "Tolerance": "±10%",
+                "Voltage Rated": "50V",
+                "Temperature Coefficient": "X7R",
+                "Description": "容值:8.2nF;精度:±10%;额定电压:50V;材质(温度系数):X7R;",
+                "DeviceName": "GCM155R71H822KA55D",
+                "FootprintName": "C0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N51",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge124_1": {
+            "props": {
+                "Unique ID": "gge124_1",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "30d7a44b2f2648d5",
+                "Designator": "C66",
+                "Device": "852dd68d832bc902",
+                "LCSC Part Name": "100uF ±20% 6.3V",
+                "Supplier Part": "",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GRM32ER60J107ME20L",
+                "Supplier Footprint": "1210",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GRM32ER60J107ME20L/89332.html",
+                "Supplier": "LCSC",
+                "Footprint": "a1da69c64471b496",
+                "3D Model": "833068e7fe044595a6eec77c56179455",
+                "3D Model Title": "C1210_L3.2-W2.5-H2.5",
+                "3D Model Transform": "125.984,98.425,0,0,0,0,0,0,0",
+                "Value": "n.c.",
+                "Tolerance": "±20%",
+                "Voltage Rating": "6.3V",
+                "Temperature Coefficient": "X5R",
+                "Name": "={Value}",
+                "Description": "容值:100uF;精度:±20%;额定电压:6.3V;温度系数:X5R;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I65",
+                "DeviceName": "GRM32ER60J107ME20L",
+                "FootprintName": "C1210"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "$1N11",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge129": {
+            "props": {
+                "Unique ID": "gge129",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "9567d1fda40e7cc3",
+                "Designator": "U2",
+                "Device": "ffbe9551317952da",
+                "Footprint": "0a67af338878451d",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I2",
+                "LCSC Part Name": "SW7201",
+                "Supplier Part": "C5451943",
+                "Manufacturer": "",
+                "Manufacturer Part": "SW7201",
+                "Supplier Footprint": "QFN-32",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "",
+                "Supplier": "LCSC",
+                "3D Model": "62f3579202e14df58d38bb6b7ac8364e",
+                "3D Model Title": "QFN-32_L4.0-W4.0-P0.40-BL-EP2.7-A",
+                "3D Model Transform": "157.559,157.559,0,0,0,0,0,0,0",
+                "Description": "",
+                "DeviceName": "SW7201",
+                "FootprintName": "QFN-32_L4.0-W4.0-P0.40-BL-EP2.7-A"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "CSN_VBUS",
+                    "number": "1",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "CSP_VBUS",
+                    "number": "2",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                },
+                "3": {
+                    "name": "VBUS",
+                    "number": "3",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "3"
+                    }
+                },
+                "4": {
+                    "name": "GATEA1",
+                    "number": "4",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "4"
+                    }
+                },
+                "5": {
+                    "name": "INDTA1",
+                    "number": "5",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "5"
+                    }
+                },
+                "6": {
+                    "name": "GATEA2",
+                    "number": "6",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "6"
+                    }
+                },
+                "7": {
+                    "name": "INDTA2",
+                    "number": "7",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "7"
+                    }
+                },
+                "8": {
+                    "name": "GATEB",
+                    "number": "8",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "8"
+                    }
+                },
+                "9": {
+                    "name": "INDTB",
+                    "number": "9",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "9"
+                    }
+                },
+                "10": {
+                    "name": "FB",
+                    "number": "10",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "10"
+                    }
+                },
+                "11": {
+                    "name": "SDA",
+                    "number": "11",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "11"
+                    }
+                },
+                "12": {
+                    "name": "SCK",
+                    "number": "12",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "12"
+                    }
+                },
+                "13": {
+                    "name": "IRQ",
+                    "number": "13",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "13"
+                    }
+                },
+                "14": {
+                    "name": "BSSET",
+                    "number": "14",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "14"
+                    }
+                },
+                "15": {
+                    "name": "LSET",
+                    "number": "15",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "15"
+                    }
+                },
+                "16": {
+                    "name": "NTC",
+                    "number": "16",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "16"
+                    }
+                },
+                "17": {
+                    "name": "COMP2",
+                    "number": "17",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "17"
+                    }
+                },
+                "18": {
+                    "name": "COMP1",
+                    "number": "18",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "18"
+                    }
+                },
+                "19": {
+                    "name": "VCC",
+                    "number": "19",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "19"
+                    }
+                },
+                "20": {
+                    "name": "CSN_VBAT",
+                    "number": "20",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "20"
+                    }
+                },
+                "21": {
+                    "name": "CSP_VBAT",
+                    "number": "21",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "21"
+                    }
+                },
+                "22": {
+                    "name": "NC",
+                    "number": "22",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "22"
+                    }
+                },
+                "23": {
+                    "name": "VBAT",
+                    "number": "23",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "23"
+                    }
+                },
+                "24": {
+                    "name": "HD2",
+                    "number": "24",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "24"
+                    }
+                },
+                "25": {
+                    "name": "BST2",
+                    "number": "25",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "25"
+                    }
+                },
+                "26": {
+                    "name": "SW2",
+                    "number": "26",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "26"
+                    }
+                },
+                "27": {
+                    "name": "LD2",
+                    "number": "27",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "27"
+                    }
+                },
+                "28": {
+                    "name": "VDRV",
+                    "number": "28",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "28"
+                    }
+                },
+                "29": {
+                    "name": "LD1",
+                    "number": "29",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "29"
+                    }
+                },
+                "30": {
+                    "name": "SW1",
+                    "number": "30",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "30"
+                    }
+                },
+                "31": {
+                    "name": "BST1",
+                    "number": "31",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "31"
+                    }
+                },
+                "32": {
+                    "name": "HD1",
+                    "number": "32",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "32"
+                    }
+                },
+                "33": {
+                    "name": "EPAD",
+                    "number": "33",
+                    "net": "",
+                    "props": {
+                        "Pin Number": "33"
+                    }
+                }
+            }
+        }
+    },
+    "designRule": {
+        "trackPhysics": {
+            "copperThickness1oz": {
+                "name": "copperThickness1oz",
+                "isDefault": true,
+                "unit": "mm",
+                "strokeValue": {
+                    "common": {
+                        "min": 0.127,
+                        "max": 2.54,
+                        "default": 0.254
+                    }
+                }
+            },
+            "copperThickness2oz": {
+                "name": "copperThickness2oz",
+                "isDefault": false,
+                "unit": "mm",
+                "strokeValue": {
+                    "common": {
+                        "min": 0.203,
+                        "max": 2.54,
+                        "default": 0.254
+                    }
+                }
+            }
+        },
+        "netRule": {
+            "GND": {
+                "net": "GND",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N9": {
+                "net": "$1N9",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N11": {
+                "net": "$1N11",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "SCL_TPS": {
+                "net": "SCL_TPS",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "SDA_TPS": {
+                "net": "SDA_TPS",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N16": {
+                "net": "$1N16",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N17": {
+                "net": "$1N17",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N18": {
+                "net": "$1N18",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N22": {
+                "net": "$1N22",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N23": {
+                "net": "$1N23",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N24": {
+                "net": "$1N24",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N25": {
+                "net": "$1N25",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N27": {
+                "net": "$1N27",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N28": {
+                "net": "$1N28",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N30": {
+                "net": "$1N30",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N31": {
+                "net": "$1N31",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N32": {
+                "net": "$1N32",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "FB": {
+                "net": "FB",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "NET4": {
+                "net": "NET4",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "ISP_TPS": {
+                "net": "ISP_TPS",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N39": {
+                "net": "$1N39",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "ISN_TPS": {
+                "net": "ISN_TPS",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N47": {
+                "net": "$1N47",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N51": {
+                "net": "$1N51",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            }
+        }
+    },
+    "differentialPair": {},
+    "netClass": {},
+    "equalLengthNetGroup": {}
+}
