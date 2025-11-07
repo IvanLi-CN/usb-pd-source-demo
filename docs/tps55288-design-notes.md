@@ -6,7 +6,7 @@
 - 输出范围与能力：`最高 20 V / 5 A（100 W）`；支持 USB-PD 固定电压 5/9/15/20 V，后续可评估 PPS 步进（20 mV）。
 - 控制模式：初期以协议芯片（如 `SW2303`）通过 `FB` 实现调压；若具备 I2C/AVS/PPS 能力，优先与 TPS55288 I2C 联控（获得线缆压降补偿、限流与斜率可编程）。
 - 效率/热目标：20 V 5 A 满载效率 ≥94%（自然风/轻风冷）；关键器件结温 <125 °C（环境 25–40 °C）。
-- EMC：满足常规开关电源 EMI 要求；支持固定频率/展频/同步功能以避让干扰；开关频率初设 `400–800 kHz`，综合效率/体积/EMI 折衷。
+- EMC：满足常规开关电源 EMI 要求；支持固定频率/展频/同步功能以避让干扰；本项目锁定 `≈465 kHz（FSW=43 kΩ）`，早期评估可在 `400–800 kHz` 范围折衷效率/体积/EMI。
 - 保护：过压、限流、短路打嗝、过温；源端 PD 广告电流与硬件 OCP 一致；5 A 输出需 E-Marker 线缆。
 
 ### 1.1 资料索引
@@ -39,7 +39,7 @@
 - 电压等级 `VDS`：输入上限 24 V，考虑尖峰 / 谐振和安规裕量，建议选 `40 V` 器件；若应用存在更高浪涌（如车规 24 V 母线），需评估 `60 V` 器件与 TVS/RC 吸收搭配。
 - 栅极驱动与阈值：TPS55288 的 Buck 驱动为栅极约 5 V 级（VCC/BOOT1 供电，见 `docs/datasheets/tps55288-datasheet.md:200`），优选 `Logic-Level` 器件，`RDS(on)` 在 `VGS=4.5/5 V` 有明确指标；`VGS(max) ≥ ±20 V`。
 - 热与封装：优先 `LFPAK / PowerPAK / TDSON-8 5×6` 等低寄生、低热阻封装；要求大铜皮、密集过孔导热与 Kelvin 源（若可用）以降低环流与 EMI。
-- 开关频率与门极电荷：门极损耗近似 `Pgate ≈ Qg · Vdrive · fs`。以 `Qg=30 nC, Vdrive=5 V, fs=600 kHz` 估算，单管门极损耗约 `0.09 W`，两管合计约 `0.18 W`；`Qg` 过大将显著抬升驱动损耗与开关损耗。
+- 开关频率与门极电荷：门极损耗近似 `Pgate ≈ Qg · Vdrive · fs`。以 `Qg=30 nC, Vdrive=5 V, fs≈465 kHz` 估算，单管门极损耗约 `0.07 W`，两管合计约 `0.14 W`；`Qg` 过大将显著抬升驱动损耗与开关损耗。
 - 布局：缩短 `VIN–HS–LS–PGND–输入电容` 高频环路（见 `docs/datasheets/tps55288-datasheet.md:42`–`46`），必要时加 2–10 Ω 栅电阻折中 dV/dt 与 EMI。
 
 ### 2.3 高边 MOSFET 要点（DR1H）
@@ -69,7 +69,7 @@
 | NCEP40T13GU | 1.8 / 2.3 mΩ | 2.8 / 3.6 mΩ | 49 (max 70) | 9.4 / 5.0 | 3334 / 650 / 57 | 67 nC / 23 ns | 1.56 | 130 A | 阻抗最低但 Qg、Qrr 偏大，对驱动 / EMI 更苛刻 |
 | NCEP4045GU | 6.0 / 6.6 mΩ | 8.5 / 10 mΩ | 17.6 | 3.5 / 3.1 | 831 / 318 / 24 | 19 nC / 11 ns | 4.5 | 45 A | 门极 / 恢复指标理想但 RDS(on) 偏高、热阻大 |
 
-### 2.5 适配性分析与组合建议
+### 2.6 适配性分析与组合建议
 
 **高边（DR1H）适配性**
 
@@ -87,12 +87,12 @@
 
 1. 基线方案：NCEP4090GU（高边）+ NCEP4045GU（低边）。若 NCEP4045GU 供货或热阻不足，则上下管均使用 NCEP4090GU。
 2. 效率强化对照：高边替换为 NCEP40T13GU，对比导通损耗下降与驱动能耗、EMI 的取舍；低边仍以 NCEP4045GU 为主。
-3. 频率初设 500–600 kHz，视驱动温升与波形调整 2–5 Ω 栅电阻，必要时补充 RC snubber。
+3. 频率锁定 ≈465 kHz（FSW=43 kΩ）；视驱动温升与波形调整 2–5 Ω 栅电阻，必要时补充 RC snubber。
 4. 满载条件下记录高边、低边 MOS 结温（Boost & Buck 各 30 min），并观察 SW 节点 dv/dt / 整流反向恢复尖峰；确认 45 A 额定器件的浪涌、短时过流与线缆插拔可靠性。
 
 > 若需与国际品牌 MOSFET 做效率或 EMI 对比，可在同封装范畴内引入 AOS / Infineon / Vishay 等器件作为 Benchmark，建立栅驱能耗与 Qrr 性能的量化对照。
 
-### 2.6 DFN-8 (3.3 × 3.3 mm) 小封装 MOSFET 试验选型
+### 2.7 DFN-8 (3.3 × 3.3 mm) 小封装 MOSFET 试验选型
 
 > 搜索来源：店铺 https://youxindianzi.taobao.com/（2025-03-17~18，通过 chrome-devtools MCP 遍历 `DFN-8(3.3x3.3)` 与 `N沟道 DFN-8` 关键词）  
 > 数据手册：NCE Power 官方 PDF（如 `DOC013078122.pdf`、`DOC013079559.pdf` 等，存放于 ChipDip 静态镜像）
@@ -146,7 +146,7 @@
 - **数据手册公式**：TPS55288 的平均电感限流由 ILIM 电阻决定，关系式为
   $$I_{AVG\_LIMIT} = \frac{\min(1, 0.6 \times V_{OUT}) \times 330000}{R_{ILIM}}$$
   （参考 `docs/datasheets/tps55288-datasheet.md:1041`, `1044`）。
-- **电阻取值**：在 5/9/15/20 V 档位均有 $0.6 \times V_{OUT} \ge 1$，因此选用 $R_{ILIM} = 31.6\text{ kΩ}$（E96、1%）可得到 $I_{AVG\_LIMIT} \approx 10.4\text{ A}$。该上限高于 20 V/5 A 升压工况的平均电感电流，使限流不会误触；同时低于 `HPC1250` 的 13 A 连续额定与 20 A 饱和电流，配合 4.7 µH / 400–800 kHz 的纹波计算，可保持峰值不超过约 12 A，确保磁性件与 MOSFET 的热 / 磁安全余量。
+- **电阻取值**：在 5/9/15/20 V 档位均有 $0.6 \times V_{OUT} \ge 1$，因此选用 $R_{ILIM} = 31.6\text{ kΩ}$（E96、1%）可得到 $I_{AVG\_LIMIT} \approx 10.4\text{ A}$。该上限高于 20 V/5 A 升压工况的平均电感电流，使限流不会误触；同时低于 `HPC1250` 的 13 A 连续额定与 20 A 饱和电流，配合 4.7 µH / ≈465 kHz 的纹波计算，可保持峰值不超过约 12 A，确保磁性件与 MOSFET 的热 / 磁安全余量。
 - **实施要点**：
   - 使用 1% 精度、额定温漂 ≤100 ppm/°C 的片阻，靠近 ILIM 与 AGND 就近布置，减小噪声耦合。
   - 若后续在 PPS 或低压档位（<1.67 V）工作，可按公式将 $\min(1,0.6V_{OUT})$ 替换为 $0.6 \times V_{OUT}$ 重新评估。
@@ -159,62 +159,95 @@
 - **固件约束**：保持 I²C 初始化流程中不写入非零的 `CDC[2:0]`，也不要将 `CDC_OPTION` 置 1，以免在硬件仍悬空时误启补偿造成输出漂移。
 - **后续扩展指引**：若未来需要补偿线缆压降，可按照 `ΔV_OUT = 3 × R_FB_UP × ((V_ISP - V_ISN) / R_CDC)` 计算目标补偿量，选择合适 R_CDC（推荐保持 `R_FB_UP ≈ 100 kΩ`），并视需求改写寄存器启用内部阶梯或外部补偿通道【docs/datasheets/tps55288-datasheet.md:1089】。
 
-## 6. FB 分压网络与 1.2 V 参考配置
+## 6. 开关频率与 FSW 电阻配置（锁定 43 kΩ）
+
+### 6.1 目标与依据
+
+- 高功率应用建议将开关频率控制在 500 kHz 以下，以降低开关损耗、驱动功耗与热压力；结合本设计的 MOSFET（高边 NCEP4090GU、低边 NCEP4045GU）与 4.7 µH 主电感，选择约 450–470 kHz 的折中频率【docs/datasheets/tps55288-datasheet.md:452】【docs/datasheets/tps55288-datasheet.md:710】。
+- TPS55288 的频率由 `FSW` 引脚外接电阻到 `AGND` 设定；数据手册示例显示 `49.9 kΩ → ≈400 kHz`，据此可近似按 `f_SW ∝ 1 / R_FSW` 进行换算【docs/datasheets/tps55288-datasheet.md:473】【docs/datasheets/tps55288-datasheet.md:792】。
+
+### 6.2 取值与连接
+
+- 选定阻值：`R_FSW = 43.0 kΩ / 1%`（E24），对应 `f_SW ≈ 465 kHz`（以 49.9 kΩ→400 kHz 为锚点线性近似）。
+- 连接方式：`FSW` → `43.0 kΩ` → `AGND`。电阻靠近芯片放置，参考模拟地，走线远离 `SW` 与栅极驱动走线，避免高 dv/dt 串扰；勿与功率地高脉动电流回流共地环路。
+- 同步/展频：`DITH/SYNC` 焊盘保留，可对地加电容启用展频降低 EMI 峰值，或输入外部同步时钟；默认关闭升降压模式的加倍位 `FSWDBL=0`（>1.6 MHz 不建议加倍）【docs/datasheets/tps55288-datasheet.md:418】【docs/datasheets/tps55288-datasheet.md:792】。
+
+### 6.3 影响评估与快速校核（L=4.7 µH）
+
+- 电感纹波（近似，CCM）：
+  - Buck 24→20 V/5 A：ΔI_L ≈ ((24−20)·20)/(4.7e−6·465k·24) ≈ 1.53 A（≈31% 额定）。
+  - Boost 12→20 V/5 A：ΔI_L ≈ (12·(20−12))/(4.7e−6·465k·20) ≈ 2.20 A；I_DC≈8.8 A，I_PK≈9.9 A ≪ Isat=21 A。
+- 输出电容（Boost 最重，Vr 预算 20–25 mV）：
+  - ESR 纹波：I_OUT·V_OUT/V_IN ≈ 8.33 A；若 25 mV→R_COUT ≤ 3 mΩ；若 20 mV→≤2.4 mΩ（与频率无关）。
+  - 容性纹波：Vr_CAP = I_OUT·(1−V_IN/V_OUT)/(C·f) = 2/(C·f)。在 465 kHz 下：Vr≤25 mV → C≥~172 µF；Vr≤20 mV → C≥~215 µF【docs/datasheets/tps55288-datasheet.md:582】【docs/datasheets/tps55288-datasheet.md:592】。
+- 门极/开关损耗（Buck 24→20 V 粗估，Qg_HS≈40 nC，Qg_LS≈17.6 nC，Vdrive≈5 V）：
+  - P_gate ≈ (40nC+17.6nC)·5 V·465 kHz ≈ 0.133 W；
+  - P_sw_HS ≈ 0.5·24 V·5 A·(t_r+t_f)·465 kHz；若 (t_r+t_f)=12 ns → ≈0.34 W；若 20 ns → ≈0.57 W。
+
+> 注：以上为设计期校核基线。样机阶段需结合实测 tr/tf、dv/dt 与振铃及结温，必要时通过 2–5 Ω 栅电阻、RC Snubber 或展频/同步做进一步优化。
+
+### 6.4 小结
+
+- 采用 `R_FSW = 43.0 kΩ / 1%`，目标 `f_SW ≈ 465 kHz`；满足 <500 kHz 的高功率建议，并与当前 MOSFET/电感组合匹配良好。
+- 若更重视热/损耗余量，可备选 `47.0 kΩ → ≈425 kHz`；若更重视减小纹波与输出电容需求，则 `43.0 kΩ` 更优。
+
+## 7. FB 分压网络与 1.2 V 参考配置
 
 目标：在保持 SW2303 通过 `OPTO/FB` 引脚闭环控制的同时，使 TPS55288 默认稳定输出 5 V，并为后续 PD 档位调压留出易于标定的余量。
 
-### 6.1 配置流程
+### 7.1 配置流程
 
 1. **切换到外部分压模式并设定基准**：在寄存器 04h 中写入 `FB=1`，让 TPS55288 读取外部分压；随后通过寄存器 01h/00h 把内部参考电压 `VREF` 设定为 1.200 V（10-bit DAC，LSB ≈ 1.129 mV），对应代码约 `0x0376`【docs/datasheets/tps55288-datasheet.md:1056】【docs/datasheets/tps55288-datasheet.md:1063】【docs/datasheets/tps55288-datasheet.md:314】。
 2. **计算分压比**：外部分压满足 `VOUT = VREF × (1 + R_FB_UP / R_FB_BT)`【docs/datasheets/tps55288-datasheet.md:1065】。目标 5 V 时，`R_FB_UP / R_FB_BT ≈ 3.1667`。
 3. **阻值建议**：保持 TI 推荐的上臂约 100 kΩ 以便 CDC 补偿保持线性【docs/datasheets/tps55288-datasheet.md:1072】【docs/tps55288-design-notes.md:160】，可选 `R_FB_UP = 100 kΩ`、`R_FB_BT = 31.6 kΩ`（E96、1%）；实测约得到 5.01 V。若需更接近 5.000 V，可用 31.2 kΩ 或在 31.6 kΩ 并联 1 MΩ 微调。
 4. **与 SW2303 的连接**：将 SW2303 的 `OPTO/FB` 直接连到分压节点，并按数据手册 9.2 节将 `VFB` 接地启用 FB 模式，使内部“类 TL431”环路把节点拉到协议目标电压。
 
-### 6.2 实施注意事项
+### 7.2 实施注意事项
 
 - **校准余量**：`VREF = 1.2 V` 已处于 DAC 上限，若默认输出偏低只能通过调整电阻或在 SW2303 侧抬高目标档位；建议在样机阶段记录默认 5 V 档 `FB/INT` 电压，必要时通过寄存器细调 1–2 个 LSB。
 - **噪声与补偿**：在 FB 节点到 AGND 保留 100–220 pF 的并联电容抑制高速噪声，或按 TL431 常规串联 RC（示例：4.7 kΩ / 4.7 nF）后依据波形微调，确保 SW2303 外环路稳定。
 - **布局要点**：`R_FB_UP` 上端直接 Kelvin 到 VOUT 铜皮、下端与 `R_FB_BT` 汇合后短接至 `FB/INT` 节点；`R_FB_BT` 接 AGND。`OPTO/FB` 走线保持短且远离开关节点，避免高频干扰导致输出漂移。
 - **量产复核**：出厂前在 5 V、9 V、20 V 档位各测一次输出，以确认 SW2303 的多档调压仍与分压配置匹配；若启用 CDC 外补偿，记得重新校核 5 V 档静态电压。
 
-## 7. 输入 / 输出电容规划
+## 8. 输入 / 输出电容规划
 
-> 估算基于默认开关频率 `f_SW = 600 kHz`（位于设计笔记建议的 400–800 kHz 中段）；若调试阶段调整 `f_SW`，按数据手册公式 (17) 对输出端最小等效电容进行成比例修正。`docs/datasheets/tps55288-datasheet.md:566`, `docs/datasheets/tps55288-datasheet.md:594`
+> 本节估算基于已选开关频率 `f_SW ≈ 465 kHz`；若后续调整 `f_SW`，按数据手册式 (17) 对输出端最小等效电容成比例修正。`docs/datasheets/tps55288-datasheet.md:566`, `docs/datasheets/tps55288-datasheet.md:594`
 
-### 7.1 输入端（VIN↔PGND）
+### 8.1 输入端（VIN↔PGND）
 
 - 高频陶瓷堆栈：2×22 µF/35 V X7R（1210）+ 1 µF + 0.1 µF X7R，贴近 `VIN–HS–LS–PGND` 环路压缩高 di/dt 面积；考虑 24 V 直流偏压后有效电容仍约 20 µF，符合手册 4.7–22 µF 的推荐范围与 “20 µF 起步” 指南。`docs/datasheets/tps55288-datasheet.md:42`–`46`, `docs/datasheets/tps55288-datasheet.md:566`, `docs/datasheets/tps55288-datasheet.md:820`
 - 母线补偿：在输入连接器附近并联 100 µF/35 V 低 ESR 铝聚合物或电解电容，满足第 9 章所述的 bulk capacitance 要求并抑制远端母线扰动。`docs/datasheets/tps55288-datasheet.md:38`
 - 纹波电流校核：Buck 场景（24 V→20 V@5 A）下利用式 (14) 估算 `I_CIN(RMS) ≈ 1.86 A`，选型时保证并联陶瓷的额定 RMS ≥2 A，必要时放大封装或增片延长寿命。`docs/datasheets/tps55288-datasheet.md:556`
 
-### 7.2 输出端分区（检流电阻 ISP/ISN 两侧）
+### 8.2 输出端分区（检流电阻 ISP/ISN 两侧）
 
-#### 7.2.1 转换器侧（TPS → 检流电阻上游）
+#### 8.2.1 转换器侧（TPS → 检流电阻上游）
 
 - 目标：提供 Boost 高频环路低阻抗回路，同时避免脉动压降落在检流电阻上，确保 ISP/ISN 读取干净。
 - 推荐：≥3×22 µF/25 V X7R + 1 µF + 0.1 µF X7R，全部紧贴 VOUT/PGND。直流偏压后有效电容约 30 µF，可承受 12→20 V@5 A 的 4.1 A RMS 电流（式 15）。`docs/datasheets/tps55288-datasheet.md:40`, `docs/datasheets/tps55288-datasheet.md:48`, `docs/datasheets/tps55288-datasheet.md:578`
 - 布局要点：陶瓷正负极直接跨接 SW2→VOUT 铜皮与 PGND，必要时在 SW2 外沿布地过孔围栏抑制 dv/dt。
 
-#### 7.2.2 负载侧（检流电阻下游 → 外部负载）
+#### 8.2.2 负载侧（检流电阻下游 → 外部负载）
 
 - 目标：吸收 USB-PD 阶跃能量并配合电缆压降补偿。
 - 推荐：≥150 µF/25 V 低 ESR 聚合物 + 22 µF + 1 µF X7R。按式 (17) 在 1 % 纹波（0.2 V）下得到 `C_min ≈ 16.7 µF`；聚合物容量设置为 150–220 µF 可把突发压降控制在 <0.3 V，同时覆盖线缆压降补偿幅度。`docs/datasheets/tps55288-datasheet.md:594`
 - Kelvin 连接：ISP/ISN 需分别以独立、紧邻的差分走线取样；大电流铜皮只允许从 Sense 电阻负载端引出，避免测量偏移。`docs/datasheets/tps55288-datasheet.md:48`, `docs/datasheets/tps55288-datasheet.md:602`
 
-### 7.3 实施与验证要点
+### 8.3 实施与验证要点
 
 - 选用 X7R/X7S 等电介质时需查看直流偏压曲线；聚合物电容确认 100 kHz 阻抗与纹波额定。
 - 输入、输出陶瓷尽量与 MOSFET/电感同层布置，PGND 面使用密集过孔回流并避免跨越模拟地。
 - 样机验证：在 12 V→20 V/5 A（Boost）与 24 V→5 V/5 A（Buck）工况下测量输入/输出纹波、ISP/ISN 差分电压及限流触发；若调整 `f_SW`，按式 (17) 重新评估输出侧总等效电容后复测。
 
-## 8. 关键器件选型清单
+## 9. 关键器件选型清单
 
 - `Buck` 高边 / 低边 MOSFET：默认采用 **NCEP4090GU**，满足低阻抗与适中门极电荷；若验证低边热阻允许，也可组合 **NCEP4045GU** 作为同步整流管以改善 dv/dt。
 - `Buck` 小封装 MOSFET：高边指定 **NCEP3040Q**、低边指定 **NCE3035Q**（DFN-8，3.3×3.3 mm，V<sub>DS</sub>=30 V，R<sub>DS(on)</sub> 分别为 6.8 mΩ / 7.0 mΩ @10 V），测试重点记录 12 V→5 V /5 A 工况下的效率、SW dv/dt 与结温，确保与 5×6 mm 方案形成并行对比数据。
 - `主电感`：首选 **Sumida HPC1250-4R7MT**（4.7 µH，DCR_typ ≈ 10.5 mΩ，连续电流 13 A，饱和 20 A）；高度受限时可对比 HPC1250，需额外温升验证时可引入 HPC1770 方案。对外出 BOM 默认沿用 16.5×16.0 mm 方案（等效封装 MPX1D1650L4R7），17×17 mm 版本仅在极端低温升评估中作为“备用的备用”，无需常规验证。
 - `ILIM` 设置：使用 31.6 kΩ（E96、1%）贴片电阻，置于 ILIM 与 AGND 之间确保电流限幅目标。
-- 输入电容网络：参见 7.1 节，按默认 `f_SW = 600 kHz` 堆叠 2×22 µF X7R + 1 µF + 0.1 µF，并配合 100 µF Bulk；按式 (14) 校核 `I_CIN(RMS)`。
-- 输出电容网络：参见 7.2 节，转换器侧堆叠陶瓷、负载侧采用 ≥150 µF 聚合物 + 陶瓷，按式 (15)/(17) 校核并保持 Kelvin 走线。
+- `FSW` 频率设定：使用 43.0 kΩ（E24、1%）贴片电阻，`FSW → 43k → AGND`，对应 `f_SW ≈ 465 kHz`；封装建议 0603/0402，靠近芯片与 AGND 放置，远离 SW/栅极走线。
+- 输入电容网络：参见 8.1 节，按本设计 `f_SW ≈ 465 kHz` 堆叠 2×22 µF X7R + 1 µF + 0.1 µF，并配合 100 µF Bulk；按式 (14) 校核 `I_CIN(RMS)`。
+- 输出电容网络：参见 8.2 节，转换器侧堆叠陶瓷、负载侧采用 ≥150 µF 聚合物 + 陶瓷，按式 (15)/(17) 校核并保持 Kelvin 走线。
 - `验证重点`：沿用第 2 节建议，完成 Boost / Buck 满载结温与 SW 波形测试，并在 12→20 V/5 A、24→5 V/5 A 两端工况验证输入 / 输出纹波与 ISP/ISN 差分，确认与设计假设匹配后再冻结 BOM。
 
 | 器件型号 | 用途 | 数量 | [单价](购买链接) |
@@ -225,3 +258,4 @@
 | NCE3035Q | Buck 功率级低边（DFN3×3 mm，方案 B，小封装，与 NCEP3040Q 配对二选一） | 2 | [¥0.62](https://item.taobao.com/item.htm?id=813775396551) |
 | MPX1D1650L4R7 | 16.5×16.0 mm 主电感（默认量产件，适配 1650 焊盘，KEMET） | 1 | [¥18.45](https://item.szlcsc.com/1943475.html) |
 | MPX1D1770L4R7 | 17×17 mm 主电感（仅作备用-的-备用，极端热预算才启用，KEMET） | 1 | [¥16.39](https://item.szlcsc.com/2139545.html) |
+| R_FSW 43.0kΩ 1% 0603 | FSW 频率设定（≈465 kHz，对应 43 kΩ→AGND） | 1 | - |
