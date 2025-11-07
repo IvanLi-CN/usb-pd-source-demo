@@ -1,3 +1,5 @@
+> Source: [docs/datasheets/source/TPS55288RPMR-datasheet.pdf](../source/TPS55288RPMR-datasheet.pdf)
+
 # 8.2.3 Application Curves
 
 ![](../assets/tps55288-datasheet/30b13ac99c29a1686d455df90fc1a9580396efce2eb5c49d63e8d2a4721ccfd4.jpg)  

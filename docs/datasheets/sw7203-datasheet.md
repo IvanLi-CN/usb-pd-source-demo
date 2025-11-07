@@ -1,5 +1,7 @@
 # Narrow VDC High-efficiency Bidirectional BuckBoost Charge-Discharge Controller
 
+> Source: [docs/datasheets/source/SW7203_Datasheet_Release_DS107_1_V1.0.pdf](../source/SW7203_Datasheet_Release_DS107_1_V1.0.pdf)
+
 # 1. Description
 
 SW7203 is a high-efficiency synchronous 4-transistor bidirectional buck-boost chargedischarge controller that supports the charge-discharge management of 1-4 cells and NVDC. It can provide up to $1 0 0 \mathrm { W }$ output power and support multiple input and output detection and path drive. It can form a simple and complete bidirectional fast charging solution with an MCU and a protocol chip.

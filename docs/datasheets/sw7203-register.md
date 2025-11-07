@@ -1,3 +1,5 @@
+> Source: [docs/datasheets/source/SW7203_Register_EN.pdf](../source/SW7203_Register_EN.pdf)
+
 # SW7203 Register List
 
 # 1. History

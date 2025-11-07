@@ -1,3 +1,5 @@
+> Source: [docs/datasheets/source/SW7201_Software_CN.pdf](../source/SW7201_Software_CN.pdf)
+
 # SW7201 软件流程指导
 
 # 1. 初始化设置

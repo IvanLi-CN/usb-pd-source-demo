@@ -1,3 +1,5 @@
+> Source: [docs/datasheets/source/SW7201_Register_CN.pdf](../source/SW7201_Register_CN.pdf)
+
 # SW7201 寄存器手册
 
 # 1 版本历史

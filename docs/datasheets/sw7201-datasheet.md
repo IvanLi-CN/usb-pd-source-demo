@@ -1,5 +1,7 @@
 # I2C High-efficiency Bidirectional Buck-Boost Charge-Discharge Controller
 
+> Source: [docs/datasheets/source/SW7201_Datasheet_Release_DS107_2_V1.0.pdf](../source/SW7201_Datasheet_Release_DS107_2_V1.0.pdf)
+
 # 1. Description
 
 SW7201 is a high-efficiency synchronous 4-transistor bidirectional buck-boost chargedischarge controller that supports the charge-discharge management of 1-4 cells. It can provide up to 100W output power and support multiple input and output detection and path drive. It can form a simple and complete bidirectional fast charging solution with an MCU and a protocol chip.

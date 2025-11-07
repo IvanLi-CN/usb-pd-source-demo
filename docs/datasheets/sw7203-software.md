@@ -1,3 +1,5 @@
+> Source: [docs/datasheets/source/SW7203_Software_CN.pdf](../source/SW7203_Software_CN.pdf)
+
 # SW7203 软件流程指导
 
 # 1. 初始化设置
