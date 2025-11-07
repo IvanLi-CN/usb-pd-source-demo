@@ -42,7 +42,7 @@
 
 ### 2.2 驱动网络
 
-- **PMOS 模式**（主/副口都通用）：GATE 输出需串 1 kΩ 限流后连接到 MOSFET 栅极；同时从栅极到 VOUT 上拉 30 kΩ 并并联 15 V TVS/Zener，实现快速关断与 VGS 钳位。该网络可防止插拔瞬间因 VBUS 电压高于 15 V 导致 VGS 超额。[`docs/datasheets/sw2303/sw2303-schematic-guide.md:53`](docs/datasheets/sw2303/sw2303-schematic-guide.md:53)
+- **PMOS 模式**：GATE 输出需串 1 kΩ 限流后连接到 MOSFET 栅极；同时从栅极到 VOUT 上拉 30 kΩ 并并联 15 V TVS/Zener，实现快速关断与 VGS 钳位。该网络可防止插拔瞬间因 VBUS 电压高于 15 V 导致 VGS 超额。[`docs/datasheets/sw2303/sw2303-schematic-guide.md:53`](docs/datasheets/sw2303/sw2303-schematic-guide.md:53)
 - **NMOS 模式**：GATE 与栅极直接连接，依赖内置电荷泵。需确认 MOSFET 栅漏电流 ≤100 nA，以免泵电荷流失导致 VGS 降幅。必要时可加 1–2 Ω 栅电阻抑制振铃。
 
 ### 2.3 保护与布局
@@ -87,15 +87,15 @@
 
 ## 5. DFN3.3×3.3 PMOS 方案
 
-面向尺寸敏感的副口或辅路。
+面向尺寸受限或需要降额运行的场景。
 
 | 器件 | 封装 | 关键指标 | 估算损耗 (5 A) | 优势 | 关注点 | 淘宝价格 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `NCE20P45Q` | DFN3.3×3.3 | `RDS(on)=7 mΩ@-4.5 V / 12 mΩ@-1.8 V`；`ID=-45 A`。[`docs/datasheets/mosfets/nce20p45q.md:18`](docs/datasheets/mosfets/nce20p45q.md#L18) | ≈0.45 W | 20 V 器件提供 45 A 峰值，适合副口或备用输出；低阈值支持 SW2303 PMOS 驱动 | 需要确保 `VGS(max)=±10 V`，齐纳钳位必须贴近栅源；PowerDI3333 散热有限 | [￥0.89（1+）](https://item.taobao.com/item.htm?id=813357243438) |
-| `NCE40P20Q` | DFN3.3×3.3 | `RDS(on)=18 mΩ@-10 V / <28 mΩ@-4.5 V`；`ID=-40 A`。[`docs/datasheets/mosfets/nce40p20q.md:18`](docs/datasheets/mosfets/nce40p20q.md#L18) | ≈0.34 W | 40 V 耐压可覆盖 28 V 浪涌，适合作为 65 W 副口或辅助输出 | 栅电荷较高，建议串 1 kΩ 栅阻；全功率运行需在底层铺铜导热 | [￥0.85（1+）](https://item.taobao.com/item.htm?id=813531926445) |
-| `NCE30P28Q` | DFN3.3×3.3 | `RDS(on)=6.7 mΩ(typ)@-10 V / 9.5 mΩ(typ)@-4.5 V`；`Qg≈45 nC`；`ID=-28 A`。[`docs/datasheets/mosfets/nce30p28q.md:42`](docs/datasheets/mosfets/nce30p28q.md:42) | ≈0.23 W | 30 V 等级配合 3×3 封装仍保持低阻，适合空间受限的副口或备用 VBUS | 栅电荷 45 nC，需验证 SW2303 PMOS 驱动速度并配 1 kΩ 栅阻、齐纳钳位 | [￥0.83](https://item.taobao.com/item.htm?id=811850463141) |
-| `NCE3025Q` | DFN3.3×3.3 | `RDS(on)=10 mΩ@-10 V / 14 mΩ@-4.5 V`；`Qg≈15 nC`；`ID=-25 A`。[`docs/datasheets/mosfets/nce3025q.md:9`](docs/datasheets/mosfets/nce3025q.md#L9) | ≈0.25 W | 栅电荷仅 15 nC，SW2303 易于驱动；25 A 额定 + 7 mm² 占板适合副口或背靠背 PMOS | DFN3.3×3.3 散热有限，5 A 连续工作需 2 oz 铜+底层导热；30 V 器件必须配合齐纳钳位 | [￥0.78](https://item.taobao.com/item.htm?id=813675385660) |
-| `NCE3035Q` | DFN3.3×3.3 | `RDS(on)=7 mΩ@-10 V / 11 mΩ@-4.5 V`；`Qg≈45 nC`；`ID=-35 A`。[`docs/datasheets/mosfets/nce3035q.md:10`](docs/datasheets/mosfets/nce3035q.md#L10) | ≈0.18 W | 更低导通阻、35 A 峰值，适合要求 4–5 A 的副口；150 mJ 单脉冲浪涌能力好 | `Qg≈45 nC` 逼近 PMOS 驱动极限，需严格验证 VGS 波形并配置 1 kΩ 栅阻 + 15 V 齐纳 | [￥0.63](https://item.taobao.com/item.htm?id=813775396551) |
+| `NCE20P45Q` | DFN3.3×3.3 | `RDS(on)=7 mΩ@-4.5 V / 12 mΩ@-1.8 V`；`ID=-45 A`。[`docs/datasheets/mosfets/nce20p45q.md:18`](docs/datasheets/mosfets/nce20p45q.md#L18) | ≈0.45 W | 20 V 器件提供 45 A 峰值，适合降额或备用输出；低阈值支持 SW2303 PMOS 驱动 | 需要确保 `VGS(max)=±10 V`，齐纳钳位必须贴近栅源；PowerDI3333 散热有限 | [￥0.89（1+）](https://item.taobao.com/item.htm?id=813357243438) |
+| `NCE40P20Q` | DFN3.3×3.3 | `RDS(on)=18 mΩ@-10 V / <28 mΩ@-4.5 V`；`ID=-40 A`。[`docs/datasheets/mosfets/nce40p20q.md:18`](docs/datasheets/mosfets/nce40p20q.md#L18) | ≈0.34 W | 40 V 耐压可覆盖 28 V 浪涌，适合作为 65 W 系统的降额配置或辅助输出 | 栅电荷较高，建议串 1 kΩ 栅阻；全功率运行需在底层铺铜导热 | [￥0.85（1+）](https://item.taobao.com/item.htm?id=813531926445) |
+| `NCE30P28Q` | DFN3.3×3.3 | `RDS(on)=6.7 mΩ(typ)@-10 V / 9.5 mΩ(typ)@-4.5 V`；`Qg≈45 nC`；`ID=-28 A`。[`docs/datasheets/mosfets/nce30p28q.md:42`](docs/datasheets/mosfets/nce30p28q.md:42) | ≈0.23 W | 30 V 等级配合 3×3 封装仍保持低阻，适合空间受限的降额/备用 VBUS | 栅电荷 45 nC，需验证 SW2303 PMOS 驱动速度并配 1 kΩ 栅阻、齐纳钳位 | [￥0.83](https://item.taobao.com/item.htm?id=811850463141) |
+| `NCE3025Q` | DFN3.3×3.3 | `RDS(on)=10 mΩ@-10 V / 14 mΩ@-4.5 V`；`Qg≈15 nC`；`ID=-25 A`。[`docs/datasheets/mosfets/nce3025q.md:9`](docs/datasheets/mosfets/nce3025q.md#L9) | ≈0.25 W | 栅电荷仅 15 nC，SW2303 易于驱动；25 A 额定 + 7 mm² 占板适合紧凑降额方案或背靠背 PMOS | DFN3.3×3.3 散热有限，5 A 连续工作需 2 oz 铜+底层导热；30 V 器件必须配合齐纳钳位 | [￥0.78](https://item.taobao.com/item.htm?id=813675385660) |
+| `NCE3035Q` | DFN3.3×3.3 | `RDS(on)=7 mΩ@-10 V / 11 mΩ@-4.5 V`；`Qg≈45 nC`；`ID=-35 A`。[`docs/datasheets/mosfets/nce3035q.md:10`](docs/datasheets/mosfets/nce3035q.md#L10) | ≈0.18 W | 更低导通阻、35 A 峰值，适合 4–5 A 降额模式；150 mJ 单脉冲浪涌能力好 | `Qg≈45 nC` 逼近 PMOS 驱动极限，需严格验证 VGS 波形并配置 1 kΩ 栅阻 + 15 V 齐纳 | [￥0.63](https://item.taobao.com/item.htm?id=813775396551) |
 
 **设计提示**
 
@@ -104,12 +104,12 @@
 
 ## 6. DFN3.3×3.3 NMOS 方案
 
-适合紧凑布局或副口同步整流。
+适合紧凑布局或背靠背防反灌等高效低损耗开关场景。
 
 | 器件 | 封装 | 关键指标 | 估算损耗 (5 A) | 优势 | 关注点 | 淘宝价格 |
 | --- | --- | --- | --- | --- | --- | --- |
 | `NCEP3040Q` | DFN3.3×3.3 | `RDS(on)=6.8 mΩ@10 V / 9.5 mΩ@4.5 V`；`ID=40 A`。[`docs/datasheets/mosfets/ncep3040q.md:9`](docs/datasheets/mosfets/ncep3040q.md#L9) | ≈0.24 W | 30 V 器件，低栅漏电可稳定配合 SW2303 电荷泵；FOM 适中，易于布线 | 建议串 1 Ω 栅阻抑制振铃；功耗控制在 4–5 A 以内效果最好 | [￥0.62（1+）](https://item.taobao.com/item.htm?id=812367836579) |
-| `NCEP3065QU` | DFN3.3×3.3 | `RDS(on)=1.9 mΩ@10 V / 3.0 mΩ@4.5 V`；`ID=65 A`。[`docs/datasheets/mosfets/ncep3065qu.md:7`](docs/datasheets/mosfets/ncep3065qu.md#L7) | ≈0.07 W | 极低导通阻和 500 mJ 单脉冲能量，适合高功率副口或反灌保护双 NMOS | 栅电荷 54 nC，建议验证 SW2303 驱动充电速度；布线需留足散热铜皮 | [￥1.85（1+）](https://item.taobao.com/item.htm?id=814077881714) |
+| `NCEP3065QU` | DFN3.3×3.3 | `RDS(on)=1.9 mΩ@10 V / 3.0 mΩ@4.5 V`；`ID=65 A`。[`docs/datasheets/mosfets/ncep3065qu.md:7`](docs/datasheets/mosfets/ncep3065qu.md#L7) | ≈0.07 W | 极低导通阻和 500 mJ 单脉冲能量，适合高功率降额配置或反灌保护双 NMOS | 栅电荷 54 nC，建议验证 SW2303 驱动充电速度；布线需留足散热铜皮 | [￥1.85（1+）](https://item.taobao.com/item.htm?id=814077881714) |
 
 **设计提示**
 
