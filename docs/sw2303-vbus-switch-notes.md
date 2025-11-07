@@ -53,29 +53,30 @@
 
 ### 2.4 推荐方案（单 USB 口）
 
-- **优选 1：DFN5×6 PMOS 单管（NCE30P50G）**  
-  - MOSFET：`NCE30P50G`；搭配 `1 kΩ` 栅串阻、`30 kΩ` 上拉、`15 V` SOD-123 TVS（如 SMF15A）实现快速钳位。  
-  - VBUS 端建议再加 `SMAJ20A` 级共模 TVS 与 `5 mΩ` 取样电阻，保证 20 V/5 A 下导通损耗 <0.12 W。  
-  - 适用：SW2303 100 W 主通路，导通阻最小，温升最低。
+1. **优选 PMOS（DFN5×6 单管：NCE30P50G）**  
+   - MOSFET：`NCE30P50G`。  
+   - 配件：`1 kΩ` 栅串阻、`30 kΩ` 上拉、`15 V` SOD-123 TVS（如 SMF15A）跨栅源；VBUS 端 `SMAJ20A/SMBJ20A`；`5 mΩ` 取样电阻采用 Kelvin 布线。  
+   - 用途：100 W 单口输出的主力方案，导通损耗最低。
 
-- **次优 1：DFN5×6 PMOS 经济型（NCE30P30G）**  
-  - MOSFET：`NCE30P30G`；附带的栅网络与优选 1 相同，TVS 不可省。  
-  - 适合在铜皮/成本受限但仍需 100 W 能力的情形；`RDS(on)` 略高，需确保 PCB 至少 2 oz 铜皮。 
+2. **次优 PMOS（DFN5×6 单管：NCE30P30G）**  
+   - MOSFET：`NCE30P30G`。  
+   - 配件：与优选 PMOS 相同，TVS 与串阻不可省；需保证 MOSFET 下方≥2 oz 铜皮与过孔。  
+   - 用途：在成本或供应受限但仍需 100 W 的情况下替代。
 
-- **优选 2：DFN5×6 NMOS 单管（NCEP4090GU）**  
-  - MOSFET：`NCEP4090GU`；GATE 串 `1 Ω` 阻尼，栅源之间并 `18 V` TVS（SMAJ18A），VBUS 端另配 `SMAJ24A`。  
-  - 需保留 `Kelvin` 回路给 SW2303 测流；IGSS 宜验证 <100 nA。  
-  - 适合希望复用同一 GATE 拓扑的高侧 NMOS 方案，100 W/5 A 下导损 <0.1 W。
+3. **优选 NMOS（DFN5×6 单管：NCEP4090GU）**  
+   - MOSFET：`NCEP4090GU`。  
+   - 配件：GATE 串 `1 Ω` 阻尼；栅源并 `18 V` TVS（SMAJ18A）；VBUS 端 `SMAJ24A`；漏到源各加 `100 kΩ` 泄放确保关断；取样线路保持 Kelvin。  
+   - 用途：需要高侧 NMOS 拓扑且希望在 100 W 下保持极低 `RDS(on)`。
 
-- **次优 2：DFN5×6 NMOS 背靠背（NCEP40T14G ×2）**  
-  - 组成：两颗 `NCEP40T14G` 源端相连、漏端分别面向上/下游，实现防反灌。  
-  - 配置：每颗栅极串 `2 Ω`，并联 `18 V` TVS；两栅之间加 `100 kΩ` 均压；VBUS 端同样使用 `SMAJ24A`。  
-  - 适合对浪涌、反向插拔要求极高的系统，可在 100 W 下保持极低 `RDS(on)` 和高浪涌余量。
+4. **次优 NMOS（DFN5×6 背靠背：NCEP40T14G ×2）**  
+   - 结构：两颗 `NCEP40T14G` 源端相连、漏端分别朝上/下游，形成双向阻断。  
+   - 配件：每颗栅串 `2 Ω`，栅源并 `18 V` TVS；两栅之间增设 `100 kΩ` 均压；背靠背节点加 `1 nF` 缓冲；VBUS 侧 `SMAJ24A`。  
+   - 用途：对浪涌、反插、防回灌要求严苛的 USB-PD 场景。
 
-- **紧凑方案：DFN3.3×3.3（NCE3035Q / NCEP3065QU）**  
-  - PMOS：`NCE3035Q` + `1 kΩ` 栅串阻 + `15 V` TVS；NMOS：`NCEP3065QU`（单颗或背靠背）+ `1 Ω` 栅阻 + `18 V` TVS。  
-  - 必须在 FPC 区预留 ≥1 cm² 铜皮并布置 ≥6 颗过孔帮助散热，同样需要 VBUS 侧 `SMAJ20A~24A`。  
-  - 适合极限尺寸或需要将 MOSFET 放在 daughter board 的情况，使用前需实测热裕量。
+> 紧凑方案（DFN3.3×3.3，如 `NCE3035Q`、`NCEP3065QU`）仅在散热确认后使用：PMOS 栅极 `1 kΩ` 串阻 + `15 V` TVS，NMOS 栅极 `1 Ω` 串阻 + `18 V` TVS，VBUS 端必须配置 `SMAJ20~24A`，并在 PCB 上提供 ≥1 cm² 铜皮与 ≥6 颗热过孔。
+
+
+## 3. DFN5×6 PMOS 方案
 
 ## 3. DFN5×6 PMOS 方案
 
