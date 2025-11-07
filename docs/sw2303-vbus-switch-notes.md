@@ -59,8 +59,8 @@
 | **方案 A（次优）** | DFN5×6 PMOS | `NCE30P30G` | 外设与优选 PMOS 相同；RDS(on) 略高，需确认温升并预留更多铜皮/过孔。| [￥0.93](https://item.taobao.com/item.htm?id=811984370950) |
 | **方案 B（优选）** | DFN5×6 NMOS | `NCEP4090GU` | GATE 串 `1 Ω`；栅源并 `18 V` TVS（SMAJ18A）；VBUS 端 `SMAJ24A`；漏-源各 `100 kΩ` 泄放；取样保持 Kelvin。适用于单管高侧 NMOS。| [￥1.10](https://item.taobao.com/item.htm?id=812122094056) |
 | **方案 B（次优）** | DFN5×6 NMOS 背靠背 | `NCEP40T14G` ×2 | 两颗源端相连、漏端分别朝上/下游，形成双向阻断；每颗栅串 `2 Ω`，并 `18 V` TVS；两栅之间 `100 kΩ` 均压；节点加 `1 nF` 缓冲；VBUS 端 `SMAJ24A`。适用于高浪涌/防反灌需求。| [￥2.20](https://item.taobao.com/item.htm?id=811993983238) |
-| **方案 C（优选）** | DFN3.3×3.3 PMOS | `NCE3035Q` | `1 kΩ` 栅串阻、`15 V` TVS；VBUS 端 `SMAJ20~24A`；PCB 至少 1 cm² 铜皮 + ≥6 颗过孔导热；用于极限空间且散热已验证的场景。| [￥0.63](https://item.taobao.com/item.htm?id=813775396551) |
-| **方案 C（次优）** | DFN3.3×3.3 PMOS | `NCE3025Q` | 与方案 C 外设相同，适合更紧凑或需要背靠背 PMOS 的设计；注意 30 V 耐压需配齐纳。| [￥0.78](https://item.taobao.com/item.htm?id=813675385660) |
+| **方案 C（优选）** | DFN3.3×3.3 PMOS | `NCE3035Q` | `1 kΩ` 栅串阻、`30 kΩ` 上拉、`15 V` TVS；VBUS 端 `SMAJ20~24A`；PCB 至少 1 cm² 铜皮 + ≥6 颗过孔导热；用于极限空间且散热已验证的场景。| [￥0.63](https://item.taobao.com/item.htm?id=813775396551) |
+| **方案 C（次优）** | DFN3.3×3.3 PMOS | `NCE3025Q` | 与方案 C 外设相同（含 `30 kΩ` 上拉、`15 V` TVS），适合更紧凑或需要背靠背 PMOS 的设计；注意 30 V 耐压需配齐纳。| [￥0.78](https://item.taobao.com/item.htm?id=813675385660) |
 | **方案 D（优选）** | DFN3.3×3.3 NMOS | `NCEP3065QU` | 单颗或背靠背使用；栅串 `1 Ω`、并 `18 V` TVS；VBUS 端 `SMAJ24A`；PCB 铜皮与过孔要求同方案 C。| [￥1.85](https://item.taobao.com/item.htm?id=814077881714) |
 | **方案 D（次优）** | DFN3.3×3.3 NMOS | `NCEP3040Q` | 同样配置串阻/TVS；RDS(on) 稍高，重点核查 5 A 连续下的温升；建议加 `1 nF` 栅到源缓冲。| [￥0.62](https://item.taobao.com/item.htm?id=812367836579) |
 
