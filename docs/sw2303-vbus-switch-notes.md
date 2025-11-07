@@ -51,6 +51,32 @@
 - 电流采样电阻需靠近 SW2303 CSP/CSN，避免高 dI/dt 共模噪声耦合。[`docs/datasheets/sw2303/sw2303-schematic-guide.md:55`](docs/datasheets/sw2303/sw2303-schematic-guide.md:55)
 - PCB 指南建议 VBUS 主铜皮≥2 mm 宽、栅极走线远离高 dv/dt 区域，同时多点接地减少环路面积。`docs/datasheets/sw2303/sw2303-pcb-guide.md`
 
+### 2.4 推荐方案（单 USB 口）
+
+- **优选 1：DFN5×6 PMOS 单管（NCE30P50G）**  
+  - MOSFET：`NCE30P50G`；搭配 `1 kΩ` 栅串阻、`30 kΩ` 上拉、`15 V` SOD-123 TVS（如 SMF15A）实现快速钳位。  
+  - VBUS 端建议再加 `SMAJ20A` 级共模 TVS 与 `5 mΩ` 取样电阻，保证 20 V/5 A 下导通损耗 <0.12 W。  
+  - 适用：SW2303 100 W 主通路，导通阻最小，温升最低。
+
+- **次优 1：DFN5×6 PMOS 经济型（NCE30P30G）**  
+  - MOSFET：`NCE30P30G`；附带的栅网络与优选 1 相同，TVS 不可省。  
+  - 适合在铜皮/成本受限但仍需 100 W 能力的情形；`RDS(on)` 略高，需确保 PCB 至少 2 oz 铜皮。 
+
+- **优选 2：DFN5×6 NMOS 单管（NCEP4090GU）**  
+  - MOSFET：`NCEP4090GU`；GATE 串 `1 Ω` 阻尼，栅源之间并 `18 V` TVS（SMAJ18A），VBUS 端另配 `SMAJ24A`。  
+  - 需保留 `Kelvin` 回路给 SW2303 测流；IGSS 宜验证 <100 nA。  
+  - 适合希望复用同一 GATE 拓扑的高侧 NMOS 方案，100 W/5 A 下导损 <0.1 W。
+
+- **次优 2：DFN5×6 NMOS 背靠背（NCEP40T14G ×2）**  
+  - 组成：两颗 `NCEP40T14G` 源端相连、漏端分别面向上/下游，实现防反灌。  
+  - 配置：每颗栅极串 `2 Ω`，并联 `18 V` TVS；两栅之间加 `100 kΩ` 均压；VBUS 端同样使用 `SMAJ24A`。  
+  - 适合对浪涌、反向插拔要求极高的系统，可在 100 W 下保持极低 `RDS(on)` 和高浪涌余量。
+
+- **紧凑方案：DFN3.3×3.3（NCE3035Q / NCEP3065QU）**  
+  - PMOS：`NCE3035Q` + `1 kΩ` 栅串阻 + `15 V` TVS；NMOS：`NCEP3065QU`（单颗或背靠背）+ `1 Ω` 栅阻 + `18 V` TVS。  
+  - 必须在 FPC 区预留 ≥1 cm² 铜皮并布置 ≥6 颗过孔帮助散热，同样需要 VBUS 侧 `SMAJ20A~24A`。  
+  - 适合极限尺寸或需要将 MOSFET 放在 daughter board 的情况，使用前需实测热裕量。
+
 ## 3. DFN5×6 PMOS 方案
 
 适用于 100 W 级单口 VBUS。优先保证低导通阻和合理门极电荷，以匹配 SW2303 保守驱动能力。
