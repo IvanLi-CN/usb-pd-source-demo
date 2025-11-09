@@ -39,6 +39,9 @@
 - `NCEP40T14G` — 40 V / 140 A，RDS(on) 1.6 mΩ@VGS=10 V、2.3 mΩ@4.5 V；`docs/datasheets/mosfets/ncep40t14g.md`；店内参考价 [¥2.16](https://item.taobao.com/item.htm?id=811993983238)（采集自优信电子 2025-11-09）。
 - `NCEP6080AG` — 60 V / 80 A，RDS(on) <4 mΩ@VGS=10 V（typ 3.5 mΩ）、<5 mΩ@4.5 V；`docs/datasheets/mosfets/ncep6080ag.md`；店内参考价 [¥1.67](https://item.taobao.com/item.htm?id=812383056552)（采集自优信电子 2025-11-09）。
 - `NCEP6090AGU` — 60 V / 90 A，典型 RDS(on) 2.8 mΩ@VGS=10 V、3.5 mΩ@4.5 V；`docs/datasheets/mosfets/ncep6090agu.md`；店内参考价 [¥1.96](https://item.taobao.com/item.htm?id=811996059227)（采集自优信电子 2025-11-09）。
+- `NCEP40T13GU` — 40 V / 130 A，RDS(on) 2.3 mΩ@VGS=10 V；封装 DFN5×6‑8L；LCSC 参考价 [$0.29@100+](https://lcsc.com/product-detail/C191993.html)（采集 2025‑11‑09）。
+- `NCEP4045GU` — 40 V / 45 A，RDS(on) 8.5 mΩ@VGS=4.5 V（20 A 条件）；封装 DFN5×6‑8L；LCSC 参考价 [$0.24@50+](https://lcsc.com/product-detail/C502973.html)（采集 2025‑11‑09）。
+- `NCEP4090GU` — 40 V / 90 A，RDS(on) 2.2 mΩ@VGS=10 V；封装 DFN5×6‑8L；LCSC 参考价 [$0.32@50+](https://lcsc.com/product-detail/C502976.html)（采集 2025‑11‑09）。
 
 ### DFN3x3 / DFN3x3 EP
 - `AON7408` — 30 V / 18 A，RDS(on) <20 mΩ@VGS=10 V、<32 mΩ@4.5 V，官方 PDF 标注为 DFN 3x3 EP 封装；`docs/datasheets/mosfets/aon7408.md`；店内暂无上架（采集自优信电子 2025-11-09）。
