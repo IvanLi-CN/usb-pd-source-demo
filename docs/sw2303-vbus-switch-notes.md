@@ -49,6 +49,32 @@
 
 - VBUS 端建议放置 20 V 级 TVS 贴近连接器，并保证 VBUS/VIN 快速放电路径（SW2303 内置）。[`docs/datasheets/sw2303/sw2303-datasheet.md:27`](docs/datasheets/sw2303/sw2303-datasheet.md:27)
 - 电流采样电阻需靠近 SW2303 CSP/CSN，避免高 dI/dt 共模噪声耦合。[`docs/datasheets/sw2303/sw2303-schematic-guide.md:55`](docs/datasheets/sw2303/sw2303-schematic-guide.md:55)
+
+#### 2.3.1 为什么 NMOS 也需要并 TVS（栅-源钳位）
+
+- 高速插拔/ESD/CDE 瞬态下，VBUS（即 NMOS 源极）可能在 ns–µs 级快速跃迁，而门极由充泵与走线/寄生电容“滞留”。这会使瞬时 `VGS` 超过器件的绝对额定值（常见 `±20 V`），造成栅氧击穿或潜在退化。栅-源并联一只约 `18 V` 的 TVS/Zener 可把 `VGS` 正向钳在安全范围内；其正向导通也会把负向 `VGS` 钳在 ~0.7 V 附近。
+- 过压/关断瞬间，漏极（上游 VBUS 侧）dv/dt 经 `Cgd` 注入门极（Miller 效应），可能诱发误导通并再次冲击 `VGS`。G-S TVS 提供低阻泄放路径，抑制 Miller 注入，提升关断确定性。
+- 线缆与电源回路电感在关断/短路过程中会产生尖峰。主体能量应由“VBUS 对地”的总线 TVS 吸收（本节第一条），但耦合到门极的尖峰仍需局部钳位，避免反复靠近额定值工作导致的可靠性下降。
+- `SW2303` 内置电荷泵主要提供驱动电荷，并非高速钳位器件；其灌电流与响应时间不足以在 IEC 61000-4-2/线缆放电事件（CDE）级别的尖峰下保护 `VGS`，因此需要就地并一只 G-S 钳位器件。
+
+选型与布局建议：
+
+- G-S 钳位：优先选 `VRWM≈16–18 V` 的单向 TVS/Zener（如 `SMAJ18A`），保证在工作 `VGS`（8–12 V）下泄漏很小（µA 级），在浪涌时 `VCLAMP≤22–24 V`；靠近 MOSFET 引脚放置，最短回路走线。
+- 总线钳位：在连接器旁放置 `VRWM=20–24 V` 的 VBUS 对地 TVS（如 `SMAJ24A/SMBJ24A`），用于吸收热插拔/线缆放电影响的主体能量，降低 MOSFET 所见 `VDS`/`VGS` 应力。
+- 与本文件的器件表一致：单 NMOS 方案在栅-源并 `18 V` TVS，并在 VBUS 端放置 `SMAJ24A`。[`docs/sw2303-vbus-switch-notes.md:60`](docs/sw2303-vbus-switch-notes.md:60)
+
+#### 2.3.2 TVS 极性与连接方向（单向 TVS 推荐）
+
+- NMOS（限制正向 VGS）：`TVS 阴极(Cathode) → Gate`，`阳极(Anode) → Source`。当 `Vg−Vs ≥ Vz` 时 TVS 反向雪崩把 `VGS` 钳在安全值；当出现负向 `VGS` 时由 TVS 正向导通把电压钳在≈0.7 V。
+- PMOS（限制负向 VGS）：`TVS 阴极(Cathode) → Source`，`阳极(Anode) → Gate`。当 `Vs−Vg ≥ Vz` 时 TVS 反向雪崩把 `|VGS|` 钳住；正向 `VGS` 则由 TVS 正向导通≈0.7 V。
+- 标称电压建议：NMOS 选 `VRWM≈16–18 V`（如 `SMAJ18A`），PMOS 选 `VRWM≈12–15 V`（如 `SMF15A/SMAJ15A`），避免在正常导通电压下误动作，又能在浪涌时可靠钳位。
+- 识别与焊接：单向 TVS 通常在“阴极”一侧有条形丝印，按上面规则对准 Gate/Source 引脚即可。双向 TVS 方向不敏感，但失去“另一极性 0.7 V 正向钳位”的好处，不如单向器件适配本场景。
+
+可选小体积齐纳（用于栅-源钳位，非总线TVS）：
+
+- PMOS 栅-源：`MM5Z15VT1G`（ON Semiconductor，约 15 V，SOD-523，小信号齐纳），贴近 G/S 引脚放置即可。
+- NMOS 栅-源：`MM5Z18VT1G`（ON Semiconductor，约 18 V，SOD-523，小信号齐纳），贴近 G/S 引脚放置即可。
+- 注意：上述为“小信号”齐纳，脉冲功率有限，仅用于门极局部钳位；VBUS 对地仍需放置 `SMAJ20~24A/SMBJ20~24A` 等“总线 TVS”吸收主体能量。
 - PCB 指南建议 VBUS 主铜皮≥2 mm 宽、栅极走线远离高 dv/dt 区域，同时多点接地减少环路面积。`docs/datasheets/sw2303/sw2303-pcb-guide.md`
 
 ### 2.4 推荐方案（单 USB 口）
