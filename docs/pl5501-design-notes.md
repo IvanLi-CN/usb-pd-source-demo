@@ -1,6 +1,6 @@
 # PL5501 方案设计笔记（DC-DC 段）
 
-本笔记聚焦以宝砾微 PL5501 构建 USB‑C 源端（含 PPS）的升降压功率级选型与实现要点，输出 100 W（20 V/5 A），输入 12–24 V 直流母线，协议由 SW2303 负责，采用 OPTO/FB 与 VADJ 协同实现 PPS。
+本笔记聚焦以宝砾微 PL5501 构建 USB‑C 源端（含 PPS）的升降压功率级选型与实现要点，输出 100 W（20 V/5 A），输入 12–24 V 直流母线。协议由 SW2303 负责，采用“FB 模式”通过 OPTO/FB 拉动 PL5501 的 FB2 分压节点实现固定档与 PPS；PL5501 的 VADJ 固定为 2 V（接 VDD）或由外部 DAC/PWM 驱动，SW2303 不直接驱动 VADJ。
 
 ## 1. 系统目标与芯片要点
 
@@ -83,10 +83,6 @@ PL5501 提供 150/300/600/1200 kHz 四档。由于本项目体积敏感，优�
   - 600 kHz 场景下，选择“较低 Qg/Qgd”的器件可明显降低开关/门极损耗，抵消部分 RDS 上升带来的效率劣化。
  结论：当前库内 5×6 的 40/60 V 器件（NCEP40T14G / NCEP6090AGU / NCEP6080AG）均可覆盖 100 W 需求；无须过度苛求极限超低 RDS(on)。3×3 因仅有 30 V 等级，建议仅作 12 V DEMO 试验，不纳入 24 V 正式方案。
 
-### 3.6 价格与 BOM 候选（合并说明）
-
-已合并至“3.2 候选与采购汇总（技术 + 价格/链接）”。
-
 ## 4. 电感选型与最终推荐（600 kHz 基线）
 
 以最严苛工况估算（Boost：12 V→20 V，100 W/5 A）：
@@ -117,7 +113,7 @@ PL5501 提供 150/300/600/1200 kHz 四档。由于本项目体积敏感，优�
 - 频率设定/抖频：将频率档位配置为 600 kHz（按数据手册的 FSW 选择脚/电阻分档，见 `docs/datasheets/pl5501-datasheet.md:18`、`:9`）；建议开启展频以改善 EMI（频率抖动特性参见特性描述）。
 - 软启动/斜率：配置 SS 以限制上电 dV/dt；PPS 档位切换采用受控斜率（VADJ 侧 RC）抑制过冲/下冲。
 - 调压/限流（依据：VADJ/IADJ 引脚功能，见 `docs/datasheets/pl5501-datasheet.md:20`、引脚表 `:32`）：
-  - VADJ：作为电压动态参考，连接 SW2303 的 OPTO/FB；VADJ‑AGND 并 10–100 nF 与小电阻阻尼。
+  - VADJ：作为电压动态参考，通常接 VDD 固定 2 V；或由外部 DAC/PWM（如 MCU）经 RC 滤波驱动。切勿将 SW2303 的 OPTO/FB 接至 VADJ。VADJ‑AGND 建议并 10–100 nF，并配合小电阻阻尼。
   - IADJ：用于设定输出电流限值（具体 5.5 A 设计见 6.1）；PPS 档位切换时可同步调整限流以匹配线缆/热预算。
   - FB：分压设定默认 5 V 上电，PPS 通过 VADJ 微步进；避免 VADJ 与 FB 直连导致环路抢权。
 - 补偿（COMP/VC）：Type‑II 起步，目标带宽 ≈ fs/30（~20 kHz），相位裕量 ≥45–60°（误差放大器/COMP 引脚见 `docs/datasheets/pl5501-datasheet.md:32`）；对 5/9/15/20 V 与 12/24 V 端点分别验证稳定域。
@@ -217,7 +213,7 @@ PL5501 提供 150/300/600/1200 kHz 四档。由于本项目体积敏感，优�
 
 ## 9. 与 SW2303 的调压协同（PPS）
 
-- FB/OPTO 路线：SW2303 的 OPTO/FB 并入 PL5501 的 FB/参考节点（或 VADJ）实现 5/9/15/20 V 档与 PPS 细步；需校准 20 mV 步进下的线性与温漂（依据：SW2303 引脚/功能与 FB/OPTO 驱动，见 `docs/datasheets/sw2303/sw2303-datasheet.md:63`、`:79`；原理图/PCB 指南见 `docs/datasheets/sw2303/sw2303-schematic-guide.md`、`sw2303-pcb-guide.md`）。
+- FB/OPTO 路线：SW2303 的 OPTO/FB 并入 PL5501 的 FB2 分压节点（而非 VADJ），实现 5/9/15/20 V 档与 PPS 细步；需校准 20 mV 步进下的线性与温漂（依据：SW2303 引脚/功能与 FB/OPTO 驱动，见 `docs/datasheets/sw2303/sw2303-datasheet.md:63`、`:79`；原理图/PCB 指南见 `docs/datasheets/sw2303/sw2303-schematic-guide.md`、`sw2303-pcb-guide.md`）。
 - 5 A 限流一致性：SW2303 侧以 IFB/CSP 限流，PL5501 侧以 IADJ/CS 配置，二者目标电流需一致并受 5 A 约束（依据：SW2303 IFB/CSP 与 PL5501 IADJ/CS 描述，见 `docs/datasheets/sw2303/sw2303-datasheet.md:63`、`docs/datasheets/pl5501-datasheet.md:20`、`:32`）。
 
 ## 10. 待验证项（样机/量产）
