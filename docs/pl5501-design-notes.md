@@ -17,7 +17,10 @@ PL5501 提供 150/300/600/1200 kHz 四档。由于本项目体积敏感，优�
 - 备选：300 kHz（效率/EMI 裕量更好、磁件损耗更低，但体积上不占优）。
 - 不优先：1200 kHz（开关损耗与热压力过高，除非极端小型化并有强散热）；150 kHz（磁件体积大、纹波电流偏大）。
 
-频率设置对应档位电阻/引脚按数据手册配置；建议开启抖频并配合 2–5 Ω 栅电阻抑制 dV/dt 与振铃。
+根据数据手册表格（`docs/datasheets/pl5501-datasheet.md:68`），FREQ 引脚电压 0–0.4 V、1.8–5.4 V、0.4–0.85 V、0.85–1.8 V 分别映射 150/300/600/1200 kHz。600 kHz 需要 `VFREQ≈0.4–0.85 V`，本方案在 FREQ 与 AGND 间放置 `Rbot=56 kΩ`，FREQ 与 VDD 间放置 `Rtop=470 kΩ`，得到 `VFREQ≈5.4 V × 56/(470+56) ≈ 0.58 V`。
+
+- FREQ 分压器贴近芯片布置，并让下端直接落在 AGND；若需调至 1200 kHz，可将 `Rbot` 换为 120 kΩ（`VFREQ≈1.0 V`）。
+- 建议开启抖频并配合 2–5 Ω 栅电阻抑制 dV/dt 与振铃。
 
 ## 3. MOSFET 选型（600 kHz｜按项目库）
 
@@ -113,9 +116,9 @@ PL5501 提供 150/300/600/1200 kHz 四档。由于本项目体积敏感，优�
 - 频率设定/抖频：将频率档位配置为 600 kHz（按数据手册的 FSW 选择脚/电阻分档，见 `docs/datasheets/pl5501-datasheet.md:18`、`:9`）；建议开启展频以改善 EMI（频率抖动特性参见特性描述）。
 - 软启动/斜率：配置 SS 以限制上电 dV/dt；PPS 档位切换采用受控斜率（VADJ 侧 RC）抑制过冲/下冲。
 - 调压/限流（依据：VADJ/IADJ 引脚功能，见 `docs/datasheets/pl5501-datasheet.md:20`、引脚表 `:32`）：
-  - VADJ：作为电压动态参考，通常接 VDD 固定 2 V；或由外部 DAC/PWM（如 MCU）经 RC 滤波驱动。切勿将 SW2303 的 OPTO/FB 接至 VADJ。VADJ‑AGND 建议并 10–100 nF，并配合小电阻阻尼。
-  - IADJ：用于设定输出电流限值（具体 5.5 A 设计见 6.1）；PPS 档位切换时可同步调整限流以匹配线缆/热预算。
-  - FB：分压设定默认 5 V 上电，PPS 通过 VADJ 微步进；避免 VADJ 与 FB 直连导致环路抢权。
+  - VADJ：默认直接接 VDD，将 VREF 固定 2 V；仅当未来需要 MCU/DAC 直接拉动 VBUS 时才开放。VADJ‑AGND 建议并 470 nF（兼作软启动），并配合小电阻阻尼。
+  - IADJ：用于设定输出电流限值，默认同样接 VDD 令 IREF=2 V（详见 6.1），若需不同限值再以 0–2 V DAC 调整。
+  - FB：以 R1/R2 分压默认 5 V，上电即工作；SW2303 通过 OPTO 并入 FB2 调压（详见 6.2），避免与 VADJ 抢环路。
 - 补偿（COMP/VC）：Type‑II 起步，目标带宽 ≈ fs/30（~20 kHz），相位裕量 ≥45–60°（误差放大器/COMP 引脚见 `docs/datasheets/pl5501-datasheet.md:32`）；对 5/9/15/20 V 与 12/24 V 端点分别验证稳定域。
 - 保护阈值：设定 VIN UVLO（如 10–10.5 V 上电/9–9.5 V 断电）与 VOUT OVP；CS 侧用 RC（如 100–220 pF＋数 Ω）滤除尖峰（UVLO/OVP/限流/OTP 等保护参见 `docs/datasheets/pl5501-datasheet.md:18`）。
 - 栅极与缓冲：各栅极串 2–5 Ω；必要时在 SW‑GND 并 RC Snubber；布线最小化 VIN–HS–LS–PGND 高频环路，源极开尔文回采。
@@ -139,6 +142,38 @@ PL5501 提供 150/300/600/1200 kHz 四档。由于本项目体积敏感，优�
 - 版图要点：`CSP2/CSN2` Kelvin 走线、等长对称，远离 `BST/SW/HG/LG` 等噪声节点；`RCS2` 位于 VBUS 大电容与接口之间。
   - 依据：`docs/datasheets/pl5501-datasheet.md:265`。
 - 与 SW2303 协同：SW2303 口端限流配置为 5 A；PL5501 设定约 5.7 A（RCS2=7 mΩ）作为电源级上限，避免双环冲突（量产前按瞬态/热校准微调 `RCS2`）。
+
+### 6.2 FB2 分压与 SW2303 协同
+
+- **VADJ 处理**：VADJ 短接 VDD，令 VREF 恒 2 V（`docs/datasheets/pl5501-datasheet.md:20`、`:32`、`:246`），SW2303 仅通过 FB2 调压；VREF/IREF 各并 470 nF 兼作软启动。
+- **默认 5 V 分压**：输出满足 `VOUT = 2 V × (1 + R1/R2)`（`docs/datasheets/pl5501-datasheet.md:246-254`）。选 1% 精度 `R1 = 150 kΩ`（VBUS→FB2）与 `R2 = 100 kΩ`（FB2→AGND），分压电流约 20 µA，既保证默认 5 V，又不给 SW2303 光耦带来过大负担。
+- **版图要求**：R1/R2 紧贴 FB2，走线远离 BST/SW 等噪声节点并单点回 AGND（`docs/datasheets/pl5501-datasheet.md:262`）。暂不并 FB2 补偿电容，仅在验证后确认为必要时再加。
+- **SW2303 OPTO 接入**：SW2303 的 OPTO/FB（下拉型）直接并入 FB2 节点（`docs/pl5501-design-notes.md:3`、`docs/datasheets/sw2303/sw2303-datasheet.md:63`）。
+  - OPTO 截止 ⇒ 由 R1/R2 单独决定 5 V。
+  - 请求 9/15/20 V 或 PPS ⇒ OPTO 灌流 0–40 µA 量级，等效减小 R2，拉升 VBUS；需按 SW2303 20 mV 步进特性校准跨导，保证线性。
+  - 建议在 OPTO 集电极与 FB2 之间串 1–2 kΩ 阻尼，并将 SW2303 推荐的补偿 RC 置于其本侧，避免直接挂在 FB2 节点上。
+- **IADJ**：保持与 6.1 相同的“直连 VDD + RCS2 限流”策略，PL5501 与 SW2303 的 5 A 限流点分别校准，防止双环互抢。
+- **上电顺序**：先由 R1/R2 建立 5 V，待 PL5501 软启动完成、SW2303 初始化后再释放 OPTO，避免软启动阶段被强制拉高；调试时记录 FB2/VBUS 波形确认光耦动作不会引入振荡或欠压。
+
+### 6.3 关键引脚连接清单
+
+| 引脚 | 本方案连接方式 | 备注与依据 |
+| --- | --- | --- |
+| VADJ | 直接焊接至 VDD（PL5501 内部 5.4 V LDO 输出） | 使 VREF 恒定 2 V，避免 SW2303/MCU 与 PL5501 抢环；若未来需要 DAC/PWM 调压，再解除短接。参考 `docs/datasheets/pl5501-datasheet.md:20`、`:32`。 |
+| VREF | VREF 对 AGND 并 470 nF（X7R，0603/0805），靠近芯片；无其他外接电阻 | 该电容同时担当软启动、滤除 VADJ 噪声。官方推荐“较大电容如 470 nF”，不可悬空；见 `docs/datasheets/pl5501-datasheet.md:176`。 |
+| FB2 | 通过 `R1=150 kΩ`（VBUS→FB2）、`R2=100 kΩ`（FB2→AGND）分压，SW2303 OPTO 集电极并入 FB2，发射极接 AGND，串 1–2 kΩ 阻尼 | R1/R2 设定默认 5 V；OPTO 仅在调压时下拉 FB2。分压/OPTO 走线要远离噪声，参见 6.2；依据 `docs/datasheets/pl5501-datasheet.md:246-254`、`docs/datasheets/sw2303/sw2303-datasheet.md:63`。 |
+| IADJ | 直接焊接至 VDD，并预留测试焊盘 | 强制 IREF=2 V，限流由 RCS2 决定。后续若需要动态限流，可改为 0–2 V DAC；依据 `docs/datasheets/pl5501-datasheet.md:20`、`:32`。 |
+| IREF | IREF 对 AGND 并 470 nF（同 VREF 规格），靠近芯片 | 该电容滤除 IADJ 噪声并决定平均限流软启动/响应，禁止悬空；参考 `docs/datasheets/pl5501-datasheet.md:176`。 |
+| FREQ | 置入 `Rtop=470 kΩ`（VDD→FREQ）、`Rbot=56 kΩ`（FREQ→AGND），实现 `VFREQ≈0.58 V`；FREQ→AGND 同时并 100 nF 抑制干扰 | 470 kΩ/56 kΩ 组合属于通用 E24 阻值，`VFREQ` 落在 0.4–0.85 V 档位，对应 600 kHz。若要切换 1200 kHz，可将下阻改为 ≈120 kΩ。依据 `docs/datasheets/pl5501-datasheet.md:68`。 |
+| LDO | 在 LDO 与 AGND 并 1 µF（X7R），靠近芯片；若需要可从此取 5 V/55 mA 给 MCU/辅助逻辑，否则保持空载但保留去耦 | LDO 提供 5 V/55 mA 低静耗电源（`docs/datasheets/pl5501-datasheet.md:32`），也是内部参考/控制电源，按手册推荐至少放 1 µF 去耦。 |
+| COMP | Type‑II 起步：`COMP→RC=10 kΩ→CC=10 nF→AGND` 串联，在 COMP 对地并 `Cff=220–330 pF` | 该网络带宽约 fs/30（~20 kHz），与文中补偿建议一致；RC/CC/Cff 贴近芯片并回 AGND，实测可在 5/9/15/20 V 档微调；参考 `docs/pl5501-design-notes.md:111-123` 与 `docs/datasheets/pl5501-datasheet.md:32`（COMP 定义）。 |
+| CSP2/CSN2 | Kelvin 连接至 RCS2 两端，前串 `RF`、并 `CF`（按实测整定），布线对称 | 负责输出平均限流检测；详见 6.1，依据 `docs/datasheets/pl5501-datasheet.md:150-190`。 |
+| CSP1/CSN1 | 未使用输入限流时短接在一起并连至 VIN 侧铜皮 | 关闭输入平均限流，避免悬空拾噪；参考 `docs/datasheets/pl5501-datasheet.md:158`。 |
+| TS | 采用 `VDD → Rtop=51 kΩ → TS → Rseries=47 kΩ → NTC(FNTC0402X103F3380FB，10 kΩ@25 °C，B=3380) → AGND` 串式网络 | 计算结果：−10 °C≈3.48 V、25 °C≈2.85 V、110 °C≈2.61 V，约 −10 °C～110 °C 保持在 2.6–3.8 V 合法窗口内；温度超限时 TS 被拉出范围，PL5501 自动停机。依据 `docs/datasheets/pl5501-datasheet.md:32`、`:9.9`。 |
+| EN | 按系统需求保持悬空由上游开漏/光耦控制，使默认掉电保持禁用；需要启动时由 SW2303/MCU 拉高 | 保证“默认禁止”时 PL5501 不自行上电；使能顺序由协议芯片掌控。参考 `docs/datasheets/pl5501-datasheet.md:32`（EN 描述）并结合本方案电源时序要求。 |
+| VDD/AGND | VDD 旁并 ≥1 µF + 0.1 µF 去耦，AGND 作为小信号基准，与功率 PGND 在芯片底部汇接 | 提供控制电源及模拟地，确保噪声隔离。 |
+
+> 注：其余功率级管脚（VIN、VBUS、SW1/2、HG/LG、BST、COMP、FREQ 等）已在第 3、4、6.1 节分别描述布局、电感、栅极及补偿做法，按对应章节执行即可。
 
 ## 7. 电容设计（100 W 基线｜输入→功率级、功率级→输出检流、检流→VBUS 开关）
 
