@@ -125,7 +125,7 @@
                 "11": {
                     "name": "VOUT",
                     "number": "11",
-                    "net": "VOUT_TPS",
+                    "net": "ISP_TPS",
                     "props": {
                         "Pin Number": "11"
                     }
@@ -2605,7 +2605,7 @@
                 "8": {
                     "name": "CSP",
                     "number": "8",
-                    "net": "SW2303_CSP",
+                    "net": "$1N65",
                     "props": {
                         "Pin Number": "8"
                     }
@@ -2909,7 +2909,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "SW2303_CSP",
+                    "net": "$1N65",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -2963,7 +2963,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "SW2303_CSP",
+                    "net": "$1N65",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -3260,7 +3260,7 @@
                 "A1B12": {
                     "name": "GND",
                     "number": "A1B12",
-                    "net": "GND",
+                    "net": "PGND_TPS",
                     "props": {
                         "Pin Number": "A1B12"
                     }
@@ -3316,7 +3316,7 @@
                 "B1A12": {
                     "name": "GND",
                     "number": "B1A12",
-                    "net": "GND",
+                    "net": "PGND_TPS",
                     "props": {
                         "Pin Number": "B1A12"
                     }
@@ -4425,7 +4425,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "SW2303_CSP",
+                    "net": "$1N65",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -4507,7 +4507,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "GND",
+                    "net": "PGND_TPS",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -4543,6 +4543,232 @@
                     "net": "FB_TPS",
                     "props": {
                         "Pin Number": "1"
+                    }
+                }
+            }
+        },
+        "gge402": {
+            "props": {
+                "Unique ID": "gge402",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "6fda3b379eb24195",
+                "Designator": "Q22",
+                "Device": "c938cea6d0d62b67",
+                "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
+                "Supplier Part": "C502964",
+                "Manufacturer": "NCE(无锡新洁能)",
+                "Manufacturer Part": "NCEP3065QU",
+                "Supplier Footprint": "DFN3.3x3.3-8L",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
+                "Supplier": "LCSC",
+                "Footprint": "edb067b44731c8fc",
+                "3D Model": "516601acd9f9456f95db3aec763cd5e7",
+                "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
+                "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
+                "Number": "1个N沟道",
+                "Drain to Source Voltage": "30V",
+                "Current - Continuous Drain(Id)": "65A",
+                "RDS(on)": "1.9mΩ@10V,20A",
+                "Pd - Power Dissipation": "55W",
+                "Gate Threshold Voltage (Vgs(th))": "1.5V",
+                "Gate Charge(Qg)": "34.8nC@10V",
+                "Input Capacitance(Ciss)": "2.1nF@15V",
+                "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
+                "Operating Temperature": "-55℃~+150℃@(Tj)",
+                "Name": "={Manufacturer Part}",
+                "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I156",
+                "DeviceName": "NCEP3065QU",
+                "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "S",
+                    "number": "1",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "S",
+                    "number": "2",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                },
+                "3": {
+                    "name": "S",
+                    "number": "3",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "3"
+                    }
+                },
+                "4": {
+                    "name": "G",
+                    "number": "4",
+                    "net": "$1N52",
+                    "props": {
+                        "Pin Number": "4"
+                    }
+                },
+                "5": {
+                    "name": "D",
+                    "number": "5",
+                    "net": "VIN",
+                    "props": {
+                        "Pin Number": "5"
+                    }
+                },
+                "6": {
+                    "name": "D",
+                    "number": "6",
+                    "net": "VIN",
+                    "props": {
+                        "Pin Number": "6"
+                    }
+                },
+                "7": {
+                    "name": "D",
+                    "number": "7",
+                    "net": "VIN",
+                    "props": {
+                        "Pin Number": "7"
+                    }
+                },
+                "8": {
+                    "name": "D",
+                    "number": "8",
+                    "net": "VIN",
+                    "props": {
+                        "Pin Number": "8"
+                    }
+                },
+                "9": {
+                    "name": "D",
+                    "number": "9",
+                    "net": "VIN",
+                    "props": {
+                        "Pin Number": "9"
+                    }
+                }
+            }
+        },
+        "gge403": {
+            "props": {
+                "Unique ID": "gge403",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "6fda3b379eb24195",
+                "Designator": "Q23",
+                "Device": "c938cea6d0d62b67",
+                "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
+                "Supplier Part": "C502964",
+                "Manufacturer": "NCE(无锡新洁能)",
+                "Manufacturer Part": "NCEP3065QU",
+                "Supplier Footprint": "DFN3.3x3.3-8L",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
+                "Supplier": "LCSC",
+                "Footprint": "edb067b44731c8fc",
+                "3D Model": "516601acd9f9456f95db3aec763cd5e7",
+                "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
+                "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
+                "Number": "1个N沟道",
+                "Drain to Source Voltage": "30V",
+                "Current - Continuous Drain(Id)": "65A",
+                "RDS(on)": "1.9mΩ@10V,20A",
+                "Pd - Power Dissipation": "55W",
+                "Gate Threshold Voltage (Vgs(th))": "1.5V",
+                "Gate Charge(Qg)": "34.8nC@10V",
+                "Input Capacitance(Ciss)": "2.1nF@15V",
+                "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
+                "Operating Temperature": "-55℃~+150℃@(Tj)",
+                "Name": "={Manufacturer Part}",
+                "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I157",
+                "DeviceName": "NCEP3065QU",
+                "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "S",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "S",
+                    "number": "2",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                },
+                "3": {
+                    "name": "S",
+                    "number": "3",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "3"
+                    }
+                },
+                "4": {
+                    "name": "G",
+                    "number": "4",
+                    "net": "$1N55",
+                    "props": {
+                        "Pin Number": "4"
+                    }
+                },
+                "5": {
+                    "name": "D",
+                    "number": "5",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "5"
+                    }
+                },
+                "6": {
+                    "name": "D",
+                    "number": "6",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "6"
+                    }
+                },
+                "7": {
+                    "name": "D",
+                    "number": "7",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "7"
+                    }
+                },
+                "8": {
+                    "name": "D",
+                    "number": "8",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "8"
+                    }
+                },
+                "9": {
+                    "name": "D",
+                    "number": "9",
+                    "net": "$1N18",
+                    "props": {
+                        "Pin Number": "9"
                     }
                 }
             }
@@ -8120,7 +8346,7 @@
                 "8": {
                     "name": "CSP",
                     "number": "8",
-                    "net": "SW2303_CSP",
+                    "net": "$2N96",
                     "props": {
                         "Pin Number": "8"
                     }
@@ -8424,7 +8650,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "SW2303_CSP",
+                    "net": "$2N96",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -8478,7 +8704,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "SW2303_CSP",
+                    "net": "$2N96",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -9573,7 +9799,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "SW2303_CSP",
+                    "net": "$2N96",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -10152,6 +10378,458 @@
                     "net": "FB_SW",
                     "props": {
                         "Pin Number": "1"
+                    }
+                }
+            }
+        },
+        "gge404": {
+            "props": {
+                "Unique ID": "gge404",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "6fda3b379eb24195",
+                "Designator": "Q28",
+                "Device": "c938cea6d0d62b67",
+                "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
+                "Supplier Part": "C502964",
+                "Manufacturer": "NCE(无锡新洁能)",
+                "Manufacturer Part": "NCEP3065QU",
+                "Supplier Footprint": "DFN3.3x3.3-8L",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
+                "Supplier": "LCSC",
+                "Footprint": "edb067b44731c8fc",
+                "3D Model": "516601acd9f9456f95db3aec763cd5e7",
+                "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
+                "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
+                "Number": "1个N沟道",
+                "Drain to Source Voltage": "30V",
+                "Current - Continuous Drain(Id)": "65A",
+                "RDS(on)": "1.9mΩ@10V,20A",
+                "Pd - Power Dissipation": "55W",
+                "Gate Threshold Voltage (Vgs(th))": "1.5V",
+                "Gate Charge(Qg)": "34.8nC@10V",
+                "Input Capacitance(Ciss)": "2.1nF@15V",
+                "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
+                "Operating Temperature": "-55℃~+150℃@(Tj)",
+                "Name": "={Manufacturer Part}",
+                "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I151",
+                "DeviceName": "NCEP3065QU",
+                "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "S",
+                    "number": "1",
+                    "net": "$2N6",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "S",
+                    "number": "2",
+                    "net": "$2N6",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                },
+                "3": {
+                    "name": "S",
+                    "number": "3",
+                    "net": "$2N6",
+                    "props": {
+                        "Pin Number": "3"
+                    }
+                },
+                "4": {
+                    "name": "G",
+                    "number": "4",
+                    "net": "$2N8",
+                    "props": {
+                        "Pin Number": "4"
+                    }
+                },
+                "5": {
+                    "name": "D",
+                    "number": "5",
+                    "net": "INA_CSP",
+                    "props": {
+                        "Pin Number": "5"
+                    }
+                },
+                "6": {
+                    "name": "D",
+                    "number": "6",
+                    "net": "INA_CSP",
+                    "props": {
+                        "Pin Number": "6"
+                    }
+                },
+                "7": {
+                    "name": "D",
+                    "number": "7",
+                    "net": "INA_CSP",
+                    "props": {
+                        "Pin Number": "7"
+                    }
+                },
+                "8": {
+                    "name": "D",
+                    "number": "8",
+                    "net": "INA_CSP",
+                    "props": {
+                        "Pin Number": "8"
+                    }
+                },
+                "9": {
+                    "name": "D",
+                    "number": "9",
+                    "net": "INA_CSP",
+                    "props": {
+                        "Pin Number": "9"
+                    }
+                }
+            }
+        },
+        "gge405": {
+            "props": {
+                "Unique ID": "gge405",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "6fda3b379eb24195",
+                "Designator": "Q29",
+                "Device": "c938cea6d0d62b67",
+                "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
+                "Supplier Part": "C502964",
+                "Manufacturer": "NCE(无锡新洁能)",
+                "Manufacturer Part": "NCEP3065QU",
+                "Supplier Footprint": "DFN3.3x3.3-8L",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
+                "Supplier": "LCSC",
+                "Footprint": "edb067b44731c8fc",
+                "3D Model": "516601acd9f9456f95db3aec763cd5e7",
+                "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
+                "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
+                "Number": "1个N沟道",
+                "Drain to Source Voltage": "30V",
+                "Current - Continuous Drain(Id)": "65A",
+                "RDS(on)": "1.9mΩ@10V,20A",
+                "Pd - Power Dissipation": "55W",
+                "Gate Threshold Voltage (Vgs(th))": "1.5V",
+                "Gate Charge(Qg)": "34.8nC@10V",
+                "Input Capacitance(Ciss)": "2.1nF@15V",
+                "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
+                "Operating Temperature": "-55℃~+150℃@(Tj)",
+                "Name": "={Manufacturer Part}",
+                "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I152",
+                "DeviceName": "NCEP3065QU",
+                "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "S",
+                    "number": "1",
+                    "net": "$2N2",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "S",
+                    "number": "2",
+                    "net": "$2N2",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                },
+                "3": {
+                    "name": "S",
+                    "number": "3",
+                    "net": "$2N2",
+                    "props": {
+                        "Pin Number": "3"
+                    }
+                },
+                "4": {
+                    "name": "G",
+                    "number": "4",
+                    "net": "$2N20",
+                    "props": {
+                        "Pin Number": "4"
+                    }
+                },
+                "5": {
+                    "name": "D",
+                    "number": "5",
+                    "net": "$2N24",
+                    "props": {
+                        "Pin Number": "5"
+                    }
+                },
+                "6": {
+                    "name": "D",
+                    "number": "6",
+                    "net": "$2N24",
+                    "props": {
+                        "Pin Number": "6"
+                    }
+                },
+                "7": {
+                    "name": "D",
+                    "number": "7",
+                    "net": "$2N24",
+                    "props": {
+                        "Pin Number": "7"
+                    }
+                },
+                "8": {
+                    "name": "D",
+                    "number": "8",
+                    "net": "$2N24",
+                    "props": {
+                        "Pin Number": "8"
+                    }
+                },
+                "9": {
+                    "name": "D",
+                    "number": "9",
+                    "net": "$2N24",
+                    "props": {
+                        "Pin Number": "9"
+                    }
+                }
+            }
+        },
+        "gge406": {
+            "props": {
+                "Unique ID": "gge406",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "6fda3b379eb24195",
+                "Designator": "Q30",
+                "Device": "c938cea6d0d62b67",
+                "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
+                "Supplier Part": "C502964",
+                "Manufacturer": "NCE(无锡新洁能)",
+                "Manufacturer Part": "NCEP3065QU",
+                "Supplier Footprint": "DFN3.3x3.3-8L",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
+                "Supplier": "LCSC",
+                "Footprint": "edb067b44731c8fc",
+                "3D Model": "516601acd9f9456f95db3aec763cd5e7",
+                "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
+                "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
+                "Number": "1个N沟道",
+                "Drain to Source Voltage": "30V",
+                "Current - Continuous Drain(Id)": "65A",
+                "RDS(on)": "1.9mΩ@10V,20A",
+                "Pd - Power Dissipation": "55W",
+                "Gate Threshold Voltage (Vgs(th))": "1.5V",
+                "Gate Charge(Qg)": "34.8nC@10V",
+                "Input Capacitance(Ciss)": "2.1nF@15V",
+                "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
+                "Operating Temperature": "-55℃~+150℃@(Tj)",
+                "Name": "={Manufacturer Part}",
+                "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I153",
+                "DeviceName": "NCEP3065QU",
+                "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "S",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "S",
+                    "number": "2",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                },
+                "3": {
+                    "name": "S",
+                    "number": "3",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "3"
+                    }
+                },
+                "4": {
+                    "name": "G",
+                    "number": "4",
+                    "net": "$2N19",
+                    "props": {
+                        "Pin Number": "4"
+                    }
+                },
+                "5": {
+                    "name": "D",
+                    "number": "5",
+                    "net": "$2N2",
+                    "props": {
+                        "Pin Number": "5"
+                    }
+                },
+                "6": {
+                    "name": "D",
+                    "number": "6",
+                    "net": "$2N2",
+                    "props": {
+                        "Pin Number": "6"
+                    }
+                },
+                "7": {
+                    "name": "D",
+                    "number": "7",
+                    "net": "$2N2",
+                    "props": {
+                        "Pin Number": "7"
+                    }
+                },
+                "8": {
+                    "name": "D",
+                    "number": "8",
+                    "net": "$2N2",
+                    "props": {
+                        "Pin Number": "8"
+                    }
+                },
+                "9": {
+                    "name": "D",
+                    "number": "9",
+                    "net": "$2N2",
+                    "props": {
+                        "Pin Number": "9"
+                    }
+                }
+            }
+        },
+        "gge407": {
+            "props": {
+                "Unique ID": "gge407",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "6fda3b379eb24195",
+                "Designator": "Q31",
+                "Device": "c938cea6d0d62b67",
+                "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
+                "Supplier Part": "C502964",
+                "Manufacturer": "NCE(无锡新洁能)",
+                "Manufacturer Part": "NCEP3065QU",
+                "Supplier Footprint": "DFN3.3x3.3-8L",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
+                "Supplier": "LCSC",
+                "Footprint": "edb067b44731c8fc",
+                "3D Model": "516601acd9f9456f95db3aec763cd5e7",
+                "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
+                "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
+                "Number": "1个N沟道",
+                "Drain to Source Voltage": "30V",
+                "Current - Continuous Drain(Id)": "65A",
+                "RDS(on)": "1.9mΩ@10V,20A",
+                "Pd - Power Dissipation": "55W",
+                "Gate Threshold Voltage (Vgs(th))": "1.5V",
+                "Gate Charge(Qg)": "34.8nC@10V",
+                "Input Capacitance(Ciss)": "2.1nF@15V",
+                "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
+                "Operating Temperature": "-55℃~+150℃@(Tj)",
+                "Name": "={Manufacturer Part}",
+                "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I154",
+                "DeviceName": "NCEP3065QU",
+                "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "S",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "S",
+                    "number": "2",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                },
+                "3": {
+                    "name": "S",
+                    "number": "3",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "3"
+                    }
+                },
+                "4": {
+                    "name": "G",
+                    "number": "4",
+                    "net": "$2N10",
+                    "props": {
+                        "Pin Number": "4"
+                    }
+                },
+                "5": {
+                    "name": "D",
+                    "number": "5",
+                    "net": "$2N6",
+                    "props": {
+                        "Pin Number": "5"
+                    }
+                },
+                "6": {
+                    "name": "D",
+                    "number": "6",
+                    "net": "$2N6",
+                    "props": {
+                        "Pin Number": "6"
+                    }
+                },
+                "7": {
+                    "name": "D",
+                    "number": "7",
+                    "net": "$2N6",
+                    "props": {
+                        "Pin Number": "7"
+                    }
+                },
+                "8": {
+                    "name": "D",
+                    "number": "8",
+                    "net": "$2N6",
+                    "props": {
+                        "Pin Number": "8"
+                    }
+                },
+                "9": {
+                    "name": "D",
+                    "number": "9",
+                    "net": "$2N6",
+                    "props": {
+                        "Pin Number": "9"
                     }
                 }
             }
@@ -11552,7 +12230,7 @@
                 "6": {
                     "name": "D",
                     "number": "6",
-                    "net": "$4N46",
+                    "net": "$4N45",
                     "props": {
                         "Pin Number": "6"
                     }
@@ -11560,7 +12238,7 @@
                 "7": {
                     "name": "D",
                     "number": "7",
-                    "net": "$4N46",
+                    "net": "$4N45",
                     "props": {
                         "Pin Number": "7"
                     }
@@ -11568,7 +12246,7 @@
                 "8": {
                     "name": "D",
                     "number": "8",
-                    "net": "$4N46",
+                    "net": "$4N45",
                     "props": {
                         "Pin Number": "8"
                     }
@@ -11576,7 +12254,7 @@
                 "9": {
                     "name": "D",
                     "number": "9",
-                    "net": "$4N46",
+                    "net": "$4N45",
                     "props": {
                         "Pin Number": "9"
                     }
@@ -11754,7 +12432,7 @@
                 "3": {
                     "name": "S",
                     "number": "3",
-                    "net": "$4N46",
+                    "net": "$4N45",
                     "props": {
                         "Pin Number": "3"
                     }
@@ -11856,7 +12534,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "$4N46",
+                    "net": "$4N45",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -11903,7 +12581,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "$4N46",
+                    "net": "$4N45",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -12515,7 +13193,7 @@
                 "18": {
                     "name": "SW2",
                     "number": "18",
-                    "net": "$4N46",
+                    "net": "$4N45",
                     "props": {
                         "Pin Number": "18"
                     }
@@ -12737,7 +13415,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "$4N46",
+                    "net": "$4N45",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -13510,7 +14188,7 @@
                 "8": {
                     "name": "CSP",
                     "number": "8",
-                    "net": "PL",
+                    "net": "$4N94",
                     "props": {
                         "Pin Number": "8"
                     }
@@ -13814,7 +14492,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "PL",
+                    "net": "$4N94",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -13868,7 +14546,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "PL",
+                    "net": "$4N94",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -15168,6 +15846,458 @@
                     }
                 }
             }
+        },
+        "gge408": {
+            "props": {
+                "Unique ID": "gge408",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "6fda3b379eb24195",
+                "Designator": "Q24",
+                "Device": "c938cea6d0d62b67",
+                "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
+                "Supplier Part": "C502964",
+                "Manufacturer": "NCE(无锡新洁能)",
+                "Manufacturer Part": "NCEP3065QU",
+                "Supplier Footprint": "DFN3.3x3.3-8L",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
+                "Supplier": "LCSC",
+                "Footprint": "edb067b44731c8fc",
+                "3D Model": "516601acd9f9456f95db3aec763cd5e7",
+                "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
+                "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
+                "Number": "1个N沟道",
+                "Drain to Source Voltage": "30V",
+                "Current - Continuous Drain(Id)": "65A",
+                "RDS(on)": "1.9mΩ@10V,20A",
+                "Pd - Power Dissipation": "55W",
+                "Gate Threshold Voltage (Vgs(th))": "1.5V",
+                "Gate Charge(Qg)": "34.8nC@10V",
+                "Input Capacitance(Ciss)": "2.1nF@15V",
+                "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
+                "Operating Temperature": "-55℃~+150℃@(Tj)",
+                "Name": "={Manufacturer Part}",
+                "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I175",
+                "DeviceName": "NCEP3065QU",
+                "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "S",
+                    "number": "1",
+                    "net": "$4N42",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "S",
+                    "number": "2",
+                    "net": "$4N42",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                },
+                "3": {
+                    "name": "S",
+                    "number": "3",
+                    "net": "$4N42",
+                    "props": {
+                        "Pin Number": "3"
+                    }
+                },
+                "4": {
+                    "name": "G",
+                    "number": "4",
+                    "net": "$4N44",
+                    "props": {
+                        "Pin Number": "4"
+                    }
+                },
+                "5": {
+                    "name": "D",
+                    "number": "5",
+                    "net": "VIN",
+                    "props": {
+                        "Pin Number": "5"
+                    }
+                },
+                "6": {
+                    "name": "D",
+                    "number": "6",
+                    "net": "VIN",
+                    "props": {
+                        "Pin Number": "6"
+                    }
+                },
+                "7": {
+                    "name": "D",
+                    "number": "7",
+                    "net": "VIN",
+                    "props": {
+                        "Pin Number": "7"
+                    }
+                },
+                "8": {
+                    "name": "D",
+                    "number": "8",
+                    "net": "VIN",
+                    "props": {
+                        "Pin Number": "8"
+                    }
+                },
+                "9": {
+                    "name": "D",
+                    "number": "9",
+                    "net": "VIN",
+                    "props": {
+                        "Pin Number": "9"
+                    }
+                }
+            }
+        },
+        "gge409": {
+            "props": {
+                "Unique ID": "gge409",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "6fda3b379eb24195",
+                "Designator": "Q25",
+                "Device": "c938cea6d0d62b67",
+                "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
+                "Supplier Part": "C502964",
+                "Manufacturer": "NCE(无锡新洁能)",
+                "Manufacturer Part": "NCEP3065QU",
+                "Supplier Footprint": "DFN3.3x3.3-8L",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
+                "Supplier": "LCSC",
+                "Footprint": "edb067b44731c8fc",
+                "3D Model": "516601acd9f9456f95db3aec763cd5e7",
+                "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
+                "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
+                "Number": "1个N沟道",
+                "Drain to Source Voltage": "30V",
+                "Current - Continuous Drain(Id)": "65A",
+                "RDS(on)": "1.9mΩ@10V,20A",
+                "Pd - Power Dissipation": "55W",
+                "Gate Threshold Voltage (Vgs(th))": "1.5V",
+                "Gate Charge(Qg)": "34.8nC@10V",
+                "Input Capacitance(Ciss)": "2.1nF@15V",
+                "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
+                "Operating Temperature": "-55℃~+150℃@(Tj)",
+                "Name": "={Manufacturer Part}",
+                "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I176",
+                "DeviceName": "NCEP3065QU",
+                "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "S",
+                    "number": "1",
+                    "net": "$4N45",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "S",
+                    "number": "2",
+                    "net": "$4N45",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                },
+                "3": {
+                    "name": "S",
+                    "number": "3",
+                    "net": "$4N45",
+                    "props": {
+                        "Pin Number": "3"
+                    }
+                },
+                "4": {
+                    "name": "G",
+                    "number": "4",
+                    "net": "$4N37",
+                    "props": {
+                        "Pin Number": "4"
+                    }
+                },
+                "5": {
+                    "name": "D",
+                    "number": "5",
+                    "net": "$4N27",
+                    "props": {
+                        "Pin Number": "5"
+                    }
+                },
+                "6": {
+                    "name": "D",
+                    "number": "6",
+                    "net": "$4N27",
+                    "props": {
+                        "Pin Number": "6"
+                    }
+                },
+                "7": {
+                    "name": "D",
+                    "number": "7",
+                    "net": "$4N27",
+                    "props": {
+                        "Pin Number": "7"
+                    }
+                },
+                "8": {
+                    "name": "D",
+                    "number": "8",
+                    "net": "$4N27",
+                    "props": {
+                        "Pin Number": "8"
+                    }
+                },
+                "9": {
+                    "name": "D",
+                    "number": "9",
+                    "net": "$4N27",
+                    "props": {
+                        "Pin Number": "9"
+                    }
+                }
+            }
+        },
+        "gge410": {
+            "props": {
+                "Unique ID": "gge410",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "6fda3b379eb24195",
+                "Designator": "Q26",
+                "Device": "c938cea6d0d62b67",
+                "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
+                "Supplier Part": "C502964",
+                "Manufacturer": "NCE(无锡新洁能)",
+                "Manufacturer Part": "NCEP3065QU",
+                "Supplier Footprint": "DFN3.3x3.3-8L",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
+                "Supplier": "LCSC",
+                "Footprint": "edb067b44731c8fc",
+                "3D Model": "516601acd9f9456f95db3aec763cd5e7",
+                "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
+                "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
+                "Number": "1个N沟道",
+                "Drain to Source Voltage": "30V",
+                "Current - Continuous Drain(Id)": "65A",
+                "RDS(on)": "1.9mΩ@10V,20A",
+                "Pd - Power Dissipation": "55W",
+                "Gate Threshold Voltage (Vgs(th))": "1.5V",
+                "Gate Charge(Qg)": "34.8nC@10V",
+                "Input Capacitance(Ciss)": "2.1nF@15V",
+                "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
+                "Operating Temperature": "-55℃~+150℃@(Tj)",
+                "Name": "={Manufacturer Part}",
+                "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I177",
+                "DeviceName": "NCEP3065QU",
+                "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "S",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "S",
+                    "number": "2",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                },
+                "3": {
+                    "name": "S",
+                    "number": "3",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "3"
+                    }
+                },
+                "4": {
+                    "name": "G",
+                    "number": "4",
+                    "net": "$4N41",
+                    "props": {
+                        "Pin Number": "4"
+                    }
+                },
+                "5": {
+                    "name": "D",
+                    "number": "5",
+                    "net": "$4N42",
+                    "props": {
+                        "Pin Number": "5"
+                    }
+                },
+                "6": {
+                    "name": "D",
+                    "number": "6",
+                    "net": "$4N42",
+                    "props": {
+                        "Pin Number": "6"
+                    }
+                },
+                "7": {
+                    "name": "D",
+                    "number": "7",
+                    "net": "$4N42",
+                    "props": {
+                        "Pin Number": "7"
+                    }
+                },
+                "8": {
+                    "name": "D",
+                    "number": "8",
+                    "net": "$4N42",
+                    "props": {
+                        "Pin Number": "8"
+                    }
+                },
+                "9": {
+                    "name": "D",
+                    "number": "9",
+                    "net": "$4N42",
+                    "props": {
+                        "Pin Number": "9"
+                    }
+                }
+            }
+        },
+        "gge411": {
+            "props": {
+                "Unique ID": "gge411",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "6fda3b379eb24195",
+                "Designator": "Q27",
+                "Device": "c938cea6d0d62b67",
+                "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
+                "Supplier Part": "C502964",
+                "Manufacturer": "NCE(无锡新洁能)",
+                "Manufacturer Part": "NCEP3065QU",
+                "Supplier Footprint": "DFN3.3x3.3-8L",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
+                "Supplier": "LCSC",
+                "Footprint": "edb067b44731c8fc",
+                "3D Model": "516601acd9f9456f95db3aec763cd5e7",
+                "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
+                "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
+                "Number": "1个N沟道",
+                "Drain to Source Voltage": "30V",
+                "Current - Continuous Drain(Id)": "65A",
+                "RDS(on)": "1.9mΩ@10V,20A",
+                "Pd - Power Dissipation": "55W",
+                "Gate Threshold Voltage (Vgs(th))": "1.5V",
+                "Gate Charge(Qg)": "34.8nC@10V",
+                "Input Capacitance(Ciss)": "2.1nF@15V",
+                "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
+                "Operating Temperature": "-55℃~+150℃@(Tj)",
+                "Name": "={Manufacturer Part}",
+                "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I178",
+                "DeviceName": "NCEP3065QU",
+                "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "S",
+                    "number": "1",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "S",
+                    "number": "2",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                },
+                "3": {
+                    "name": "S",
+                    "number": "3",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "3"
+                    }
+                },
+                "4": {
+                    "name": "G",
+                    "number": "4",
+                    "net": "$4N39",
+                    "props": {
+                        "Pin Number": "4"
+                    }
+                },
+                "5": {
+                    "name": "D",
+                    "number": "5",
+                    "net": "$4N45",
+                    "props": {
+                        "Pin Number": "5"
+                    }
+                },
+                "6": {
+                    "name": "D",
+                    "number": "6",
+                    "net": "$4N45",
+                    "props": {
+                        "Pin Number": "6"
+                    }
+                },
+                "7": {
+                    "name": "D",
+                    "number": "7",
+                    "net": "$4N45",
+                    "props": {
+                        "Pin Number": "7"
+                    }
+                },
+                "8": {
+                    "name": "D",
+                    "number": "8",
+                    "net": "$4N45",
+                    "props": {
+                        "Pin Number": "8"
+                    }
+                },
+                "9": {
+                    "name": "D",
+                    "number": "9",
+                    "net": "$4N45",
+                    "props": {
+                        "Pin Number": "9"
+                    }
+                }
+            }
         }
     },
     "designRule": {
@@ -15408,8 +16538,8 @@
                     "TrackPhysics": ""
                 }
             },
-            "SW2303_CSP": {
-                "net": "SW2303_CSP",
+            "$2N96": {
+                "net": "$2N96",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
@@ -15540,12 +16670,6 @@
                     "TrackPhysics": ""
                 }
             },
-            "$4N46": {
-                "net": "$4N46",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
             "$4N47": {
                 "net": "$4N47",
                 "ruleMap": {
@@ -15642,8 +16766,8 @@
                     "TrackPhysics": ""
                 }
             },
-            "PL": {
-                "net": "PL",
+            "$4N94": {
+                "net": "$4N94",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
@@ -15786,14 +16910,14 @@
                     "TrackPhysics": ""
                 }
             },
-            "VOUT_TPS": {
-                "net": "VOUT_TPS",
+            "ISP_TPS": {
+                "net": "ISP_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "ISP_TPS": {
-                "net": "ISP_TPS",
+            "VOUT_TPS": {
+                "net": "VOUT_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
@@ -15840,6 +16964,12 @@
                     "TrackPhysics": ""
                 }
             },
+            "$1N65": {
+                "net": "$1N65",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
             "5V_TPS": {
                 "net": "5V_TPS",
                 "ruleMap": {
@@ -15872,6 +17002,12 @@
             },
             "DM_TPS": {
                 "net": "DM_TPS",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "PGND_TPS": {
+                "net": "PGND_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }

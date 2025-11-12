@@ -1,6 +1,6 @@
-# 网表对照评审（2025-11-12 最新2）
+# 网表对照评审（2025-11-12 最新3）
 
-- 评审对象：`docs/netlists/usb-pd-source-netlist.enet`（已用最新文件替换：`/Users/ivan/Downloads/Netlist_Schematic1_2025-11-12 (2).enet`）
+- 评审对象：`docs/netlists/usb-pd-source-netlist.enet`（已用最新文件替换：`/Users/ivan/Downloads/Netlist_Schematic1_2025-11-12 (3).enet`）
 - 对照基线：
   - `docs/tps55288-design-notes.md:1`
   - `docs/sw2303-vbus-switch-notes.md:1`
@@ -13,9 +13,9 @@
 - 已替换项目网表为用户提供的最新文件（仅替换既有路径，未新增文件）。
 - 网表中包含 SW7201 方案（U2=SW7201，确认在案）。
 - 网表中未出现 PL5500，当前为 PL5501（U4=PL5501），后续校对均针对 PL5501 执行；如需改回 PL5500 请指示。
-  - 本次更新确认两项修复：
-    - PL5501.U4 的 FB2 → `FB_PL`，与 SW2303.U15 的 `OPTO/FB`= `FB_PL` 闭环一致（docs/netlists/usb-pd-source-netlist.enet:12468-12474, 13558-13566）。
-    - PL5501.U4 的 `VCC` 已加入去耦电容 C186=1µF X5R（`VCC($4N119)` → GND）（docs/netlists/usb-pd-source-netlist.enet:12532-12538, 15121-15170, 15699-15700）。
+  - “最新3”增量变更确认：
+    - 先前跨域同名网已消除：SW 与 TPS 域的 SW2303.CSP 分别使用匿名网（SW: `$2N96`；TPS: `$1N65`），不存在 `SW2303_CSP` 同名并网（示例：U13.8→`$2N96`；U12.8→`$1N65`）。
+    - TPS 域 USB 接口地线与相关器件连接符合建议：见“TPS→SW2303 USB 接口 GND 复核”。
 
 ## 检查清单（SW7201 段）
 
@@ -315,15 +315,7 @@ VBUS_SW 网络分布（抽样确认）
 
 ## 未解决问题
 
-- 网络同名导致跨域短接（需修复）：
-  - 发现公共网名 `SW2303_CSP` 同时用于 TPS 方案与 SW 方案中的 SW2303 节点，造成两套 Demo 通过该采样节点被“同名并网”。
-    - 证据：
-      - TPS 域 SW2303.CSP → `SW2303_CSP`：docs/netlists/usb-pd-source-netlist.enet:2608、2912、2966、4428
-      - SW 域 SW2303.CSP → `SW2303_CSP`：docs/netlists/usb-pd-source-netlist.enet:8123、8427、8481、9576
-      - Net 字典仅有一个 `SW2303_CSP`：docs/netlists/usb-pd-source-netlist.enet:15412（说明为全局同名网）
-  - 影响：三套 DCDC 除 VIN/GND 外应完全独立；该同名网导致 SW 与 TPS 域在 SW2303 的 CSP 采样点被电气连接，破坏隔离。
-  - 建议修复：在原理图中将两处网名改为域内唯一命名（如 `SW2303_CSP_SW` 与 `SW2303_CSP_TPS`，或简化为 `CSP_SW` / `CSP_TPS`），重新导出网表并替换项目文件。
-  - 备注：当前另一个无后缀网名 `PL` 仅在 PL 域使用，未造成跨域并网，可保留；但为降低歧义，也可按需统一为 `PL_PL`。
+- （无）“最新3”网表替换后，先前问题已解决，未发现新增冲突或连错/漏连。
 
 ## 澄清（非问题）
 
@@ -357,5 +349,19 @@ VBUS_SW 网络分布（抽样确认）
 - I2C：`SDA_SW`/`SCL_SW`、`SDA_TPS`/`SCL_TPS`、`SDA_PL`/`SCL_PL` 独立（板上无上拉，外部主机提供）
 - 自举/驱动：各自 `BSTx/SWx/VCC` 仅在本方案内连接；PL5501 的 `VCC` 已去耦（C186=1µF）且未与其它 5V 网相连
 - 全器件跨域扫描（不限两引脚，含多引脚器件）：未发现任何器件同时连接 ≥2 个方案域网络（统计 0 项；脚本对 240 个器件逐一解析 pinInfoMap 并判定域归属）。
+
+## TPS→SW2303 USB 接口 GND 复核（对照官方建议）
+
+- 芯片 GND 与采样参考：
+  - U12=SW2303（TPS 域）`CSN`→GND（U12.9），符合“CSN 接地”的采样参考要求。
+  - U12 `CSP` 采用差分 RC 滤波：R67=510Ω（`$1N65`→`VBUS_TPS`）、C132=1µF（`$1N65`→GND），与手册推荐“510Ω+1µF RC 滤波（差分接 CSP/CSN）”一致。
+- USB 端口与 ESD/耦合：
+  - ESD 阵列 D5（TPD4E05U06）：各线路至 GND（D5.3、D5.8→GND；D+、D-、CC1、CC2 各通道对应 `DP_TPS/DM_TPS/CC1_TPS/CC2_TPS`）。
+  - CC 耦合电容：C133=330nF（`CC1_TPS`→GND）、C134=330nF（`CC2_TPS`→GND），作为端口侧 EMI/瞬态耦合，符合常见做法。
+- 连接器地网划分：
+  - USB6（Type‑C）壳体/若干焊脚 → GND（pins 12–15）；触点 A1B12/B1A12 → `PGND_TPS`，实现端口接地与系统地的分域。
+  - 端口去耦：VBUS_TPS 至 `PGND_TPS` 采用 C（22µF 等，样例 C127，docs/netlists/usb-pd-source-netlist.enet:4502–4514），就近端口能量回路，降低回流环路面积。
+- 结论：
+  - SW2303（TPS 域）的 USB 接口地线与相关器件连接方式与官方资料一致（CSN 接地；CSP 差分 RC；端口 ESD/耦合对系统地；端口大电流回路对 `PGND_TPS`）。当前无违背建议的接法。
 
 > 注：本文档仅基于网表与仓库笔记进行交叉核查，未包含版图/实测波形验证。后续请结合 PCB 布局与上电测试补充确认。
