@@ -2565,7 +2565,7 @@
                 "3": {
                     "name": "VDD",
                     "number": "3",
-                    "net": "5V_SW",
+                    "net": "5V_TPS",
                     "props": {
                         "Pin Number": "3"
                     }
@@ -2780,7 +2780,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "5V_SW",
+                    "net": "5V_TPS",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -2813,7 +2813,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "5V_SW",
+                    "net": "5V_TPS",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -3465,6 +3465,11 @@
                 "Symbol": "7c60cd21b049fdde",
                 "Designator": "Q12",
                 "Device": "cc715072bf1ec725",
+                "Footprint": "21af69896abd3a5f",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I117",
                 "LCSC Part Name": "1个N沟道 耐压:30V 电流:40A",
                 "Supplier Part": "C502961",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -3473,7 +3478,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20210916/C7FC9E4553F76B09A7A1476E3419D818.pdf",
                 "Supplier": "LCSC",
-                "Footprint": "21af69896abd3a5f",
                 "3D Model": "b23e793009534f16bb01b0820426cab8",
                 "3D Model Title": "POWERVDFN-8_L3.2-W3.1-P0.65-LS3.3-BL-1",
                 "3D Model Transform": "129.921,129.921,0,0,0,0,0,0,0",
@@ -3487,11 +3491,7 @@
                 "Input Capacitance (Ciss@Vds)": "822pF",
                 "Reverse Transfer Capacitance (Crss@Vds)": "15.3pF",
                 "Operating Temperature": "-55℃~+150℃",
-                "Name": "={Manufacturer Part}",
                 "Description": "类型:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):40A;导通电阻(RDS(on)@Vgs,Id):9.5mΩ@4.5V,20A;功率:25W;阈值电压(Vgs(th)@Id):1V@250uA;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$1I117",
                 "DeviceName": "NCEP3040Q",
                 "FootprintName": "POWERVDFN-8_L3.2-W3.1-P0.65-LS3.3-BL-1"
             },
@@ -3624,6 +3624,11 @@
                 "Symbol": "291ff1588dcd35af",
                 "Designator": "Q13",
                 "Device": "ff9c741971bec4dd",
+                "Footprint": "28e726abbb591754",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I120",
                 "LCSC Part Name": "1个P沟道 耐压:30V",
                 "Supplier Part": "C502815",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -3632,7 +3637,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20200911/C502815_8390B8B11A53BCF62088D69875D3D22E.pdf",
                 "Supplier": "LCSC",
-                "Footprint": "28e726abbb591754",
                 "3D Model": "516601acd9f9456f95db3aec763cd5e7",
                 "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
                 "3D Model Transform": "129.921,131.8895,0,0,0,0,0,2.5,0",
@@ -3646,11 +3650,7 @@
                 "Input Capacitance (Ciss@Vds)": "-",
                 "Reverse Transfer Capacitance (Crss@Vds)": "-",
                 "Operating Temperature": "-55℃~+150℃",
-                "Name": "={Manufacturer Part}",
                 "Description": "类型:1个P沟道;漏源电压(Vdss):30V;连续漏极电流(Id):-;导通电阻(RDS(on)@Vgs,Id):-;功率:40W;阈值电压(Vgs(th)@Id):-;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$1I120",
                 "DeviceName": "NCE30P28Q",
                 "FootprintName": "PDFN3333-8_L3.1-W3.2-P0.65-LS3.4-BL"
             },
@@ -3737,6 +3737,11 @@
                 "Symbol": "76b22e6cc43f63b3",
                 "Designator": "D1",
                 "Device": "5df848684d7484f9",
+                "Footprint": "89b4661b6898a876",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I122",
                 "LCSC Part Name": "MM5Z15VT1G",
                 "Supplier Part": "C236108",
                 "Manufacturer": "onsemi(安森美)",
@@ -3745,7 +3750,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/MM5Z15VT1G/235698.html",
                 "Supplier": "LCSC",
-                "Footprint": "89b4661b6898a876",
                 "3D Model": "d10bb3db7b4b41808fe672faecd39ab5",
                 "3D Model Title": "SOD-523_L1.2-W0.8-LS1.6-RD-1",
                 "3D Model Transform": "62.992,31.496,0,0,0,0,0,0,0",
@@ -3756,11 +3760,7 @@
                 "Impedance(Zzt)": "30Ω",
                 "Impedance(Zzk)": "80Ω",
                 "Operating Junction Temperature Range": "-65℃~+150℃",
-                "Name": "={Manufacturer Part}",
                 "Description": "稳压值(标称值):15V;稳压值(范围):14.3V~15.8V;耗散功率(Pd):500mW;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$1I122",
                 "DeviceName": "MM5Z15VT1G",
                 "FootprintName": "SOD-523_L1.2-W0.8-LS1.6-RD-1"
             },
@@ -3791,6 +3791,11 @@
                 "Symbol": "104c4dbddf4db9fd",
                 "Designator": "R72",
                 "Device": "26f72fe2f47aadfc",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I128",
                 "LCSC Part Name": "1kΩ ±1% 62.5mW 厚膜电阻",
                 "Supplier Part": "C11702",
                 "Manufacturer": "UNI-ROYAL(厚声)",
@@ -3799,7 +3804,6 @@
                 "JLCPCB Part Class": "Basic Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/0402WGF1001TCE/12256.html",
                 "Supplier": "LCSC",
-                "Footprint": "6aa1f3953dbd9cdc",
                 "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
                 "3D Model Title": "R0402_L1.0-W0.5-H0.4",
                 "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
@@ -3810,11 +3814,7 @@
                 "Voltage-Supply(Max)": "50V",
                 "Temperature Coefficient": "±100ppm/℃",
                 "Operating Temperature": "-55℃~+155℃",
-                "Name": "={Value}",
                 "Description": "电阻类型:厚膜电阻;阻值:1kΩ;精度:±1%;功率:62.5mW;工作电压:50V;温度系数:±100ppm/℃;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$1I128",
                 "DeviceName": "0402WGF1001TCE",
                 "FootprintName": "R0402"
             },
@@ -3899,15 +3899,19 @@
                 "Symbol": "174287835e3e9139",
                 "Designator": "D16",
                 "Device": "7d2b79f345310ee1",
+                "Manufacturer Part": "n.c.",
+                "Supplier Footprint": "SOD-523",
+                "Footprint": "439f7f3b13f2a32a",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I132",
                 "LCSC Part Name": "电压:70V 电流:70mA",
                 "Supplier Part": "C179321",
                 "Manufacturer": "Nexperia(安世)",
-                "Manufacturer Part": "n.c.",
-                "Supplier Footprint": "SOD-523",
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/1PS79SB70%252C115/190715.html",
                 "Supplier": "LCSC",
-                "Footprint": "439f7f3b13f2a32a",
                 "3D Model": "8f56a03db567494d8f4c9d12aa52a741",
                 "3D Model Title": "SOD-523_L1.2-W0.8-H0.7-LS1.6",
                 "3D Model Transform": "62.992,31.496,0,180,0,0,0,0,0",
@@ -3917,11 +3921,7 @@
                 "Current - Rectified": "70mA",
                 "Reverse Leakage Current (Ir)": "10uA@70V",
                 "Non-Repetitive Peak Forward Surge Current": "100mA",
-                "Name": "={Manufacturer Part}",
                 "Description": "二极管配置:1个独立式;正向压降(Vf):1V@15mA;直流反向耐压(Vr):70V;整流电流:70mA;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$1I132",
                 "DeviceName": "1PS79SB70,115",
                 "FootprintName": "SOD-523_L1.2-W0.8-LS1.6-RD"
             },
@@ -3952,15 +3952,19 @@
                 "Symbol": "174287835e3e9139",
                 "Designator": "D17",
                 "Device": "7d2b79f345310ee1",
+                "Manufacturer Part": "n.c.",
+                "Supplier Footprint": "SOD-523",
+                "Footprint": "439f7f3b13f2a32a",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I133",
                 "LCSC Part Name": "电压:70V 电流:70mA",
                 "Supplier Part": "C179321",
                 "Manufacturer": "Nexperia(安世)",
-                "Manufacturer Part": "n.c.",
-                "Supplier Footprint": "SOD-523",
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/1PS79SB70%252C115/190715.html",
                 "Supplier": "LCSC",
-                "Footprint": "439f7f3b13f2a32a",
                 "3D Model": "8f56a03db567494d8f4c9d12aa52a741",
                 "3D Model Title": "SOD-523_L1.2-W0.8-H0.7-LS1.6",
                 "3D Model Transform": "62.992,31.496,0,180,0,0,0,0,0",
@@ -3970,11 +3974,7 @@
                 "Current - Rectified": "70mA",
                 "Reverse Leakage Current (Ir)": "10uA@70V",
                 "Non-Repetitive Peak Forward Surge Current": "100mA",
-                "Name": "={Manufacturer Part}",
                 "Description": "二极管配置:1个独立式;正向压降(Vf):1V@15mA;直流反向耐压(Vr):70V;整流电流:70mA;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$1I133",
                 "DeviceName": "1PS79SB70,115",
                 "FootprintName": "SOD-523_L1.2-W0.8-LS1.6-RD"
             },
@@ -4004,8 +4004,8 @@
                 "Convert to PCB": "yes",
                 "Symbol": "7ade811f663915b5",
                 "Designator": "U46",
-                "Name": "={Manufacturer Part}",
                 "Device": "7f8220f66a277dfe",
+                "Name": "={Manufacturer Part}",
                 "Reuse Block": "",
                 "Group ID": "",
                 "Channel ID": "$1I139",
@@ -4104,6 +4104,11 @@
                 "Symbol": "58c5f25197effd10",
                 "Designator": "R92",
                 "Device": "0e2e9af9d7ead7e3",
+                "Footprint": "3da5a640e1636de4",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I141",
                 "LCSC Part Name": "0Ω ±1% 50mW 厚膜电阻",
                 "Supplier Part": "C473473",
                 "Manufacturer": "UNI-ROYAL(厚声)",
@@ -4112,7 +4117,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/0201WMF0000TEE/479866.html",
                 "Supplier": "LCSC",
-                "Footprint": "3da5a640e1636de4",
                 "3D Model": "0e006ba4c37b4b73b0e85d5d1c6800cb",
                 "3D Model Title": "R0201_L0.6-W0.3-H0.3",
                 "3D Model Transform": "23.622,11.811,0,0,0,0,0,-0.0005,0",
@@ -4123,11 +4127,7 @@
                 "Voltage-Supply(Max)": "25V",
                 "Temperature Coefficient": "-",
                 "Operating Temperature": "-55℃~+155℃",
-                "Name": "={Value}",
                 "Description": "电阻类型:厚膜电阻;阻值:0Ω;精度:±1%;功率:50mW;工作电压:25V;温度系数:-;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$1I141",
                 "DeviceName": "0201WMF0000TEE",
                 "FootprintName": "R0201"
             },
@@ -4194,7 +4194,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "5V_SW",
+                    "net": "5V_TPS",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -4371,7 +4371,7 @@
                 "5": {
                     "name": "V+",
                     "number": "5",
-                    "net": "5V_SW",
+                    "net": "5V_TPS",
                     "props": {
                         "Pin Number": "5"
                     }
@@ -4514,6 +4514,39 @@
                 }
             }
         },
+        "gge360_3": {
+            "props": {
+                "Unique ID": "gge360_3",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Designator": "TP8",
+                "Symbol": "3e8d450d9dbc2b78",
+                "Device": "f103fa0072dee2f5",
+                "Name": "FB",
+                "Footprint": "73bbda59ef65f40a",
+                "3D Model": "",
+                "3D Model Title": "",
+                "3D Model Transform": "",
+                "Description": "Test Point 测试点",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I155",
+                "Comment": "",
+                "PCB Layer": "TopLayer",
+                "DeviceName": "Test-Point",
+                "FootprintName": "Test-Point-0.5mm"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "FB_TPS",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                }
+            }
+        },
         "gge129": {
             "props": {
                 "Unique ID": "gge129",
@@ -4562,7 +4595,7 @@
                 "3": {
                     "name": "VBUS",
                     "number": "3",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "3"
                     }
@@ -4610,7 +4643,7 @@
                 "9": {
                     "name": "INDTB",
                     "number": "9",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "9"
                     }
@@ -4618,7 +4651,7 @@
                 "10": {
                     "name": "FB",
                     "number": "10",
-                    "net": "$2N58",
+                    "net": "FB_SW",
                     "props": {
                         "Pin Number": "10"
                     }
@@ -4996,7 +5029,7 @@
                 "5": {
                     "name": "D",
                     "number": "5",
-                    "net": "$2N3",
+                    "net": "$2N2",
                     "props": {
                         "Pin Number": "5"
                     }
@@ -5552,7 +5585,7 @@
                 "1": {
                     "name": "S",
                     "number": "1",
-                    "net": "$2N3",
+                    "net": "$2N2",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -5560,7 +5593,7 @@
                 "2": {
                     "name": "S",
                     "number": "2",
-                    "net": "$2N3",
+                    "net": "$2N2",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -6389,7 +6422,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -6485,7 +6518,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -6656,7 +6689,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -6715,7 +6748,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -6766,7 +6799,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -6817,7 +6850,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -6871,7 +6904,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -6976,7 +7009,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -7557,7 +7590,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "$2N58",
+                    "net": "FB_SW",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -7765,7 +7798,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -7876,7 +7909,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "$2N58",
+                    "net": "FB_SW",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -7884,7 +7917,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -8143,7 +8176,7 @@
                 "15": {
                     "name": "VIN",
                     "number": "15",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "15"
                     }
@@ -8750,7 +8783,7 @@
                 "A4B9": {
                     "name": "VBUS",
                     "number": "A4B9",
-                    "net": "SW",
+                    "net": "VBUS_SW",
                     "props": {
                         "Pin Number": "A4B9"
                     }
@@ -8947,6 +8980,11 @@
                 "Symbol": "7c60cd21b049fdde",
                 "Designator": "Q14",
                 "Device": "cc715072bf1ec725",
+                "Footprint": "21af69896abd3a5f",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I116",
                 "LCSC Part Name": "1个N沟道 耐压:30V 电流:40A",
                 "Supplier Part": "C502961",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -8955,7 +8993,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20210916/C7FC9E4553F76B09A7A1476E3419D818.pdf",
                 "Supplier": "LCSC",
-                "Footprint": "21af69896abd3a5f",
                 "3D Model": "b23e793009534f16bb01b0820426cab8",
                 "3D Model Title": "POWERVDFN-8_L3.2-W3.1-P0.65-LS3.3-BL-1",
                 "3D Model Transform": "129.921,129.921,0,0,0,0,0,0,0",
@@ -8969,11 +9006,7 @@
                 "Input Capacitance (Ciss@Vds)": "822pF",
                 "Reverse Transfer Capacitance (Crss@Vds)": "15.3pF",
                 "Operating Temperature": "-55℃~+150℃",
-                "Name": "={Manufacturer Part}",
                 "Description": "类型:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):40A;导通电阻(RDS(on)@Vgs,Id):9.5mΩ@4.5V,20A;功率:25W;阈值电压(Vgs(th)@Id):1V@250uA;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$2I116",
                 "DeviceName": "NCEP3040Q",
                 "FootprintName": "POWERVDFN-8_L3.2-W3.1-P0.65-LS3.3-BL-1"
             },
@@ -9013,7 +9046,7 @@
                 "5": {
                     "name": "D",
                     "number": "5",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "5"
                     }
@@ -9021,7 +9054,7 @@
                 "6": {
                     "name": "D",
                     "number": "6",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "6"
                     }
@@ -9029,7 +9062,7 @@
                 "7": {
                     "name": "D",
                     "number": "7",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "7"
                     }
@@ -9037,7 +9070,7 @@
                 "8": {
                     "name": "D",
                     "number": "8",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "8"
                     }
@@ -9051,8 +9084,8 @@
                 "Convert to PCB": "yes",
                 "Symbol": "27ed5a6f1feafa57",
                 "Designator": "D9",
-                "Name": "={Manufacturer Part}",
                 "Device": "bdc4aee9905a5639",
+                "Name": "={Manufacturer Part}",
                 "Reuse Block": "",
                 "Group ID": "",
                 "Channel ID": "$2I117",
@@ -9106,6 +9139,11 @@
                 "Symbol": "291ff1588dcd35af",
                 "Designator": "Q15",
                 "Device": "ff9c741971bec4dd",
+                "Footprint": "28e726abbb591754",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I118",
                 "LCSC Part Name": "1个P沟道 耐压:30V",
                 "Supplier Part": "C502815",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -9114,7 +9152,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20200911/C502815_8390B8B11A53BCF62088D69875D3D22E.pdf",
                 "Supplier": "LCSC",
-                "Footprint": "28e726abbb591754",
                 "3D Model": "516601acd9f9456f95db3aec763cd5e7",
                 "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
                 "3D Model Transform": "129.921,131.8895,0,0,0,0,0,2.5,0",
@@ -9128,11 +9165,7 @@
                 "Input Capacitance (Ciss@Vds)": "-",
                 "Reverse Transfer Capacitance (Crss@Vds)": "-",
                 "Operating Temperature": "-55℃~+150℃",
-                "Name": "={Manufacturer Part}",
                 "Description": "类型:1个P沟道;漏源电压(Vdss):30V;连续漏极电流(Id):-;导通电阻(RDS(on)@Vgs,Id):-;功率:40W;阈值电压(Vgs(th)@Id):-;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$2I118",
                 "DeviceName": "NCE30P28Q",
                 "FootprintName": "PDFN3333-8_L3.1-W3.2-P0.65-LS3.4-BL"
             },
@@ -9140,7 +9173,7 @@
                 "1": {
                     "name": "S",
                     "number": "1",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -9148,7 +9181,7 @@
                 "2": {
                     "name": "S",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -9156,7 +9189,7 @@
                 "3": {
                     "name": "S",
                     "number": "3",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "3"
                     }
@@ -9219,6 +9252,11 @@
                 "Symbol": "76b22e6cc43f63b3",
                 "Designator": "D10",
                 "Device": "5df848684d7484f9",
+                "Footprint": "89b4661b6898a876",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I119",
                 "LCSC Part Name": "MM5Z15VT1G",
                 "Supplier Part": "C236108",
                 "Manufacturer": "onsemi(安森美)",
@@ -9227,7 +9265,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/MM5Z15VT1G/235698.html",
                 "Supplier": "LCSC",
-                "Footprint": "89b4661b6898a876",
                 "3D Model": "d10bb3db7b4b41808fe672faecd39ab5",
                 "3D Model Title": "SOD-523_L1.2-W0.8-LS1.6-RD-1",
                 "3D Model Transform": "62.992,31.496,0,0,0,0,0,0,0",
@@ -9238,11 +9275,7 @@
                 "Impedance(Zzt)": "30Ω",
                 "Impedance(Zzk)": "80Ω",
                 "Operating Junction Temperature Range": "-65℃~+150℃",
-                "Name": "={Manufacturer Part}",
                 "Description": "稳压值(标称值):15V;稳压值(范围):14.3V~15.8V;耗散功率(Pd):500mW;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$2I119",
                 "DeviceName": "MM5Z15VT1G",
                 "FootprintName": "SOD-523_L1.2-W0.8-LS1.6-RD-1"
             },
@@ -9250,7 +9283,7 @@
                 "1": {
                     "name": "C",
                     "number": "1",
-                    "net": "VIN",
+                    "net": "$2N143",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -9478,7 +9511,7 @@
                 "4": {
                     "name": "-",
                     "number": "4",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "4"
                     }
@@ -9555,6 +9588,11 @@
                 "Symbol": "104c4dbddf4db9fd",
                 "Designator": "R74",
                 "Device": "26f72fe2f47aadfc",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I132",
                 "LCSC Part Name": "1kΩ ±1% 62.5mW 厚膜电阻",
                 "Supplier Part": "C11702",
                 "Manufacturer": "UNI-ROYAL(厚声)",
@@ -9563,7 +9601,6 @@
                 "JLCPCB Part Class": "Basic Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/0402WGF1001TCE/12256.html",
                 "Supplier": "LCSC",
-                "Footprint": "6aa1f3953dbd9cdc",
                 "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
                 "3D Model Title": "R0402_L1.0-W0.5-H0.4",
                 "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
@@ -9574,11 +9611,7 @@
                 "Voltage-Supply(Max)": "50V",
                 "Temperature Coefficient": "±100ppm/℃",
                 "Operating Temperature": "-55℃~+155℃",
-                "Name": "={Value}",
                 "Description": "电阻类型:厚膜电阻;阻值:1kΩ;精度:±1%;功率:62.5mW;工作电压:50V;温度系数:±100ppm/℃;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$2I132",
                 "DeviceName": "0402WGF1001TCE",
                 "FootprintName": "R0402"
             },
@@ -9640,7 +9673,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "VIN",
+                    "net": "$2N143",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -9663,15 +9696,19 @@
                 "Symbol": "174287835e3e9139",
                 "Designator": "D12",
                 "Device": "7d2b79f345310ee1",
+                "Footprint": "439f7f3b13f2a32a",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I134",
+                "Manufacturer Part": "n.c.",
+                "Supplier Footprint": "SOD-523",
                 "LCSC Part Name": "电压:70V 电流:70mA",
                 "Supplier Part": "C179321",
                 "Manufacturer": "Nexperia(安世)",
-                "Manufacturer Part": "n.c.",
-                "Supplier Footprint": "SOD-523",
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/1PS79SB70%252C115/190715.html",
                 "Supplier": "LCSC",
-                "Footprint": "439f7f3b13f2a32a",
                 "3D Model": "8f56a03db567494d8f4c9d12aa52a741",
                 "3D Model Title": "SOD-523_L1.2-W0.8-H0.7-LS1.6",
                 "3D Model Transform": "62.992,31.496,0,180,0,0,0,0,0",
@@ -9681,11 +9718,7 @@
                 "Current - Rectified": "70mA",
                 "Reverse Leakage Current (Ir)": "10uA@70V",
                 "Non-Repetitive Peak Forward Surge Current": "100mA",
-                "Name": "={Manufacturer Part}",
                 "Description": "二极管配置:1个独立式;正向压降(Vf):1V@15mA;直流反向耐压(Vr):70V;整流电流:70mA;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$2I134",
                 "DeviceName": "1PS79SB70,115",
                 "FootprintName": "SOD-523_L1.2-W0.8-LS1.6-RD"
             },
@@ -9716,15 +9749,19 @@
                 "Symbol": "174287835e3e9139",
                 "Designator": "D13",
                 "Device": "7d2b79f345310ee1",
+                "Manufacturer Part": "n.c.",
+                "Supplier Footprint": "SOD-523",
+                "Footprint": "439f7f3b13f2a32a",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I135",
                 "LCSC Part Name": "电压:70V 电流:70mA",
                 "Supplier Part": "C179321",
                 "Manufacturer": "Nexperia(安世)",
-                "Manufacturer Part": "n.c.",
-                "Supplier Footprint": "SOD-523",
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/1PS79SB70%252C115/190715.html",
                 "Supplier": "LCSC",
-                "Footprint": "439f7f3b13f2a32a",
                 "3D Model": "8f56a03db567494d8f4c9d12aa52a741",
                 "3D Model Title": "SOD-523_L1.2-W0.8-H0.7-LS1.6",
                 "3D Model Transform": "62.992,31.496,0,180,0,0,0,0,0",
@@ -9734,11 +9771,7 @@
                 "Current - Rectified": "70mA",
                 "Reverse Leakage Current (Ir)": "10uA@70V",
                 "Non-Repetitive Peak Forward Surge Current": "100mA",
-                "Name": "={Manufacturer Part}",
                 "Description": "二极管配置:1个独立式;正向压降(Vf):1V@15mA;直流反向耐压(Vr):70V;整流电流:70mA;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$2I135",
                 "DeviceName": "1PS79SB70,115",
                 "FootprintName": "SOD-523_L1.2-W0.8-LS1.6-RD"
             },
@@ -9769,15 +9802,19 @@
                 "Symbol": "174287835e3e9139",
                 "Designator": "D14",
                 "Device": "7d2b79f345310ee1",
+                "Manufacturer Part": "n.c.",
+                "Supplier Footprint": "SOD-523",
+                "Footprint": "439f7f3b13f2a32a",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I136",
                 "LCSC Part Name": "电压:70V 电流:70mA",
                 "Supplier Part": "C179321",
                 "Manufacturer": "Nexperia(安世)",
-                "Manufacturer Part": "n.c.",
-                "Supplier Footprint": "SOD-523",
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/1PS79SB70%252C115/190715.html",
                 "Supplier": "LCSC",
-                "Footprint": "439f7f3b13f2a32a",
                 "3D Model": "8f56a03db567494d8f4c9d12aa52a741",
                 "3D Model Title": "SOD-523_L1.2-W0.8-H0.7-LS1.6",
                 "3D Model Transform": "62.992,31.496,0,180,0,0,0,0,0",
@@ -9787,11 +9824,7 @@
                 "Current - Rectified": "70mA",
                 "Reverse Leakage Current (Ir)": "10uA@70V",
                 "Non-Repetitive Peak Forward Surge Current": "100mA",
-                "Name": "={Manufacturer Part}",
                 "Description": "二极管配置:1个独立式;正向压降(Vf):1V@15mA;直流反向耐压(Vr):70V;整流电流:70mA;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$2I136",
                 "DeviceName": "1PS79SB70,115",
                 "FootprintName": "SOD-523_L1.2-W0.8-LS1.6-RD"
             },
@@ -9822,15 +9855,19 @@
                 "Symbol": "174287835e3e9139",
                 "Designator": "D15",
                 "Device": "7d2b79f345310ee1",
+                "Manufacturer Part": "n.c.",
+                "Supplier Footprint": "SOD-523",
+                "Footprint": "439f7f3b13f2a32a",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I137",
                 "LCSC Part Name": "电压:70V 电流:70mA",
                 "Supplier Part": "C179321",
                 "Manufacturer": "Nexperia(安世)",
-                "Manufacturer Part": "n.c.",
-                "Supplier Footprint": "SOD-523",
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/1PS79SB70%252C115/190715.html",
                 "Supplier": "LCSC",
-                "Footprint": "439f7f3b13f2a32a",
                 "3D Model": "8f56a03db567494d8f4c9d12aa52a741",
                 "3D Model Title": "SOD-523_L1.2-W0.8-H0.7-LS1.6",
                 "3D Model Transform": "62.992,31.496,0,180,0,0,0,0,0",
@@ -9840,11 +9877,7 @@
                 "Current - Rectified": "70mA",
                 "Reverse Leakage Current (Ir)": "10uA@70V",
                 "Non-Repetitive Peak Forward Surge Current": "100mA",
-                "Name": "={Manufacturer Part}",
                 "Description": "二极管配置:1个独立式;正向压降(Vf):1V@15mA;直流反向耐压(Vr):70V;整流电流:70mA;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$2I137",
                 "DeviceName": "1PS79SB70,115",
                 "FootprintName": "SOD-523_L1.2-W0.8-LS1.6-RD"
             },
@@ -9874,8 +9907,8 @@
                 "Convert to PCB": "yes",
                 "Symbol": "7ade811f663915b5",
                 "Designator": "U45",
-                "Name": "={Manufacturer Part}",
                 "Device": "7f8220f66a277dfe",
+                "Name": "={Manufacturer Part}",
                 "Reuse Block": "",
                 "Group ID": "",
                 "Channel ID": "$2I140",
@@ -9919,7 +9952,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "EN_SW",
+                    "net": "",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -9990,7 +10023,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "VIN",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -10084,6 +10117,39 @@
                     "name": "1",
                     "number": "1",
                     "net": "GND",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                }
+            }
+        },
+        "gge360_4": {
+            "props": {
+                "Unique ID": "gge360_4",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Designator": "TP9",
+                "Symbol": "3e8d450d9dbc2b78",
+                "Device": "f103fa0072dee2f5",
+                "Name": "FB",
+                "Footprint": "73bbda59ef65f40a",
+                "3D Model": "",
+                "3D Model Title": "",
+                "3D Model Transform": "",
+                "Description": "Test Point 测试点",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I150",
+                "Comment": "",
+                "PCB Layer": "TopLayer",
+                "DeviceName": "Test-Point",
+                "FootprintName": "Test-Point-0.5mm"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "FB_SW",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -10962,7 +11028,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "VIN",
+                    "net": "VOUT_PL",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -11017,7 +11083,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "VIN",
+                    "net": "VOUT_PL",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -11076,7 +11142,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_PL",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -11127,7 +11193,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_PL",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -11178,7 +11244,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_PL",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -11229,7 +11295,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_PL",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -11244,6 +11310,11 @@
                 "Symbol": "163afa4d76e15ecd",
                 "Designator": "R76",
                 "Device": "05f338ae9c9df49c",
+                "Footprint": "18fe0afe327ce21d",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I84",
                 "LCSC Part Name": "7mΩ ±1% 1W",
                 "Supplier Part": "C2988653",
                 "Manufacturer": "Milliohm(毫欧)",
@@ -11252,7 +11323,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220407/F189C92CC2C10DCB4BF36375122B9E11.pdf",
                 "Supplier": "LCSC",
-                "Footprint": "18fe0afe327ce21d",
                 "3D Model": "89a1f13db2384da588040e0b3c55bf66",
                 "3D Model Title": "R1206_L3.2-W1.6-H0.6",
                 "3D Model Transform": "125.984,62.992,0,0,0,0,0,0,0",
@@ -11264,11 +11334,7 @@
                 "Current Rating": "31.6A",
                 "Temperature Coefficient": "±50ppm/℃",
                 "Mounting Type": "贴片",
-                "Name": "={Value}",
                 "Description": "电阻类型:采样电阻;阻值:7mΩ;精度:±1%;工作电压:-;功率:1W;温度系数:±50ppm/℃;安装方式:贴片;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I84",
                 "DeviceName": "HoLLR1206-1W-7mR-1%",
                 "FootprintName": "R1206"
             },
@@ -11284,7 +11350,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_PL",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -12068,15 +12134,19 @@
                 "Symbol": "174287835e3e9139",
                 "Designator": "D18",
                 "Device": "7d2b79f345310ee1",
+                "Manufacturer Part": "n.c.",
+                "Supplier Footprint": "SOD-523",
+                "Footprint": "439f7f3b13f2a32a",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I98",
                 "LCSC Part Name": "电压:70V 电流:70mA",
                 "Supplier Part": "C179321",
                 "Manufacturer": "Nexperia(安世)",
-                "Manufacturer Part": "n.c.",
-                "Supplier Footprint": "SOD-523",
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/1PS79SB70%252C115/190715.html",
                 "Supplier": "LCSC",
-                "Footprint": "439f7f3b13f2a32a",
                 "3D Model": "8f56a03db567494d8f4c9d12aa52a741",
                 "3D Model Title": "SOD-523_L1.2-W0.8-H0.7-LS1.6",
                 "3D Model Transform": "62.992,31.496,0,180,0,0,0,0,0",
@@ -12086,11 +12156,7 @@
                 "Current - Rectified": "70mA",
                 "Reverse Leakage Current (Ir)": "10uA@70V",
                 "Non-Repetitive Peak Forward Surge Current": "100mA",
-                "Name": "={Manufacturer Part}",
                 "Description": "二极管配置:1个独立式;正向压降(Vf):1V@15mA;直流反向耐压(Vr):70V;整流电流:70mA;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I98",
                 "DeviceName": "1PS79SB70,115",
                 "FootprintName": "SOD-523_L1.2-W0.8-LS1.6-RD"
             },
@@ -12121,15 +12187,19 @@
                 "Symbol": "174287835e3e9139",
                 "Designator": "D19",
                 "Device": "7d2b79f345310ee1",
+                "Manufacturer Part": "n.c.",
+                "Supplier Footprint": "SOD-523",
+                "Footprint": "439f7f3b13f2a32a",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I99",
                 "LCSC Part Name": "电压:70V 电流:70mA",
                 "Supplier Part": "C179321",
                 "Manufacturer": "Nexperia(安世)",
-                "Manufacturer Part": "n.c.",
-                "Supplier Footprint": "SOD-523",
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/1PS79SB70%252C115/190715.html",
                 "Supplier": "LCSC",
-                "Footprint": "439f7f3b13f2a32a",
                 "3D Model": "8f56a03db567494d8f4c9d12aa52a741",
                 "3D Model Title": "SOD-523_L1.2-W0.8-H0.7-LS1.6",
                 "3D Model Transform": "62.992,31.496,0,180,0,0,0,0,0",
@@ -12139,11 +12209,7 @@
                 "Current - Rectified": "70mA",
                 "Reverse Leakage Current (Ir)": "10uA@70V",
                 "Non-Repetitive Peak Forward Surge Current": "100mA",
-                "Name": "={Manufacturer Part}",
                 "Description": "二极管配置:1个独立式;正向压降(Vf):1V@15mA;直流反向耐压(Vr):70V;整流电流:70mA;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I99",
                 "DeviceName": "1PS79SB70,115",
                 "FootprintName": "SOD-523_L1.2-W0.8-LS1.6-RD"
             },
@@ -12174,15 +12240,19 @@
                 "Symbol": "174287835e3e9139",
                 "Designator": "D20",
                 "Device": "7d2b79f345310ee1",
+                "Manufacturer Part": "n.c.",
+                "Supplier Footprint": "SOD-523",
+                "Footprint": "439f7f3b13f2a32a",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I100",
                 "LCSC Part Name": "电压:70V 电流:70mA",
                 "Supplier Part": "C179321",
                 "Manufacturer": "Nexperia(安世)",
-                "Manufacturer Part": "n.c.",
-                "Supplier Footprint": "SOD-523",
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/1PS79SB70%252C115/190715.html",
                 "Supplier": "LCSC",
-                "Footprint": "439f7f3b13f2a32a",
                 "3D Model": "8f56a03db567494d8f4c9d12aa52a741",
                 "3D Model Title": "SOD-523_L1.2-W0.8-H0.7-LS1.6",
                 "3D Model Transform": "62.992,31.496,0,180,0,0,0,0,0",
@@ -12192,11 +12262,7 @@
                 "Current - Rectified": "70mA",
                 "Reverse Leakage Current (Ir)": "10uA@70V",
                 "Non-Repetitive Peak Forward Surge Current": "100mA",
-                "Name": "={Manufacturer Part}",
                 "Description": "二极管配置:1个独立式;正向压降(Vf):1V@15mA;直流反向耐压(Vr):70V;整流电流:70mA;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I100",
                 "DeviceName": "1PS79SB70,115",
                 "FootprintName": "SOD-523_L1.2-W0.8-LS1.6-RD"
             },
@@ -12227,15 +12293,19 @@
                 "Symbol": "174287835e3e9139",
                 "Designator": "D21",
                 "Device": "7d2b79f345310ee1",
+                "Manufacturer Part": "n.c.",
+                "Supplier Footprint": "SOD-523",
+                "Footprint": "439f7f3b13f2a32a",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I101",
                 "LCSC Part Name": "电压:70V 电流:70mA",
                 "Supplier Part": "C179321",
                 "Manufacturer": "Nexperia(安世)",
-                "Manufacturer Part": "n.c.",
-                "Supplier Footprint": "SOD-523",
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/1PS79SB70%252C115/190715.html",
                 "Supplier": "LCSC",
-                "Footprint": "439f7f3b13f2a32a",
                 "3D Model": "8f56a03db567494d8f4c9d12aa52a741",
                 "3D Model Title": "SOD-523_L1.2-W0.8-H0.7-LS1.6",
                 "3D Model Transform": "62.992,31.496,0,180,0,0,0,0,0",
@@ -12245,11 +12315,7 @@
                 "Current - Rectified": "70mA",
                 "Reverse Leakage Current (Ir)": "10uA@70V",
                 "Non-Repetitive Peak Forward Surge Current": "100mA",
-                "Name": "={Manufacturer Part}",
                 "Description": "二极管配置:1个独立式;正向压降(Vf):1V@15mA;直流反向耐压(Vr):70V;整流电流:70mA;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I101",
                 "DeviceName": "1PS79SB70,115",
                 "FootprintName": "SOD-523_L1.2-W0.8-LS1.6-RD"
             },
@@ -12401,7 +12467,7 @@
                 "12": {
                     "name": "FB2",
                     "number": "12",
-                    "net": "$4N51",
+                    "net": "FB_PL",
                     "props": {
                         "Pin Number": "12"
                     }
@@ -12417,7 +12483,7 @@
                 "14": {
                     "name": "CSP2",
                     "number": "14",
-                    "net": "VIN",
+                    "net": "VOUT_PL",
                     "props": {
                         "Pin Number": "14"
                     }
@@ -12425,7 +12491,7 @@
                 "15": {
                     "name": "VBUS",
                     "number": "15",
-                    "net": "VIN",
+                    "net": "VOUT_PL",
                     "props": {
                         "Pin Number": "15"
                     }
@@ -12465,7 +12531,7 @@
                 "20": {
                     "name": "VCC",
                     "number": "20",
-                    "net": "",
+                    "net": "$4N119",
                     "props": {
                         "Pin Number": "20"
                     }
@@ -12529,7 +12595,7 @@
                 "28": {
                     "name": "EN",
                     "number": "28",
-                    "net": "EN_SW",
+                    "net": "EN_PL",
                     "props": {
                         "Pin Number": "28"
                     }
@@ -12686,6 +12752,11 @@
                 "Symbol": "e35a43efffcef1be",
                 "Designator": "C170",
                 "Device": "d3cfc7c90cd7b53b",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I108",
                 "LCSC Part Name": "1nF ±5% 50V",
                 "Supplier Part": "C76947",
                 "Manufacturer": "muRata(村田)",
@@ -12694,7 +12765,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/GRM1555C1H102JA01D/78074.html",
                 "Supplier": "LCSC",
-                "Footprint": "61cdfc0797f2cd6a",
                 "3D Model": "36a51122f27c49738f86b3bfa98863e0",
                 "3D Model Title": "C0402_L1.0-W0.5-H0.5",
                 "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
@@ -12702,11 +12772,7 @@
                 "Tolerance": "±5%",
                 "Voltage Rating": "50V",
                 "Temperature Coefficient": "C0G",
-                "Name": "={Value}",
                 "Description": "容值:1nF;精度:±5%;额定电压:50V;温度系数:C0G;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I108",
                 "DeviceName": "GRM1555C1H102JA01D",
                 "FootprintName": "C0402"
             },
@@ -12722,7 +12788,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_PL",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -12737,6 +12803,11 @@
                 "Symbol": "af8deb1366096f08",
                 "Designator": "R81",
                 "Device": "5356167ae901bb71",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I109",
                 "LCSC Part Name": "150kΩ ±1% 62.5mW 厚膜电阻",
                 "Supplier Part": "C25755",
                 "Manufacturer": "UNI-ROYAL(厚声)",
@@ -12745,7 +12816,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
                 "Supplier": "LCSC",
-                "Footprint": "6aa1f3953dbd9cdc",
                 "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
                 "3D Model Title": "R0402_L1.0-W0.5-H0.4",
                 "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
@@ -12756,11 +12826,7 @@
                 "Overload Voltage (Max)": "50V",
                 "Temperature Coefficient": "±100ppm/℃",
                 "Operating Temperature Range": "-55℃~+155℃",
-                "Name": "={Value}",
                 "Description": "电阻类型:厚膜电阻;阻值:150kΩ;精度:±1%;功率:62.5mW;最大工作电压:50V;温度系数:±100ppm/℃;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I109",
                 "DeviceName": "0402WGF1503TCE",
                 "FootprintName": "R0402"
             },
@@ -12768,7 +12834,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "$4N51",
+                    "net": "FB_PL",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -12776,7 +12842,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VIN",
+                    "net": "VOUT_PL",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -12830,7 +12896,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "$4N51",
+                    "net": "FB_PL",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -12873,7 +12939,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "VIN",
+                    "net": "VOUT_PL",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -12896,6 +12962,11 @@
                 "Symbol": "f4b0ee10987334ff",
                 "Designator": "C172",
                 "Device": "ed46c2c5608656f2",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I115",
                 "LCSC Part Name": "470nF ±10% 16V",
                 "Supplier Part": "C471404",
                 "Manufacturer": "muRata(村田)",
@@ -12904,7 +12975,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20240710/F2237F1AF7C7EF2ACAB3062B3C96A06C.pdf",
                 "Supplier": "LCSC",
-                "Footprint": "61cdfc0797f2cd6a",
                 "3D Model": "36a51122f27c49738f86b3bfa98863e0",
                 "3D Model Title": "C0402_L1.0-W0.5-H0.5",
                 "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
@@ -12912,11 +12982,7 @@
                 "Tolerance": "±10%",
                 "Voltage Rating": "16V",
                 "Temperature Coefficient": "X7R",
-                "Name": "={Value}",
                 "Description": "容值:470nF;精度:±10%;额定电压:16V;温度系数:X7R;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I115",
                 "DeviceName": "GRM155R71C474KE01D",
                 "FootprintName": "C0402"
             },
@@ -12947,6 +13013,11 @@
                 "Symbol": "f4b0ee10987334ff",
                 "Designator": "C173",
                 "Device": "ed46c2c5608656f2",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I116",
                 "LCSC Part Name": "470nF ±10% 16V",
                 "Supplier Part": "C471404",
                 "Manufacturer": "muRata(村田)",
@@ -12955,7 +13026,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20240710/F2237F1AF7C7EF2ACAB3062B3C96A06C.pdf",
                 "Supplier": "LCSC",
-                "Footprint": "61cdfc0797f2cd6a",
                 "3D Model": "36a51122f27c49738f86b3bfa98863e0",
                 "3D Model Title": "C0402_L1.0-W0.5-H0.5",
                 "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
@@ -12963,11 +13033,7 @@
                 "Tolerance": "±10%",
                 "Voltage Rating": "16V",
                 "Temperature Coefficient": "X7R",
-                "Name": "={Value}",
                 "Description": "容值:470nF;精度:±10%;额定电压:16V;温度系数:X7R;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I116",
                 "DeviceName": "GRM155R71C474KE01D",
                 "FootprintName": "C0402"
             },
@@ -12998,6 +13064,11 @@
                 "Symbol": "4a5bccc425255a77",
                 "Designator": "R83",
                 "Device": "4cf5cb7719964c8d",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I118",
                 "LCSC Part Name": "470kΩ ±1% 62.5mW 厚膜电阻",
                 "Supplier Part": "C25790",
                 "Manufacturer": "UNI-ROYAL(厚声)",
@@ -13006,7 +13077,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/0402WGF4703TCE/26533.html",
                 "Supplier": "LCSC",
-                "Footprint": "6aa1f3953dbd9cdc",
                 "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
                 "3D Model Title": "R0402_L1.0-W0.5-H0.4",
                 "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
@@ -13017,11 +13087,7 @@
                 "Voltage-Supply(Max)": "50V",
                 "Temperature Coefficient": "±100ppm/℃",
                 "Operating Temperature": "-55℃~+155℃",
-                "Name": "={Value}",
                 "Description": "电阻类型:厚膜电阻;阻值:470kΩ;精度:±1%;功率:62.5mW;工作电压:50V;温度系数:±100ppm/℃;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I118",
                 "DeviceName": "0402WGF4703TCE",
                 "FootprintName": "R0402"
             },
@@ -13160,6 +13226,11 @@
                 "Symbol": "e427f8686810048c",
                 "Designator": "C174",
                 "Device": "77da9c5e52ba9aa1",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I121",
                 "LCSC Part Name": "10nF ±5% 25V",
                 "Supplier Part": "C3855387",
                 "Manufacturer": "muRata(村田)",
@@ -13168,7 +13239,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20230811/C6C7820912B95AFDC60D6A494CC46EBA.pdf",
                 "Supplier": "LCSC",
-                "Footprint": "61cdfc0797f2cd6a",
                 "3D Model": "36a51122f27c49738f86b3bfa98863e0",
                 "3D Model Title": "C0402_L1.0-W0.5-H0.5",
                 "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
@@ -13176,11 +13246,7 @@
                 "Tolerance": "±5%",
                 "Voltage Rated": "25V",
                 "Temperature Coefficient": "C0G",
-                "Name": "={Value}",
                 "Description": "容值:10nF;精度:±5%;额定电压:25V;材质(温度系数):C0G;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I121",
                 "DeviceName": "GRM1555C1E103JE01D",
                 "FootprintName": "C0402"
             },
@@ -13211,6 +13277,11 @@
                 "Symbol": "7ab9941f0552ad29",
                 "Designator": "C175",
                 "Device": "6dbad20010e583bf",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I122",
                 "LCSC Part Name": "220pF ±5% 50V",
                 "Supplier Part": "C71693",
                 "Manufacturer": "muRata(村田)",
@@ -13219,7 +13290,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/GRM1555C1H221JA01D/72801.html",
                 "Supplier": "LCSC",
-                "Footprint": "61cdfc0797f2cd6a",
                 "3D Model": "36a51122f27c49738f86b3bfa98863e0",
                 "3D Model Title": "C0402_L1.0-W0.5-H0.5",
                 "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
@@ -13227,11 +13297,7 @@
                 "Tolerance": "±5%",
                 "Voltage Rating": "50V",
                 "Temperature Coefficient": "C0G",
-                "Name": "={Value}",
                 "Description": "容值:220pF;精度:±5%;额定电压:50V;温度系数:C0G;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I122",
                 "DeviceName": "GRM1555C1H221JA01D",
                 "FootprintName": "C0402"
             },
@@ -14304,6 +14370,11 @@
                 "Symbol": "7c60cd21b049fdde",
                 "Designator": "Q20",
                 "Device": "cc715072bf1ec725",
+                "Footprint": "21af69896abd3a5f",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I156",
                 "LCSC Part Name": "1个N沟道 耐压:30V 电流:40A",
                 "Supplier Part": "C502961",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -14312,7 +14383,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20210916/C7FC9E4553F76B09A7A1476E3419D818.pdf",
                 "Supplier": "LCSC",
-                "Footprint": "21af69896abd3a5f",
                 "3D Model": "b23e793009534f16bb01b0820426cab8",
                 "3D Model Title": "POWERVDFN-8_L3.2-W3.1-P0.65-LS3.3-BL-1",
                 "3D Model Transform": "129.921,129.921,0,0,0,0,0,0,0",
@@ -14326,11 +14396,7 @@
                 "Input Capacitance (Ciss@Vds)": "822pF",
                 "Reverse Transfer Capacitance (Crss@Vds)": "15.3pF",
                 "Operating Temperature": "-55℃~+150℃",
-                "Name": "={Manufacturer Part}",
                 "Description": "类型:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):40A;导通电阻(RDS(on)@Vgs,Id):9.5mΩ@4.5V,20A;功率:25W;阈值电压(Vgs(th)@Id):1V@250uA;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I156",
                 "DeviceName": "NCEP3040Q",
                 "FootprintName": "POWERVDFN-8_L3.2-W3.1-P0.65-LS3.3-BL-1"
             },
@@ -14463,6 +14529,11 @@
                 "Symbol": "291ff1588dcd35af",
                 "Designator": "Q21",
                 "Device": "ff9c741971bec4dd",
+                "Footprint": "28e726abbb591754",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I158",
                 "LCSC Part Name": "1个P沟道 耐压:30V",
                 "Supplier Part": "C502815",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -14471,7 +14542,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20200911/C502815_8390B8B11A53BCF62088D69875D3D22E.pdf",
                 "Supplier": "LCSC",
-                "Footprint": "28e726abbb591754",
                 "3D Model": "516601acd9f9456f95db3aec763cd5e7",
                 "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
                 "3D Model Transform": "129.921,131.8895,0,0,0,0,0,2.5,0",
@@ -14485,11 +14555,7 @@
                 "Input Capacitance (Ciss@Vds)": "-",
                 "Reverse Transfer Capacitance (Crss@Vds)": "-",
                 "Operating Temperature": "-55℃~+150℃",
-                "Name": "={Manufacturer Part}",
                 "Description": "类型:1个P沟道;漏源电压(Vdss):30V;连续漏极电流(Id):-;导通电阻(RDS(on)@Vgs,Id):-;功率:40W;阈值电压(Vgs(th)@Id):-;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I158",
                 "DeviceName": "NCE30P28Q",
                 "FootprintName": "PDFN3333-8_L3.1-W3.2-P0.65-LS3.4-BL"
             },
@@ -14576,6 +14642,11 @@
                 "Symbol": "76b22e6cc43f63b3",
                 "Designator": "D25",
                 "Device": "5df848684d7484f9",
+                "Footprint": "89b4661b6898a876",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I159",
                 "LCSC Part Name": "MM5Z15VT1G",
                 "Supplier Part": "C236108",
                 "Manufacturer": "onsemi(安森美)",
@@ -14584,7 +14655,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/MM5Z15VT1G/235698.html",
                 "Supplier": "LCSC",
-                "Footprint": "89b4661b6898a876",
                 "3D Model": "d10bb3db7b4b41808fe672faecd39ab5",
                 "3D Model Title": "SOD-523_L1.2-W0.8-LS1.6-RD-1",
                 "3D Model Transform": "62.992,31.496,0,0,0,0,0,0,0",
@@ -14595,11 +14665,7 @@
                 "Impedance(Zzt)": "30Ω",
                 "Impedance(Zzk)": "80Ω",
                 "Operating Junction Temperature Range": "-65℃~+150℃",
-                "Name": "={Manufacturer Part}",
                 "Description": "稳压值(标称值):15V;稳压值(范围):14.3V~15.8V;耗散功率(Pd):500mW;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I159",
                 "DeviceName": "MM5Z15VT1G",
                 "FootprintName": "SOD-523_L1.2-W0.8-LS1.6-RD-1"
             },
@@ -14630,6 +14696,11 @@
                 "Symbol": "104c4dbddf4db9fd",
                 "Designator": "R88",
                 "Device": "26f72fe2f47aadfc",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I160",
                 "LCSC Part Name": "1kΩ ±1% 62.5mW 厚膜电阻",
                 "Supplier Part": "C11702",
                 "Manufacturer": "UNI-ROYAL(厚声)",
@@ -14638,7 +14709,6 @@
                 "JLCPCB Part Class": "Basic Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/0402WGF1001TCE/12256.html",
                 "Supplier": "LCSC",
-                "Footprint": "6aa1f3953dbd9cdc",
                 "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
                 "3D Model Title": "R0402_L1.0-W0.5-H0.4",
                 "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
@@ -14649,11 +14719,7 @@
                 "Voltage-Supply(Max)": "50V",
                 "Temperature Coefficient": "±100ppm/℃",
                 "Operating Temperature": "-55℃~+155℃",
-                "Name": "={Value}",
                 "Description": "电阻类型:厚膜电阻;阻值:1kΩ;精度:±1%;功率:62.5mW;工作电压:50V;温度系数:±100ppm/℃;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I160",
                 "DeviceName": "0402WGF1001TCE",
                 "FootprintName": "R0402"
             },
@@ -14737,8 +14803,8 @@
                 "Convert to PCB": "yes",
                 "Symbol": "7ade811f663915b5",
                 "Designator": "U44",
-                "Name": "={Manufacturer Part}",
                 "Device": "7f8220f66a277dfe",
+                "Name": "={Manufacturer Part}",
                 "Reuse Block": "",
                 "Group ID": "",
                 "Channel ID": "$4I166",
@@ -14837,6 +14903,11 @@
                 "Symbol": "b2145b91b13c887a",
                 "Designator": "R90",
                 "Device": "d2b2950863f7bec6",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I167",
                 "LCSC Part Name": "47kΩ ±1% 62.5mW 厚膜电阻",
                 "Supplier Part": "C25792",
                 "Manufacturer": "UNI-ROYAL(厚声)",
@@ -14845,7 +14916,6 @@
                 "JLCPCB Part Class": "Basic Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/0402WGF4702TCE/26535.html",
                 "Supplier": "LCSC",
-                "Footprint": "6aa1f3953dbd9cdc",
                 "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
                 "3D Model Title": "R0402_L1.0-W0.5-H0.4",
                 "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
@@ -14856,11 +14926,7 @@
                 "Voltage-Supply(Max)": "50V",
                 "Temperature Coefficient": "±100ppm/℃",
                 "Operating Temperature": "-55℃~+155℃",
-                "Name": "={Value}",
                 "Description": "电阻类型:厚膜电阻;阻值:47kΩ;精度:±1%;功率:62.5mW;工作电压:50V;温度系数:±100ppm/℃;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I167",
                 "DeviceName": "0402WGF4702TCE",
                 "FootprintName": "R0402"
             },
@@ -14891,6 +14957,11 @@
                 "Symbol": "f20746f3751c5b8e",
                 "Designator": "R91",
                 "Device": "37c22c10d18f439a",
+                "Footprint": "6aa1f3953dbd9cdc",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I168",
                 "LCSC Part Name": "51kΩ ±1% 62.5mW 厚膜电阻",
                 "Supplier Part": "C25794",
                 "Manufacturer": "UNI-ROYAL(厚声)",
@@ -14899,7 +14970,6 @@
                 "JLCPCB Part Class": "Basic Part",
                 "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
                 "Supplier": "LCSC",
-                "Footprint": "6aa1f3953dbd9cdc",
                 "3D Model": "98c88bc2b9094f218f3a3e30a7012738",
                 "3D Model Title": "R0402_L1.0-W0.5-H0.4",
                 "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
@@ -14910,11 +14980,7 @@
                 "Overload Voltage (Max)": "50V",
                 "Temperature Coefficient": "±100ppm/℃",
                 "Operating Temperature Range": "-55℃~+155℃",
-                "Name": "={Value}",
                 "Description": "电阻类型:厚膜电阻;阻值:51kΩ;精度:±1%;功率:62.5mW;最大工作电压:50V;温度系数:±100ppm/℃;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I168",
                 "DeviceName": "0402WGF5102TCE",
                 "FootprintName": "R0402"
             },
@@ -14961,9 +15027,144 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "VIN",
+                    "net": "VOUT_PL",
                     "props": {
                         "Pin Number": "1"
+                    }
+                }
+            }
+        },
+        "gge107_5": {
+            "props": {
+                "Unique ID": "gge107_5",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "e5253fd4af5b638f",
+                "Designator": "C185",
+                "Device": "9d72e2c71ee69b39",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I172",
+                "LCSC Part Name": "100nF ±10% 50V",
+                "Supplier Part": "",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GRM155R71H104KE14D",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GRM155R71H104KE14D/78147.html",
+                "Supplier": "LCSC",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "n.c.",
+                "Tolerance": "±10%",
+                "Voltage Rating": "50V",
+                "Temperature Coefficient": "X7R",
+                "Description": "容值:100nF;精度:±10%;额定电压:50V;温度系数:X7R;",
+                "DeviceName": "GRM155R71H104KE14D",
+                "FootprintName": "C0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$4N56",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge360_5": {
+            "props": {
+                "Unique ID": "gge360_5",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Designator": "TP10",
+                "Symbol": "3e8d450d9dbc2b78",
+                "Device": "f103fa0072dee2f5",
+                "Name": "FB",
+                "Footprint": "73bbda59ef65f40a",
+                "3D Model": "",
+                "3D Model Title": "",
+                "3D Model Transform": "",
+                "Description": "Test Point 测试点",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I173",
+                "Comment": "",
+                "PCB Layer": "TopLayer",
+                "DeviceName": "Test-Point",
+                "FootprintName": "Test-Point-0.5mm"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "FB_PL",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                }
+            }
+        },
+        "gge118_3": {
+            "props": {
+                "Unique ID": "gge118_3",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "14a7690941c1b57d",
+                "Designator": "C186",
+                "Device": "7144a73f04455c85",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I174",
+                "LCSC Part Name": "1uF ±10% 50V",
+                "Supplier Part": "C1518208",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GRM155R61H105KE05D",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GRM155R61H105KE05D/1609005.html",
+                "Supplier": "LCSC",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "1uF",
+                "Tolerance": "±10%",
+                "Voltage Rating": "50V",
+                "Temperature Coefficient": "X5R",
+                "Description": "容值:1uF;精度:±10%;额定电压:50V;温度系数:X5R;",
+                "DeviceName": "GRM155R61H105KE05D",
+                "FootprintName": "C0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "$4N119",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "GND",
+                    "props": {
+                        "Pin Number": "2"
                     }
                 }
             }
@@ -14997,8 +15198,506 @@
             }
         },
         "netRule": {
+            "$2N2": {
+                "net": "$2N2",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N5": {
+                "net": "$2N5",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N6": {
+                "net": "$2N6",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N8": {
+                "net": "$2N8",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N9": {
+                "net": "$2N9",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N10": {
+                "net": "$2N10",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N11": {
+                "net": "$2N11",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N15": {
+                "net": "$2N15",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N18": {
+                "net": "$2N18",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N19": {
+                "net": "$2N19",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N20": {
+                "net": "$2N20",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N21": {
+                "net": "$2N21",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N24": {
+                "net": "$2N24",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
             "GND": {
                 "net": "GND",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N35": {
+                "net": "$2N35",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N36": {
+                "net": "$2N36",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N38": {
+                "net": "$2N38",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N44": {
+                "net": "$2N44",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N45": {
+                "net": "$2N45",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N46": {
+                "net": "$2N46",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N47": {
+                "net": "$2N47",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N51": {
+                "net": "$2N51",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N52": {
+                "net": "$2N52",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "SDA_SW": {
+                "net": "SDA_SW",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "SCL_SW": {
+                "net": "SCL_SW",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "FB_SW": {
+                "net": "FB_SW",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N60": {
+                "net": "$2N60",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N63": {
+                "net": "$2N63",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "INT_SW": {
+                "net": "INT_SW",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "INA_CSP": {
+                "net": "INA_CSP",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "VBUS_SW": {
+                "net": "VBUS_SW",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "DM_SW": {
+                "net": "DM_SW",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "CC2_SW": {
+                "net": "CC2_SW",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "CC1_SW": {
+                "net": "CC1_SW",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "DP_SW": {
+                "net": "DP_SW",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "SW2303_CSP": {
+                "net": "SW2303_CSP",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "5V_SW": {
+                "net": "5V_SW",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N101": {
+                "net": "$2N101",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N118": {
+                "net": "$2N118",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N119": {
+                "net": "$2N119",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N123": {
+                "net": "$2N123",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N124": {
+                "net": "$2N124",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N143": {
+                "net": "$2N143",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "VOUT_SW": {
+                "net": "VOUT_SW",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "VIN": {
+                "net": "VIN",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N27": {
+                "net": "$4N27",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "VOUT_PL": {
+                "net": "VOUT_PL",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N36": {
+                "net": "$4N36",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N37": {
+                "net": "$4N37",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N38": {
+                "net": "$4N38",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N39": {
+                "net": "$4N39",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N40": {
+                "net": "$4N40",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N41": {
+                "net": "$4N41",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N42": {
+                "net": "$4N42",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N43": {
+                "net": "$4N43",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N44": {
+                "net": "$4N44",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N45": {
+                "net": "$4N45",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N46": {
+                "net": "$4N46",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N47": {
+                "net": "$4N47",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N48": {
+                "net": "$4N48",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "FB_PL": {
+                "net": "FB_PL",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N56": {
+                "net": "$4N56",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N57": {
+                "net": "$4N57",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N58": {
+                "net": "$4N58",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N60": {
+                "net": "$4N60",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N62": {
+                "net": "$4N62",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N63": {
+                "net": "$4N63",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N66": {
+                "net": "$4N66",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "EN_PL": {
+                "net": "EN_PL",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "VBUS_PL": {
+                "net": "VBUS_PL",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "DM_PL": {
+                "net": "DM_PL",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "CC2_PL": {
+                "net": "CC2_PL",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "CC1_PL": {
+                "net": "CC1_PL",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "DP_PL": {
+                "net": "DP_PL",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "PL": {
+                "net": "PL",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "5V_PL": {
+                "net": "5V_PL",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N96": {
+                "net": "$4N96",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N97": {
+                "net": "$4N97",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N99": {
+                "net": "$4N99",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N100": {
+                "net": "$4N100",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "SCL_PL": {
+                "net": "SCL_PL",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "SDA_PL": {
+                "net": "SDA_PL",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N115": {
+                "net": "$4N115",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$4N119": {
+                "net": "$4N119",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
@@ -15141,14 +15840,8 @@
                     "TrackPhysics": ""
                 }
             },
-            "SW2303_CSP": {
-                "net": "SW2303_CSP",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "5V_SW": {
-                "net": "5V_SW",
+            "5V_TPS": {
+                "net": "5V_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
@@ -15183,12 +15876,6 @@
                     "TrackPhysics": ""
                 }
             },
-            "VIN": {
-                "net": "VIN",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
             "$1N125": {
                 "net": "$1N125",
                 "ruleMap": {
@@ -15209,498 +15896,6 @@
             },
             "$1N144": {
                 "net": "$1N144",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N2": {
-                "net": "$2N2",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N3": {
-                "net": "$2N3",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N5": {
-                "net": "$2N5",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N6": {
-                "net": "$2N6",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N8": {
-                "net": "$2N8",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N9": {
-                "net": "$2N9",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N10": {
-                "net": "$2N10",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N11": {
-                "net": "$2N11",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N15": {
-                "net": "$2N15",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N18": {
-                "net": "$2N18",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N19": {
-                "net": "$2N19",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N20": {
-                "net": "$2N20",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N21": {
-                "net": "$2N21",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N24": {
-                "net": "$2N24",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N35": {
-                "net": "$2N35",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N36": {
-                "net": "$2N36",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N38": {
-                "net": "$2N38",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N44": {
-                "net": "$2N44",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N45": {
-                "net": "$2N45",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N46": {
-                "net": "$2N46",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N47": {
-                "net": "$2N47",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N51": {
-                "net": "$2N51",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N52": {
-                "net": "$2N52",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "SDA_SW": {
-                "net": "SDA_SW",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "SCL_SW": {
-                "net": "SCL_SW",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N58": {
-                "net": "$2N58",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N60": {
-                "net": "$2N60",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N63": {
-                "net": "$2N63",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "INT_SW": {
-                "net": "INT_SW",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "INA_CSP": {
-                "net": "INA_CSP",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "SW": {
-                "net": "SW",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "DM_SW": {
-                "net": "DM_SW",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "CC2_SW": {
-                "net": "CC2_SW",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "CC1_SW": {
-                "net": "CC1_SW",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "DP_SW": {
-                "net": "DP_SW",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "VBUS_SW": {
-                "net": "VBUS_SW",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N101": {
-                "net": "$2N101",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "FB_SW": {
-                "net": "FB_SW",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N118": {
-                "net": "$2N118",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N119": {
-                "net": "$2N119",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N123": {
-                "net": "$2N123",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N124": {
-                "net": "$2N124",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "EN_SW": {
-                "net": "EN_SW",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N27": {
-                "net": "$4N27",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N36": {
-                "net": "$4N36",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N37": {
-                "net": "$4N37",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N38": {
-                "net": "$4N38",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N39": {
-                "net": "$4N39",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N40": {
-                "net": "$4N40",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N41": {
-                "net": "$4N41",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N42": {
-                "net": "$4N42",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N43": {
-                "net": "$4N43",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N44": {
-                "net": "$4N44",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N45": {
-                "net": "$4N45",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N46": {
-                "net": "$4N46",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N47": {
-                "net": "$4N47",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N48": {
-                "net": "$4N48",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N51": {
-                "net": "$4N51",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N56": {
-                "net": "$4N56",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N57": {
-                "net": "$4N57",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N58": {
-                "net": "$4N58",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N60": {
-                "net": "$4N60",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N62": {
-                "net": "$4N62",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N63": {
-                "net": "$4N63",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N66": {
-                "net": "$4N66",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "VBUS_PL": {
-                "net": "VBUS_PL",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "DM_PL": {
-                "net": "DM_PL",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "VOUT_PL": {
-                "net": "VOUT_PL",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "CC2_PL": {
-                "net": "CC2_PL",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "CC1_PL": {
-                "net": "CC1_PL",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "DP_PL": {
-                "net": "DP_PL",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "PL": {
-                "net": "PL",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "5V_PL": {
-                "net": "5V_PL",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N96": {
-                "net": "$4N96",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N97": {
-                "net": "$4N97",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N99": {
-                "net": "$4N99",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N100": {
-                "net": "$4N100",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "FB_PL": {
-                "net": "FB_PL",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "SCL_PL": {
-                "net": "SCL_PL",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "SDA_PL": {
-                "net": "SDA_PL",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "EN_PL": {
-                "net": "EN_PL",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N115": {
-                "net": "$4N115",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
