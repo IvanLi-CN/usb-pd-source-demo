@@ -60,6 +60,15 @@
 - 连接关系与布局关键点对应数据手册的“Layout Guidelines”与引脚功能章节：见 `docs/datasheets/tps55288-datasheet.md:42`–`50`（高频环路与取样走线）与 `docs/datasheets/tps55288-datasheet.md:196`–`202`（Buck 栅极驱动供电/能力）。
 - 仓库附带参考网表（仅用于对照与交叉验证设计连线，不作为量产原理图约束）：`docs/netlists/tps55288-demo-2025-11-07.enet`。
 
+### 1.3 I2C 地址与配置
+
+- TPS55288（7-bit）：`0x74`（默认）或 `0x75`
+  - 方式：由 `MODE` 脚外接电阻选择，或通过 `REG 0x00` 的 `I2CADD` 位在 `0x74/0x75` 之间切换。
+  - 参考：`docs/datasheets/tps55288-datasheet.md`
+- SW2303（7-bit）：`0x3C`
+  - 说明：协议控制器用于 PD/PPS 协商；I2C 时序示例中标注从地址 `0x3C`。
+  - 参考：`docs/datasheets/sw2303/sw2303-datasheet.md`
+
 ## 2. 外置 MOSFET 设计要点与候选
 
 ### 2.1 关键工况与初算
