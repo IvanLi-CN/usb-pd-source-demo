@@ -315,7 +315,18 @@ VBUS_SW 网络分布（抽样确认）
 
 ## 未解决问题
 
-- （无）“最新3”网表替换后，先前问题已解决，未发现新增冲突或连错/漏连。
+- TPS 方案中 USB 接口地网不一致（需确认修正）
+  - 现状：
+    - 连接器 USB6 的 A1B12/B1A12（接口地脚）→ `PGND_TPS`；而同一连接器的 12/13/14/15 脚 → `GND`（docs/netlists/usb-pd-source-netlist.enet:3226–3360）。
+    - SW2303（U12，TPS 域）`CSN` → `GND`（U12.9，docs/netlists/usb-pd-source-netlist.enet:2608–2617）；`CSP` 经 R67=510Ω（$1N65→VBUS_TPS）与 C132=1µF（$1N65→GND）构成 RC 滤波（docs/netlists/usb-pd-source-netlist.enet:2889–2968）。
+    - ESD 阵列 D5（TPD4E05U06）回流 → `GND`（D5.3/D5.8，docs/netlists/usb-pd-source-netlist.enet:3106–3186）。
+    - 端口去耦 C127：`VBUS_TPS` → `PGND_TPS`（docs/netlists/usb-pd-source-netlist.enet:4498–4514）。
+    - 网表中未检出 `PGND_TPS` 与 `GND` 的桥接件（0Ω/磁珠/二极管等）（脚本穷举两端件确认 0 项）。
+  - 风险：接口 GND 回路（PGND_TPS）与 ESD/采样参考（GND）属于不同地域，且无单点连接；与 SW2303 官方“以同一地参考进行采样与防护”的常规建议相悖，可能导致 ESD 回流跨域、采样偏移与环路增大。
+  - 建议（两选一，择一落地）：
+    - 方案 A（统一地）：将 `PGND_TPS` 与 `GND` 在接口附近单点短接（0Ω/磁珠），并把 USB6 所有地脚与 D5 回流、U12.CSN/RC 同归同一地；或直接将 USB6.A1B12/B1A12 也改接 `GND`（取消 `PGND_TPS` 独立网）。
+    - 方案 B（保持 PGND 分域）：则需把 D5 回流、U12.CSN 与 RC 滤波的地端统一改接 `PGND_TPS`，并保留 `PGND_TPS`↔`GND` 的单点连接（0Ω/磁珠）以控回流路径。
+  - 备注：此前“差分 RC”建议按你的偏好不跟进改动；本条仅聚焦地网一致性。
 
 ## 澄清（非问题）
 
