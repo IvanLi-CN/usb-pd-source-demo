@@ -315,7 +315,15 @@ VBUS_SW 网络分布（抽样确认）
 
 ## 未解决问题
 
-- （无）本次更新后未发现与设计笔记/数据手册冲突或错连/漏连。
+- 网络同名导致跨域短接（需修复）：
+  - 发现公共网名 `SW2303_CSP` 同时用于 TPS 方案与 SW 方案中的 SW2303 节点，造成两套 Demo 通过该采样节点被“同名并网”。
+    - 证据：
+      - TPS 域 SW2303.CSP → `SW2303_CSP`：docs/netlists/usb-pd-source-netlist.enet:2608、2912、2966、4428
+      - SW 域 SW2303.CSP → `SW2303_CSP`：docs/netlists/usb-pd-source-netlist.enet:8123、8427、8481、9576
+      - Net 字典仅有一个 `SW2303_CSP`：docs/netlists/usb-pd-source-netlist.enet:15412（说明为全局同名网）
+  - 影响：三套 DCDC 除 VIN/GND 外应完全独立；该同名网导致 SW 与 TPS 域在 SW2303 的 CSP 采样点被电气连接，破坏隔离。
+  - 建议修复：在原理图中将两处网名改为域内唯一命名（如 `SW2303_CSP_SW` 与 `SW2303_CSP_TPS`，或简化为 `CSP_SW` / `CSP_TPS`），重新导出网表并替换项目文件。
+  - 备注：当前另一个无后缀网名 `PL` 仅在 PL 域使用，未造成跨域并网，可保留；但为降低歧义，也可按需统一为 `PL_PL`。
 
 ## 澄清（非问题）
 
