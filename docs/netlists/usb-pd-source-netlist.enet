@@ -2866,7 +2866,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VBUS_TPS",
+                    "net": "PGND_TPS",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -2971,7 +2971,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "VBUS_TPS",
+                    "net": "PGND_TPS",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -3228,7 +3228,7 @@
                 "12": {
                     "name": "12",
                     "number": "12",
-                    "net": "GND",
+                    "net": "PGND_TPS",
                     "props": {
                         "Pin Number": "12"
                     }
@@ -3236,7 +3236,7 @@
                 "13": {
                     "name": "13",
                     "number": "13",
-                    "net": "GND",
+                    "net": "PGND_TPS",
                     "props": {
                         "Pin Number": "13"
                     }
@@ -3244,7 +3244,7 @@
                 "14": {
                     "name": "14",
                     "number": "14",
-                    "net": "GND",
+                    "net": "PGND_TPS",
                     "props": {
                         "Pin Number": "14"
                     }
@@ -3252,7 +3252,7 @@
                 "15": {
                     "name": "15",
                     "number": "15",
-                    "net": "GND",
+                    "net": "PGND_TPS",
                     "props": {
                         "Pin Number": "15"
                     }
@@ -4443,7 +4443,7 @@
                 "Reuse Block": "",
                 "Group ID": "",
                 "Channel ID": "$1I152",
-                "Name": "",
+                "Name": "+",
                 "Footprint": "c00680b3dd65b5d7",
                 "3D Model": "2d7a1f86b9a149918202ae11311bf1b3",
                 "3D Model Title": "Banana_M2xφ4.4x7 v1",
@@ -4459,57 +4459,6 @@
                     "net": "VOUT_TPS",
                     "props": {
                         "Pin Number": "1"
-                    }
-                }
-            }
-        },
-        "gge112_2": {
-            "props": {
-                "Unique ID": "gge112_2",
-                "Add into BOM": "yes",
-                "Convert to PCB": "yes",
-                "Symbol": "cec05fbdf0d068b8",
-                "Designator": "C127",
-                "Device": "a120e88182a8ab2b",
-                "Voltage Rated": "35V",
-                "Name": "={Value}",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$1I153",
-                "LCSC Part Name": "22uF ±20% 35V",
-                "Supplier Part": "C6119901",
-                "Manufacturer": "HRE(芯声)",
-                "Manufacturer Part": "CGA0805X5R226M350MT",
-                "Supplier Footprint": "0805",
-                "JLCPCB Part Class": "扩展库",
-                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20231129/D589D0CC4D260F7AC3A77E53B455CCB3.pdf",
-                "Supplier": "LCSC",
-                "Footprint": "575d12570b9b242a",
-                "3D Model": "1ba041120af144c991958decab20d241",
-                "3D Model Title": "C0805_L2.0-W1.3-H1.3",
-                "3D Model Transform": "78.74,51.181,0,0,0,0,0,0.0005,0",
-                "Value": "22uF",
-                "Tolerance": "±20%",
-                "Temperature Coefficient": "X5R",
-                "Description": "容值:22uF;精度:±20%;额定电压:35V;材质(温度系数):X5R;",
-                "DeviceName": "CGA0805X5R226M350MT",
-                "FootprintName": "C0805_1"
-            },
-            "pinInfoMap": {
-                "1": {
-                    "name": "1",
-                    "number": "1",
-                    "net": "VBUS_TPS",
-                    "props": {
-                        "Pin Number": "1"
-                    }
-                },
-                "2": {
-                    "name": "2",
-                    "number": "2",
-                    "net": "PGND_TPS",
-                    "props": {
-                        "Pin Number": "2"
                     }
                 }
             }
@@ -4555,6 +4504,11 @@
                 "Symbol": "6fda3b379eb24195",
                 "Designator": "Q22",
                 "Device": "c938cea6d0d62b67",
+                "Footprint": "edb067b44731c8fc",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I156",
                 "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
                 "Supplier Part": "C502964",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -4563,7 +4517,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
                 "Supplier": "LCSC",
-                "Footprint": "edb067b44731c8fc",
                 "3D Model": "516601acd9f9456f95db3aec763cd5e7",
                 "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
                 "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
@@ -4577,11 +4530,7 @@
                 "Input Capacitance(Ciss)": "2.1nF@15V",
                 "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
                 "Operating Temperature": "-55℃~+150℃@(Tj)",
-                "Name": "={Manufacturer Part}",
                 "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$1I156",
                 "DeviceName": "NCEP3065QU",
                 "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
             },
@@ -4668,6 +4617,11 @@
                 "Symbol": "6fda3b379eb24195",
                 "Designator": "Q23",
                 "Device": "c938cea6d0d62b67",
+                "Footprint": "edb067b44731c8fc",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I157",
                 "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
                 "Supplier Part": "C502964",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -4676,7 +4630,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
                 "Supplier": "LCSC",
-                "Footprint": "edb067b44731c8fc",
                 "3D Model": "516601acd9f9456f95db3aec763cd5e7",
                 "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
                 "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
@@ -4690,11 +4643,7 @@
                 "Input Capacitance(Ciss)": "2.1nF@15V",
                 "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
                 "Operating Temperature": "-55℃~+150℃@(Tj)",
-                "Name": "={Manufacturer Part}",
                 "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$1I157",
                 "DeviceName": "NCEP3065QU",
                 "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
             },
@@ -4769,6 +4718,57 @@
                     "net": "$1N18",
                     "props": {
                         "Pin Number": "9"
+                    }
+                }
+            }
+        },
+        "gge112_2": {
+            "props": {
+                "Unique ID": "gge112_2",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "cec05fbdf0d068b8",
+                "Designator": "C127",
+                "Device": "a120e88182a8ab2b",
+                "Voltage Rated": "35V",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I160",
+                "LCSC Part Name": "22uF ±20% 35V",
+                "Supplier Part": "C6119901",
+                "Manufacturer": "HRE(芯声)",
+                "Manufacturer Part": "CGA0805X5R226M350MT",
+                "Supplier Footprint": "0805",
+                "JLCPCB Part Class": "扩展库",
+                "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20231129/D589D0CC4D260F7AC3A77E53B455CCB3.pdf",
+                "Supplier": "LCSC",
+                "Footprint": "575d12570b9b242a",
+                "3D Model": "1ba041120af144c991958decab20d241",
+                "3D Model Title": "C0805_L2.0-W1.3-H1.3",
+                "3D Model Transform": "78.74,51.181,0,0,0,0,0,0.0005,0",
+                "Value": "22uF",
+                "Tolerance": "±20%",
+                "Temperature Coefficient": "X5R",
+                "Description": "容值:22uF;精度:±20%;额定电压:35V;材质(温度系数):X5R;",
+                "DeviceName": "CGA0805X5R226M350MT",
+                "FootprintName": "C0805_1"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "VBUS_TPS",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "PGND_TPS",
+                    "props": {
+                        "Pin Number": "2"
                     }
                 }
             }
@@ -8251,7 +8251,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "$2N119",
+                    "net": "PGND_SW",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -8607,7 +8607,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "$2N119",
+                    "net": "PGND_SW",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -8712,7 +8712,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "$2N119",
+                    "net": "PGND_SW",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -8969,7 +8969,7 @@
                 "12": {
                     "name": "12",
                     "number": "12",
-                    "net": "GND",
+                    "net": "PGND_SW",
                     "props": {
                         "Pin Number": "12"
                     }
@@ -8977,7 +8977,7 @@
                 "13": {
                     "name": "13",
                     "number": "13",
-                    "net": "GND",
+                    "net": "PGND_SW",
                     "props": {
                         "Pin Number": "13"
                     }
@@ -8985,7 +8985,7 @@
                 "14": {
                     "name": "14",
                     "number": "14",
-                    "net": "GND",
+                    "net": "PGND_SW",
                     "props": {
                         "Pin Number": "14"
                     }
@@ -8993,7 +8993,7 @@
                 "15": {
                     "name": "15",
                     "number": "15",
-                    "net": "GND",
+                    "net": "PGND_SW",
                     "props": {
                         "Pin Number": "15"
                     }
@@ -9001,7 +9001,7 @@
                 "A1B12": {
                     "name": "GND",
                     "number": "A1B12",
-                    "net": "GND",
+                    "net": "PGND_SW",
                     "props": {
                         "Pin Number": "A1B12"
                     }
@@ -9057,7 +9057,7 @@
                 "B1A12": {
                     "name": "GND",
                     "number": "B1A12",
-                    "net": "GND",
+                    "net": "PGND_SW",
                     "props": {
                         "Pin Number": "B1A12"
                     }
@@ -9509,7 +9509,7 @@
                 "1": {
                     "name": "C",
                     "number": "1",
-                    "net": "$2N143",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -9899,7 +9899,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "$2N143",
+                    "net": "VOUT_SW",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -10390,6 +10390,11 @@
                 "Symbol": "6fda3b379eb24195",
                 "Designator": "Q28",
                 "Device": "c938cea6d0d62b67",
+                "Footprint": "edb067b44731c8fc",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I151",
                 "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
                 "Supplier Part": "C502964",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -10398,7 +10403,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
                 "Supplier": "LCSC",
-                "Footprint": "edb067b44731c8fc",
                 "3D Model": "516601acd9f9456f95db3aec763cd5e7",
                 "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
                 "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
@@ -10412,11 +10416,7 @@
                 "Input Capacitance(Ciss)": "2.1nF@15V",
                 "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
                 "Operating Temperature": "-55℃~+150℃@(Tj)",
-                "Name": "={Manufacturer Part}",
                 "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$2I151",
                 "DeviceName": "NCEP3065QU",
                 "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
             },
@@ -10503,6 +10503,11 @@
                 "Symbol": "6fda3b379eb24195",
                 "Designator": "Q29",
                 "Device": "c938cea6d0d62b67",
+                "Footprint": "edb067b44731c8fc",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I152",
                 "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
                 "Supplier Part": "C502964",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -10511,7 +10516,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
                 "Supplier": "LCSC",
-                "Footprint": "edb067b44731c8fc",
                 "3D Model": "516601acd9f9456f95db3aec763cd5e7",
                 "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
                 "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
@@ -10525,11 +10529,7 @@
                 "Input Capacitance(Ciss)": "2.1nF@15V",
                 "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
                 "Operating Temperature": "-55℃~+150℃@(Tj)",
-                "Name": "={Manufacturer Part}",
                 "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$2I152",
                 "DeviceName": "NCEP3065QU",
                 "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
             },
@@ -10616,6 +10616,11 @@
                 "Symbol": "6fda3b379eb24195",
                 "Designator": "Q30",
                 "Device": "c938cea6d0d62b67",
+                "Footprint": "edb067b44731c8fc",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I153",
                 "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
                 "Supplier Part": "C502964",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -10624,7 +10629,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
                 "Supplier": "LCSC",
-                "Footprint": "edb067b44731c8fc",
                 "3D Model": "516601acd9f9456f95db3aec763cd5e7",
                 "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
                 "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
@@ -10638,11 +10642,7 @@
                 "Input Capacitance(Ciss)": "2.1nF@15V",
                 "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
                 "Operating Temperature": "-55℃~+150℃@(Tj)",
-                "Name": "={Manufacturer Part}",
                 "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$2I153",
                 "DeviceName": "NCEP3065QU",
                 "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
             },
@@ -10729,6 +10729,11 @@
                 "Symbol": "6fda3b379eb24195",
                 "Designator": "Q31",
                 "Device": "c938cea6d0d62b67",
+                "Footprint": "edb067b44731c8fc",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$2I154",
                 "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
                 "Supplier Part": "C502964",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -10737,7 +10742,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
                 "Supplier": "LCSC",
-                "Footprint": "edb067b44731c8fc",
                 "3D Model": "516601acd9f9456f95db3aec763cd5e7",
                 "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
                 "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
@@ -10751,11 +10755,7 @@
                 "Input Capacitance(Ciss)": "2.1nF@15V",
                 "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
                 "Operating Temperature": "-55℃~+150℃@(Tj)",
-                "Name": "={Manufacturer Part}",
                 "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$2I154",
                 "DeviceName": "NCEP3065QU",
                 "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
             },
@@ -14093,7 +14093,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "$4N99",
+                    "net": "PGND_PL",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -14449,7 +14449,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "$4N99",
+                    "net": "PGND_PL",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -14554,7 +14554,7 @@
                 "2": {
                     "name": "2",
                     "number": "2",
-                    "net": "$4N99",
+                    "net": "PGND_PL",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -14811,7 +14811,7 @@
                 "12": {
                     "name": "12",
                     "number": "12",
-                    "net": "GND",
+                    "net": "PGND_PL",
                     "props": {
                         "Pin Number": "12"
                     }
@@ -14819,7 +14819,7 @@
                 "13": {
                     "name": "13",
                     "number": "13",
-                    "net": "GND",
+                    "net": "PGND_PL",
                     "props": {
                         "Pin Number": "13"
                     }
@@ -14827,7 +14827,7 @@
                 "14": {
                     "name": "14",
                     "number": "14",
-                    "net": "GND",
+                    "net": "PGND_PL",
                     "props": {
                         "Pin Number": "14"
                     }
@@ -14835,7 +14835,7 @@
                 "15": {
                     "name": "15",
                     "number": "15",
-                    "net": "GND",
+                    "net": "PGND_PL",
                     "props": {
                         "Pin Number": "15"
                     }
@@ -14843,7 +14843,7 @@
                 "A1B12": {
                     "name": "GND",
                     "number": "A1B12",
-                    "net": "GND",
+                    "net": "PGND_PL",
                     "props": {
                         "Pin Number": "A1B12"
                     }
@@ -14899,7 +14899,7 @@
                 "B1A12": {
                     "name": "GND",
                     "number": "B1A12",
-                    "net": "GND",
+                    "net": "PGND_PL",
                     "props": {
                         "Pin Number": "B1A12"
                     }
@@ -15855,6 +15855,11 @@
                 "Symbol": "6fda3b379eb24195",
                 "Designator": "Q24",
                 "Device": "c938cea6d0d62b67",
+                "Footprint": "edb067b44731c8fc",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I175",
                 "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
                 "Supplier Part": "C502964",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -15863,7 +15868,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
                 "Supplier": "LCSC",
-                "Footprint": "edb067b44731c8fc",
                 "3D Model": "516601acd9f9456f95db3aec763cd5e7",
                 "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
                 "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
@@ -15877,11 +15881,7 @@
                 "Input Capacitance(Ciss)": "2.1nF@15V",
                 "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
                 "Operating Temperature": "-55℃~+150℃@(Tj)",
-                "Name": "={Manufacturer Part}",
                 "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I175",
                 "DeviceName": "NCEP3065QU",
                 "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
             },
@@ -15968,6 +15968,11 @@
                 "Symbol": "6fda3b379eb24195",
                 "Designator": "Q25",
                 "Device": "c938cea6d0d62b67",
+                "Footprint": "edb067b44731c8fc",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I176",
                 "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
                 "Supplier Part": "C502964",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -15976,7 +15981,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
                 "Supplier": "LCSC",
-                "Footprint": "edb067b44731c8fc",
                 "3D Model": "516601acd9f9456f95db3aec763cd5e7",
                 "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
                 "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
@@ -15990,11 +15994,7 @@
                 "Input Capacitance(Ciss)": "2.1nF@15V",
                 "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
                 "Operating Temperature": "-55℃~+150℃@(Tj)",
-                "Name": "={Manufacturer Part}",
                 "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I176",
                 "DeviceName": "NCEP3065QU",
                 "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
             },
@@ -16081,6 +16081,11 @@
                 "Symbol": "6fda3b379eb24195",
                 "Designator": "Q26",
                 "Device": "c938cea6d0d62b67",
+                "Footprint": "edb067b44731c8fc",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I177",
                 "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
                 "Supplier Part": "C502964",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -16089,7 +16094,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
                 "Supplier": "LCSC",
-                "Footprint": "edb067b44731c8fc",
                 "3D Model": "516601acd9f9456f95db3aec763cd5e7",
                 "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
                 "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
@@ -16103,11 +16107,7 @@
                 "Input Capacitance(Ciss)": "2.1nF@15V",
                 "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
                 "Operating Temperature": "-55℃~+150℃@(Tj)",
-                "Name": "={Manufacturer Part}",
                 "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I177",
                 "DeviceName": "NCEP3065QU",
                 "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
             },
@@ -16194,6 +16194,11 @@
                 "Symbol": "6fda3b379eb24195",
                 "Designator": "Q27",
                 "Device": "c938cea6d0d62b67",
+                "Footprint": "edb067b44731c8fc",
+                "Name": "={Manufacturer Part}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$4I178",
                 "LCSC Part Name": "1个N沟道 耐压:30V 电流:65A",
                 "Supplier Part": "C502964",
                 "Manufacturer": "NCE(无锡新洁能)",
@@ -16202,7 +16207,6 @@
                 "JLCPCB Part Class": "Extended Part",
                 "Datasheet": "https://item.szlcsc.com/datasheet/NCEP3065QU/515485.html",
                 "Supplier": "LCSC",
-                "Footprint": "edb067b44731c8fc",
                 "3D Model": "516601acd9f9456f95db3aec763cd5e7",
                 "3D Model Title": "PDFN3333-8_L3.1-W3.2-H0.8-P0.65",
                 "3D Model Transform": "129.921,131.8895,0,0,0,0,0,0,0",
@@ -16216,11 +16220,7 @@
                 "Input Capacitance(Ciss)": "2.1nF@15V",
                 "Reverse Transfer Capacitance (Crss@Vds)": "15.5pF@15V",
                 "Operating Temperature": "-55℃~+150℃@(Tj)",
-                "Name": "={Manufacturer Part}",
                 "Description": "数量:1个N沟道;漏源电压(Vdss):30V;连续漏极电流(Id):65A;导通电阻(RDS(on)):1.9mΩ@10V,20A;耗散功率(Pd):55W;阈值电压(Vgs(th)):1.5V;",
-                "Reuse Block": "",
-                "Group ID": "",
-                "Channel ID": "$4I178",
                 "DeviceName": "NCEP3065QU",
                 "FootprintName": "DFN-8_L3.2-W3.1-P0.65-LS3.4-BL"
             },
@@ -16328,272 +16328,224 @@
             }
         },
         "netRule": {
-            "$2N2": {
-                "net": "$2N2",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N5": {
-                "net": "$2N5",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N6": {
-                "net": "$2N6",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N8": {
-                "net": "$2N8",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N9": {
-                "net": "$2N9",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N10": {
-                "net": "$2N10",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N11": {
-                "net": "$2N11",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N15": {
-                "net": "$2N15",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N18": {
-                "net": "$2N18",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N19": {
-                "net": "$2N19",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N20": {
-                "net": "$2N20",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N21": {
-                "net": "$2N21",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$2N24": {
-                "net": "$2N24",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
             "GND": {
                 "net": "GND",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N35": {
-                "net": "$2N35",
+            "EN_TPS": {
+                "net": "EN_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N36": {
-                "net": "$2N36",
+            "SCL_TPS": {
+                "net": "SCL_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N38": {
-                "net": "$2N38",
+            "SDA_TPS": {
+                "net": "SDA_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N44": {
-                "net": "$2N44",
+            "$1N18": {
+                "net": "$1N18",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N45": {
-                "net": "$2N45",
+            "SW2_TPS": {
+                "net": "SW2_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N46": {
-                "net": "$2N46",
+            "$1N23": {
+                "net": "$1N23",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N47": {
-                "net": "$2N47",
+            "$1N24": {
+                "net": "$1N24",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N51": {
-                "net": "$2N51",
+            "$1N25": {
+                "net": "$1N25",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N52": {
-                "net": "$2N52",
+            "$1N27": {
+                "net": "$1N27",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "SDA_SW": {
-                "net": "SDA_SW",
+            "$1N28": {
+                "net": "$1N28",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "SCL_SW": {
-                "net": "SCL_SW",
+            "$1N30": {
+                "net": "$1N30",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "FB_SW": {
-                "net": "FB_SW",
+            "$1N31": {
+                "net": "$1N31",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N60": {
-                "net": "$2N60",
+            "$1N32": {
+                "net": "$1N32",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N63": {
-                "net": "$2N63",
+            "FB_TPS": {
+                "net": "FB_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "INT_SW": {
-                "net": "INT_SW",
+            "ISP_TPS": {
+                "net": "ISP_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "INA_CSP": {
-                "net": "INA_CSP",
+            "VOUT_TPS": {
+                "net": "VOUT_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "VBUS_SW": {
-                "net": "VBUS_SW",
+            "$1N47": {
+                "net": "$1N47",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "DM_SW": {
-                "net": "DM_SW",
+            "$1N51": {
+                "net": "$1N51",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "CC2_SW": {
-                "net": "CC2_SW",
+            "$1N52": {
+                "net": "$1N52",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "CC1_SW": {
-                "net": "CC1_SW",
+            "$1N53": {
+                "net": "$1N53",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "DP_SW": {
-                "net": "DP_SW",
+            "$1N54": {
+                "net": "$1N54",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N96": {
-                "net": "$2N96",
+            "$1N55": {
+                "net": "$1N55",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "5V_SW": {
-                "net": "5V_SW",
+            "DP_TPS": {
+                "net": "DP_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N101": {
-                "net": "$2N101",
+            "$1N65": {
+                "net": "$1N65",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N118": {
-                "net": "$2N118",
+            "5V_TPS": {
+                "net": "5V_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N119": {
-                "net": "$2N119",
+            "$1N76": {
+                "net": "$1N76",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N123": {
-                "net": "$2N123",
+            "CC2_TPS": {
+                "net": "CC2_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N124": {
-                "net": "$2N124",
+            "CC1_TPS": {
+                "net": "CC1_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$2N143": {
-                "net": "$2N143",
+            "DM_TPS": {
+                "net": "DM_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "VOUT_SW": {
-                "net": "VOUT_SW",
+            "VBUS_TPS": {
+                "net": "VBUS_TPS",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "PGND_TPS": {
+                "net": "PGND_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
             "VIN": {
                 "net": "VIN",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N125": {
+                "net": "$1N125",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N126": {
+                "net": "$1N126",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "INT_TPS": {
+                "net": "INT_TPS",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$1N144": {
+                "net": "$1N144",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
@@ -16766,6 +16718,12 @@
                     "TrackPhysics": ""
                 }
             },
+            "PGND_PL": {
+                "net": "PGND_PL",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
             "$4N94": {
                 "net": "$4N94",
                 "ruleMap": {
@@ -16786,12 +16744,6 @@
             },
             "$4N97": {
                 "net": "$4N97",
-                "ruleMap": {
-                    "TrackPhysics": ""
-                }
-            },
-            "$4N99": {
-                "net": "$4N99",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
@@ -16826,212 +16778,254 @@
                     "TrackPhysics": ""
                 }
             },
-            "EN_TPS": {
-                "net": "EN_TPS",
+            "$2N2": {
+                "net": "$2N2",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "SCL_TPS": {
-                "net": "SCL_TPS",
+            "$2N5": {
+                "net": "$2N5",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "SDA_TPS": {
-                "net": "SDA_TPS",
+            "$2N6": {
+                "net": "$2N6",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N18": {
-                "net": "$1N18",
+            "$2N8": {
+                "net": "$2N8",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "SW2_TPS": {
-                "net": "SW2_TPS",
+            "$2N9": {
+                "net": "$2N9",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N23": {
-                "net": "$1N23",
+            "$2N10": {
+                "net": "$2N10",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N24": {
-                "net": "$1N24",
+            "$2N11": {
+                "net": "$2N11",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N25": {
-                "net": "$1N25",
+            "$2N15": {
+                "net": "$2N15",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N27": {
-                "net": "$1N27",
+            "$2N18": {
+                "net": "$2N18",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N28": {
-                "net": "$1N28",
+            "$2N19": {
+                "net": "$2N19",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N30": {
-                "net": "$1N30",
+            "$2N20": {
+                "net": "$2N20",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N31": {
-                "net": "$1N31",
+            "$2N21": {
+                "net": "$2N21",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N32": {
-                "net": "$1N32",
+            "$2N24": {
+                "net": "$2N24",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "FB_TPS": {
-                "net": "FB_TPS",
+            "$2N35": {
+                "net": "$2N35",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "ISP_TPS": {
-                "net": "ISP_TPS",
+            "$2N36": {
+                "net": "$2N36",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "VOUT_TPS": {
-                "net": "VOUT_TPS",
+            "$2N38": {
+                "net": "$2N38",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N47": {
-                "net": "$1N47",
+            "$2N44": {
+                "net": "$2N44",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N51": {
-                "net": "$1N51",
+            "$2N45": {
+                "net": "$2N45",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N52": {
-                "net": "$1N52",
+            "$2N46": {
+                "net": "$2N46",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N53": {
-                "net": "$1N53",
+            "$2N47": {
+                "net": "$2N47",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N54": {
-                "net": "$1N54",
+            "$2N51": {
+                "net": "$2N51",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N55": {
-                "net": "$1N55",
+            "$2N52": {
+                "net": "$2N52",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "DP_TPS": {
-                "net": "DP_TPS",
+            "SDA_SW": {
+                "net": "SDA_SW",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N65": {
-                "net": "$1N65",
+            "SCL_SW": {
+                "net": "SCL_SW",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "5V_TPS": {
-                "net": "5V_TPS",
+            "FB_SW": {
+                "net": "FB_SW",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "VBUS_TPS": {
-                "net": "VBUS_TPS",
+            "$2N60": {
+                "net": "$2N60",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N76": {
-                "net": "$1N76",
+            "$2N63": {
+                "net": "$2N63",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "CC2_TPS": {
-                "net": "CC2_TPS",
+            "INT_SW": {
+                "net": "INT_SW",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "CC1_TPS": {
-                "net": "CC1_TPS",
+            "INA_CSP": {
+                "net": "INA_CSP",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "DM_TPS": {
-                "net": "DM_TPS",
+            "VBUS_SW": {
+                "net": "VBUS_SW",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "PGND_TPS": {
-                "net": "PGND_TPS",
+            "DM_SW": {
+                "net": "DM_SW",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N125": {
-                "net": "$1N125",
+            "CC2_SW": {
+                "net": "CC2_SW",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N126": {
-                "net": "$1N126",
+            "CC1_SW": {
+                "net": "CC1_SW",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "INT_TPS": {
-                "net": "INT_TPS",
+            "DP_SW": {
+                "net": "DP_SW",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
             },
-            "$1N144": {
-                "net": "$1N144",
+            "PGND_SW": {
+                "net": "PGND_SW",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N96": {
+                "net": "$2N96",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "5V_SW": {
+                "net": "5V_SW",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N101": {
+                "net": "$2N101",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N118": {
+                "net": "$2N118",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N123": {
+                "net": "$2N123",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "$2N124": {
+                "net": "$2N124",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "VOUT_SW": {
+                "net": "VOUT_SW",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }

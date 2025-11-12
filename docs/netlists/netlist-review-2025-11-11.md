@@ -1,6 +1,6 @@
-# 网表对照评审（2025-11-12 最新3）
+# 网表对照评审（2025-11-12 最新4）
 
-- 评审对象：`docs/netlists/usb-pd-source-netlist.enet`（已用最新文件替换：`/Users/ivan/Downloads/Netlist_Schematic1_2025-11-12 (3).enet`）
+- 评审对象：`docs/netlists/usb-pd-source-netlist.enet`（已用最新文件替换：`/Users/ivan/Downloads/Netlist_Schematic1_2025-11-12 (4).enet`）
 - 对照基线：
   - `docs/tps55288-design-notes.md:1`
   - `docs/sw2303-vbus-switch-notes.md:1`
@@ -13,9 +13,12 @@
 - 已替换项目网表为用户提供的最新文件（仅替换既有路径，未新增文件）。
 - 网表中包含 SW7201 方案（U2=SW7201，确认在案）。
 - 网表中未出现 PL5500，当前为 PL5501（U4=PL5501），后续校对均针对 PL5501 执行；如需改回 PL5500 请指示。
-  - “最新3”增量变更确认：
-    - 先前跨域同名网已消除：SW 与 TPS 域的 SW2303.CSP 分别使用匿名网（SW: `$2N96`；TPS: `$1N65`），不存在 `SW2303_CSP` 同名并网（示例：U13.8→`$2N96`；U12.8→`$1N65`）。
-    - TPS 域 USB 接口地线与相关器件连接符合建议：见“TPS→SW2303 USB 接口 GND 复核”。
+  - “最新4”增量变更确认：
+    - 先前跨域同名网仍保持消除：SW 与 TPS 域的 SW2303.CSP 分别使用匿名网 `$2N96` / `$1N65`。
+    - TPS 方案低侧检流已就位：新增 R66=5mΩ（`GND` ↔ `PGND_TPS`），形成端口地与系统地之间的检流通道（docs/netlists/usb-pd-source-netlist.enet:2829, 2860–2874）。
+    - CSP RC 归属修正：R67=510Ω（`$1N65` → `PGND_TPS`），C132=1µF（`$1N65` → `GND`），CSN=GND（U12.9），符合低侧检流采样（docs/netlists/usb-pd-source-netlist.enet:2908–2979, 2613–2617）。
+    - USB6 接地脚统一到 `PGND_TPS`：12/13/14/15 与 A1B12/B1A12 全部 → `PGND_TPS`（docs/netlists/usb-pd-source-netlist.enet:3196–3368）。
+    - ESD D5（TPD4E05U06）仍回流到 `GND`（D5.3/D5.8 → GND），在低侧检流架构下可工作；如偏好端口回流全落 `PGND_TPS`，可择机调整（docs/netlists/usb-pd-source-netlist.enet:3068–3186）。
 
 ## 检查清单（SW7201 段）
 
@@ -315,18 +318,7 @@ VBUS_SW 网络分布（抽样确认）
 
 ## 未解决问题
 
-- TPS 方案中 USB 接口地网不一致（需确认修正）
-  - 现状：
-    - 连接器 USB6 的 A1B12/B1A12（接口地脚）→ `PGND_TPS`；而同一连接器的 12/13/14/15 脚 → `GND`（docs/netlists/usb-pd-source-netlist.enet:3226–3360）。
-    - SW2303（U12，TPS 域）`CSN` → `GND`（U12.9，docs/netlists/usb-pd-source-netlist.enet:2608–2617）；`CSP` 经 R67=510Ω（$1N65→VBUS_TPS）与 C132=1µF（$1N65→GND）构成 RC 滤波（docs/netlists/usb-pd-source-netlist.enet:2889–2968）。
-    - ESD 阵列 D5（TPD4E05U06）回流 → `GND`（D5.3/D5.8，docs/netlists/usb-pd-source-netlist.enet:3106–3186）。
-    - 端口去耦 C127：`VBUS_TPS` → `PGND_TPS`（docs/netlists/usb-pd-source-netlist.enet:4498–4514）。
-    - 网表中未检出 `PGND_TPS` 与 `GND` 的桥接件（0Ω/磁珠/二极管等）（脚本穷举两端件确认 0 项）。
-  - 风险：接口 GND 回路（PGND_TPS）与 ESD/采样参考（GND）属于不同地域，且无单点连接；与 SW2303 官方“以同一地参考进行采样与防护”的常规建议相悖，可能导致 ESD 回流跨域、采样偏移与环路增大。
-  - 建议（两选一，择一落地）：
-    - 方案 A（统一地）：将 `PGND_TPS` 与 `GND` 在接口附近单点短接（0Ω/磁珠），并把 USB6 所有地脚与 D5 回流、U12.CSN/RC 同归同一地；或直接将 USB6.A1B12/B1A12 也改接 `GND`（取消 `PGND_TPS` 独立网）。
-    - 方案 B（保持 PGND 分域）：则需把 D5 回流、U12.CSN 与 RC 滤波的地端统一改接 `PGND_TPS`，并保留 `PGND_TPS`↔`GND` 的单点连接（0Ω/磁珠）以控回流路径。
-  - 备注：此前“差分 RC”建议按你的偏好不跟进改动；本条仅聚焦地网一致性。
+- （无）“最新4”网表替换后，先前问题已解决，未发现新增冲突或连错/漏连。
 
 ## 澄清（非问题）
 
@@ -364,15 +356,16 @@ VBUS_SW 网络分布（抽样确认）
 ## TPS→SW2303 USB 接口 GND 复核（对照官方建议）
 
 - 芯片 GND 与采样参考：
-  - U12=SW2303（TPS 域）`CSN`→GND（U12.9），符合“CSN 接地”的采样参考要求。
-  - U12 `CSP` 采用差分 RC 滤波：R67=510Ω（`$1N65`→`VBUS_TPS`）、C132=1µF（`$1N65`→GND），与手册推荐“510Ω+1µF RC 滤波（差分接 CSP/CSN）”一致。
+  - U12=SW2303（TPS 域）`CSN`→GND（U12.9）。
+  - U12 `CSP` RC：R67=510Ω（`$1N65`→`PGND_TPS`），C132=1µF（`$1N65`→GND）；与手册“510Ω+1µF 滤波”一致，且符合低侧检流（你已明确“不做对称差分 RC”）。
 - USB 端口与 ESD/耦合：
   - ESD 阵列 D5（TPD4E05U06）：各线路至 GND（D5.3、D5.8→GND；D+、D-、CC1、CC2 各通道对应 `DP_TPS/DM_TPS/CC1_TPS/CC2_TPS`）。
   - CC 耦合电容：C133=330nF（`CC1_TPS`→GND）、C134=330nF（`CC2_TPS`→GND），作为端口侧 EMI/瞬态耦合，符合常见做法。
 - 连接器地网划分：
-  - USB6（Type‑C）壳体/若干焊脚 → GND（pins 12–15）；触点 A1B12/B1A12 → `PGND_TPS`，实现端口接地与系统地的分域。
-  - 端口去耦：VBUS_TPS 至 `PGND_TPS` 采用 C（22µF 等，样例 C127，docs/netlists/usb-pd-source-netlist.enet:4502–4514），就近端口能量回路，降低回流环路面积。
+  - USB6（Type‑C）所有地脚（12/13/14/15、A1B12/B1A12）→ `PGND_TPS`；端口回路就近闭合。
+  - 端口去耦：VBUS_TPS → `PGND_TPS`（如 C127=22µF），就近端口能量回路。
 - 结论：
-  - SW2303（TPS 域）的 USB 接口地线与相关器件连接方式与官方资料一致（CSN 接地；CSP 差分 RC；端口 ESD/耦合对系统地；端口大电流回路对 `PGND_TPS`）。当前无违背建议的接法。
+  - 低侧检流拓扑已完整：`PGND_TPS`↔（R66=5mΩ）↔`GND`；`CSP` 采端口地侧（经 R67），`CSN` 采系统地侧，连接合理。
+  - D5（ESD）回流当前接 `GND`；如更偏好端口 ESD 全在 `PGND_TPS` 回路内，可后续将 D5.GND 改为 `PGND_TPS`（非必须）。
 
 > 注：本文档仅基于网表与仓库笔记进行交叉核查，未包含版图/实测波形验证。后续请结合 PCB 布局与上电测试补充确认。
