@@ -41,12 +41,13 @@
 - 输入范围：12–24 V（项目母线）；PL5501 器件工作 3.6–32 V。
 - 拓扑/控制：同步四开关 Buck‑Boost，COT 架构；内置 ~2 A 栅极驱动；开关频率可选 150/300/600/1200 kHz；支持 VADJ/IADJ 动态调压、软启动、抖频、限流/UVLO/OVP/OTP/SCP（依据：PL5501 数据手册 FREQ/VADJ/IADJ/保护描述，见 `docs/datasheets/pl5501-datasheet.md:18`、`:20`、`:9–10`）。
 
-### 1.1 I2C 地址与配置
+### 1.1 I2C 地址与配置（本项目固定）
 
 - PL5501：无 I2C（通过 `VADJ/IADJ/FB` 外部设定）；本项目以 SW2303（协议）+ FB/VADJ 实现档位与 PPS。
-- SW2303（7-bit）：`0x3C`
-  - 说明：协议控制器 I2C 从地址；I2C 时序示例以 `0x3C` 标注。
-  - 参考：`docs/datasheets/sw2303/sw2303-datasheet.md`
+- SW2303（7-bit）：固定 `0x3C`
+  - 用途：同域协议控制器。
+  - 总线：`SDA_PL/SCL_PL`（板上无上拉，由外部主机提供）。
+  - 参考：`docs/datasheets/sw2303/sw2303-datasheet.md`、`docs/netlists/netlist-review-2025-11-11.md`
 
 ## 2. 开关频率选择（fs）
 

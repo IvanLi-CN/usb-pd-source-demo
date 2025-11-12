@@ -66,13 +66,15 @@
 - 本方案主电感设计值为 6.8 µH，因此选择“最大档” 4.7 µH (43 kΩ) 最接近实际情况，也能给控制器一个保守估计：实际电感更大 → 电流斜率更小，OCP 检测会更安全但环路补偿稍慢。若改用 4.7 µH 物料，也无需调整 LSET。
 - 切勿让 LSET 悬空，否则控制器会误判档位导致 CS 斜坡/电流限值异常，极端情况下会提前触发 OCP 或震荡。量产前若更换电感规格，记得同步检查该电阻取值。
 
-### 1.5 I2C 地址与配置
+### 1.5 I2C 地址与配置（本项目固定）
 
-- SW7201（7-bit）：`0x3C` / `0x38` / `0x1C` / `0x18`
-  - 方式：通过寄存器 `REG 0x1A[1:0]` 选择 7 位从地址。
-  - 参考：`docs/datasheets/sw7201-datasheet.md`、`docs/datasheets/sw7201-register.md`
-- SW2303（7-bit）：`0x3C`
-  - 说明：协议控制器 I2C 从地址；手册 I2C 读写时序示例以 `0x3C` 给出。
+- SW7201（7-bit）：固定 `0x38`
+  - 依据：器件支持 `0x3C/0x38/0x1C/0x18` 可选；与同域 SW2303 共用 `SDA_SW/SCL_SW` 总线，避免与 SW2303 的 `0x3C` 冲突，统一设定为 `0x38`（通过 `REG 0x1A[1:0]`）。
+  - 总线：`SDA_SW/SCL_SW`（板上无上拉，由外部主机提供）。
+  - 参考：`docs/datasheets/sw7201-datasheet.md`、`docs/datasheets/sw7201-register.md`、`docs/netlists/netlist-review-2025-11-11.md`
+- SW2303（7-bit）：固定 `0x3C`
+  - 用途：同域协议控制器；手册 I2C 时序示例从地址 `0x3C`。
+  - 总线：`SDA_SW/SCL_SW`。
   - 参考：`docs/datasheets/sw2303/sw2303-datasheet.md`
 
 ## 2. 开关频率设定（锁定 400 kHz 档）
