@@ -1,6 +1,6 @@
-# 网表对照评审（2025-11-12 最新4）
+# 网表对照评审（2025-11-12 最新5）
 
-- 评审对象：`docs/netlists/usb-pd-source-netlist.enet`（已用最新文件替换：`/Users/ivan/Downloads/Netlist_Schematic1_2025-11-12 (4).enet`）
+- 评审对象：`docs/netlists/usb-pd-source-netlist.enet`
 - 对照基线：
   - `docs/tps55288-design-notes.md:1`
   - `docs/sw2303-vbus-switch-notes.md:1`
@@ -10,7 +10,6 @@
 
 ## 现状更新
 
-- 已替换项目网表为用户提供的最新文件（仅替换既有路径，未新增文件）。
 - 网表中包含 SW7201 方案（U2=SW7201，确认在案）。
 - 网表中未出现 PL5500，当前为 PL5501（U4=PL5501），后续校对均针对 PL5501 执行；如需改回 PL5500 请指示。
   - “最新4”增量变更确认：
@@ -19,6 +18,13 @@
     - CSP RC 归属修正：R67=510Ω（`$1N65` → `PGND_TPS`），C132=1µF（`$1N65` → `GND`），CSN=GND（U12.9），符合低侧检流采样（docs/netlists/usb-pd-source-netlist.enet:2908–2979, 2613–2617）。
     - USB6 接地脚统一到 `PGND_TPS`：12/13/14/15 与 A1B12/B1A12 全部 → `PGND_TPS`（docs/netlists/usb-pd-source-netlist.enet:3196–3368）。
     - ESD D5（TPD4E05U06）仍回流到 `GND`（D5.3/D5.8 → GND），在低侧检流架构下可工作；如偏好端口回流全落 `PGND_TPS`，可择机调整（docs/netlists/usb-pd-source-netlist.enet:3068–3186）。
+
+  - “最新5”增量变更确认：
+    - 新增模拟地网 `AGND_TPS`，用于 TPS55288 模拟/参考地隔离；与既有 `PGND_TPS`（端口回路地）和 `GND`（系统地）并存。
+    - U1=TPS55288 引脚地连接更新：
+      - U1.10 `AGND` → `AGND_TPS`（原为 `GND`）。
+      - U1.24 `PGND` → `AGND_TPS`（原为 `GND`）。
+      - U1.9 `PGND` 仍 → `GND`（保持不变）。
 
 ## 检查清单（SW7201 段）
 
@@ -59,7 +65,7 @@ U1 引脚逐项（TPS55288RPMR，26 引脚）
 - [x] U1.7 DITH/SYNC → $1N51 docs/netlists/usb-pd-source-netlist.enet:96
 - [x] U1.8 FSW → $1N47 docs/netlists/usb-pd-source-netlist.enet:104
 - [x] U1.9 PGND → GND docs/netlists/usb-pd-source-netlist.enet:112
-- [x] U1.10 AGND → GND docs/netlists/usb-pd-source-netlist.enet:120
+- [x] U1.10 AGND → AGND_TPS docs/netlists/usb-pd-source-netlist.enet:120
 - [x] U1.11 VOUT → VOUT_TPS docs/netlists/usb-pd-source-netlist.enet:128
 - [x] U1.12 ISP → ISP_TPS docs/netlists/usb-pd-source-netlist.enet:136
 - [x] U1.13 ISN → VOUT_TPS docs/netlists/usb-pd-source-netlist.enet:144
@@ -73,7 +79,7 @@ U1 引脚逐项（TPS55288RPMR，26 引脚）
 - [x] U1.21 SW2 → SW2_TPS docs/netlists/usb-pd-source-netlist.enet:208
 - [x] U1.22 BOOT1 → $1N23 docs/netlists/usb-pd-source-netlist.enet:216
 - [x] U1.23 SW1 → $1N18 docs/netlists/usb-pd-source-netlist.enet:224
-- [x] U1.24 PGND → GND docs/netlists/usb-pd-source-netlist.enet:232
+- [x] U1.24 PGND → AGND_TPS docs/netlists/usb-pd-source-netlist.enet:240
 - [x] U1.25 SW2 → SW2_TPS docs/netlists/usb-pd-source-netlist.enet:240
 - [x] U1.26 VOUT → ISP_TPS docs/netlists/usb-pd-source-netlist.enet:248
 
@@ -126,7 +132,7 @@ I2C/EN（由外部主机驱动）
 
 地脚一致性
 - [x] U1.9 PGND → GND（已连接） docs/netlists/usb-pd-source-netlist.enet:112
-- [x] U1.10 AGND → GND（已连接） docs/netlists/usb-pd-source-netlist.enet:120
+- [x] U1.10 AGND → AGND_TPS（已连接） docs/netlists/usb-pd-source-netlist.enet:120
 
 网络存在性校验（net dictionary entries）
 - [x] VIN / VOUT_TPS / ISP_TPS / FB_TPS / SW2_TPS / $1N18 / $1N23 / $1N24 / $1N25 / $1N30 / $1N31 / $1N32 / $1N47 / $1N51 / $1N52 / $1N53 / $1N54 均存在 docs/netlists/usb-pd-source-netlist.enet:15316, 15640, 15646, 15634, 15580, 224, 216, 200, 192, 176, 160, 168, 104, 96, 2328-2380:16-24, 45-60, 45-52
@@ -265,9 +271,14 @@ VOUT/VBUS 输出侧电容与分流网络
 - [x] C87 100uF：INA_CSP → GND docs/netlists/usb-pd-source-netlist.enet:6600-6648
 - [x] C136 22uF（输出侧陶瓷）：VBUS_SW → $2N119 docs/netlists/usb-pd-source-netlist.enet:8008-8046
 
-TPS55288（参考关键地脚与地统一）
-- [x] TPS55288 PGND → GND docs/netlists/usb-pd-source-netlist.enet:96-100, 110-118
-- [x] TPS55288 AGND → GND docs/netlists/usb-pd-source-netlist.enet:118-126
+TPS55288（关键地脚复核）
+- [x] U1.9 `PGND` → `GND`（保持与系统地一致）
+- [x] U1.10 `AGND` → `AGND_TPS`（新增模拟地网，用于噪声隔离）
+- [x] U1.24 `PGND` → `AGND_TPS`（同属 TPS 模拟/参考地岛）
+
+## 新增问题（必须修正）
+
+- TPS55288 PGND 引脚同网一致性：U1.9 连接 `GND`，U1.24 连接 `AGND_TPS`；两处 PGND 必须同一电源地网络。建议统一到同一网络（`GND` 或 `PGND_TPS`，需一致）。依据：docs/datasheets/tps55288-datasheet.md:52。
 
 网络存在性校验（net dictionary entries）
 - [x] net VBUS_SW 存在 docs/netlists/usb-pd-source-netlist.enet:15249-15250
@@ -289,6 +300,8 @@ TPS55288（参考关键地脚与地统一）
 - [x] net $2N9 存在 docs/netlists/usb-pd-source-netlist.enet:15057-15058
 - [x] net $2N6 存在 docs/netlists/usb-pd-source-netlist.enet:15045-15046
 - [x] net $2N5 存在 docs/netlists/usb-pd-source-netlist.enet:15039-15040
+
+- [x] net AGND_TPS 存在（新增，最新5）
 
 5V_SW 低压域与去耦
 - [x] U13.3 VDD ← 5V_SW docs/netlists/usb-pd-source-netlist.enet:8040-8190:42-46
@@ -369,3 +382,13 @@ VBUS_SW 网络分布（抽样确认）
   - D5（ESD）回流当前接 `GND`；如更偏好端口 ESD 全在 `PGND_TPS` 回路内，可后续将 D5.GND 改为 `PGND_TPS`（非必须）。
 
 > 注：本文档仅基于网表与仓库笔记进行交叉核查，未包含版图/实测波形验证。后续请结合 PCB 布局与上电测试补充确认。
+
+## 装配选型（电流检测，二选一验证）
+
+- 方案 A（高侧检流，INA138）：
+  - 参与器件：U47=INA138、R93=4.99k、C184=3.3nF（节点 `$1N144`）。参考：docs/netlists/usb-pd-source-netlist.enet:4210, 4263, 4314
+  - 隔离开关：R94 0Ω（`$1N144` ↔ `$1N65`），二选一时建议按装配方案配置（保留位，默认 DNP）。参考：docs/netlists/usb-pd-source-netlist.enet:4387–4470
+
+- 方案 B（低侧检流，SW2303.CSP/CSN）：
+  - 参与器件：R66=5mΩ（GND ↔ PGND_TPS）、R67=510Ω（`$1N65`→PGND_TPS）、C132=1µF（`$1N65`→GND）。参考：docs/netlists/usb-pd-source-netlist.enet:5408–5468, 5360–5418
+  - 方案互斥：与“方案 A”二选一验证，按需装配；未选用路径保留 DNP。

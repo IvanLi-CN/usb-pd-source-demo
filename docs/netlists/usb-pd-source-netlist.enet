@@ -117,7 +117,7 @@
                 "10": {
                     "name": "AGND",
                     "number": "10",
-                    "net": "GND",
+                    "net": "AGND_TPS",
                     "props": {
                         "Pin Number": "10"
                     }
@@ -229,7 +229,7 @@
                 "24": {
                     "name": "PGND",
                     "number": "24",
-                    "net": "GND",
+                    "net": "AGND_TPS",
                     "props": {
                         "Pin Number": "24"
                     }
@@ -831,7 +831,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "GND",
+                    "net": "AGND_TPS",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -932,7 +932,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "GND",
+                    "net": "AGND_TPS",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -986,7 +986,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "GND",
+                    "net": "AGND_TPS",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -1040,7 +1040,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "GND",
+                    "net": "AGND_TPS",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -1094,7 +1094,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "GND",
+                    "net": "AGND_TPS",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -1148,7 +1148,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "GND",
+                    "net": "AGND_TPS",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -2129,7 +2129,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "GND",
+                    "net": "AGND_TPS",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -2180,7 +2180,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "GND",
+                    "net": "AGND_TPS",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -2448,7 +2448,7 @@
                 "1": {
                     "name": "1",
                     "number": "1",
-                    "net": "GND",
+                    "net": "AGND_TPS",
                     "props": {
                         "Pin Number": "1"
                     }
@@ -4767,6 +4767,57 @@
                     "name": "2",
                     "number": "2",
                     "net": "PGND_TPS",
+                    "props": {
+                        "Pin Number": "2"
+                    }
+                }
+            }
+        },
+        "gge107_9": {
+            "props": {
+                "Unique ID": "gge107_9",
+                "Add into BOM": "yes",
+                "Convert to PCB": "yes",
+                "Symbol": "e5253fd4af5b638f",
+                "Designator": "C187",
+                "Device": "9d72e2c71ee69b39",
+                "Footprint": "61cdfc0797f2cd6a",
+                "Name": "={Value}",
+                "Reuse Block": "",
+                "Group ID": "",
+                "Channel ID": "$1I161",
+                "LCSC Part Name": "100nF ±10% 50V",
+                "Supplier Part": "C77020",
+                "Manufacturer": "muRata(村田)",
+                "Manufacturer Part": "GRM155R71H104KE14D",
+                "Supplier Footprint": "0402",
+                "JLCPCB Part Class": "Extended Part",
+                "Datasheet": "https://item.szlcsc.com/datasheet/GRM155R71H104KE14D/78147.html",
+                "Supplier": "LCSC",
+                "3D Model": "36a51122f27c49738f86b3bfa98863e0",
+                "3D Model Title": "C0402_L1.0-W0.5-H0.5",
+                "3D Model Transform": "39.37,19.685,0,0,0,0,0,0,0",
+                "Value": "100nF",
+                "Tolerance": "±10%",
+                "Voltage Rating": "50V",
+                "Temperature Coefficient": "X7R",
+                "Description": "容值:100nF;精度:±10%;额定电压:50V;温度系数:X7R;",
+                "DeviceName": "GRM155R71H104KE14D",
+                "FootprintName": "C0402"
+            },
+            "pinInfoMap": {
+                "1": {
+                    "name": "1",
+                    "number": "1",
+                    "net": "VOUT_TPS",
+                    "props": {
+                        "Pin Number": "1"
+                    }
+                },
+                "2": {
+                    "name": "2",
+                    "number": "2",
+                    "net": "ISP_TPS",
                     "props": {
                         "Pin Number": "2"
                     }
@@ -16378,6 +16429,12 @@
             },
             "$1N25": {
                 "net": "$1N25",
+                "ruleMap": {
+                    "TrackPhysics": ""
+                }
+            },
+            "AGND_TPS": {
+                "net": "AGND_TPS",
                 "ruleMap": {
                     "TrackPhysics": ""
                 }
