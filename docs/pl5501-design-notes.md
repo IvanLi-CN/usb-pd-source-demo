@@ -179,10 +179,14 @@ PL5501 提供 150/300/600/1200 kHz 四档。由于本项目体积敏感，优�
   - 依据：`docs/datasheets/pl5501-datasheet.md:190`。
 - 禁用未用的一端电流环：若不需要输入侧限流，将 `CSP1` 与 `CSN1` 短接（或按手册接法接到 VIN）。
   - 依据：`docs/datasheets/pl5501-datasheet.md:158`。
+  - 若启用“输入侧平均限流”（CSP1/CSN1）：`RF/CF` 低通靠近 PL5501 的 `CSP1/CSN1` 引脚；同样以 Kelvin 直接取样分流两端，不在分流电阻上并跨接电容。
+    - 依据：`docs/datasheets/pl5501-datasheet.md:190`、`:265`。
 - IADJ/IREF：起步将 `IADJ` 直接接 `VDD`，强制 `IREF=2 V`，避免 IADJ 成为瓶颈；如需更低限值再按手册公式微调 IADJ 电压。
   - 依据：IADJ/IREF 引脚功能与说明，`docs/datasheets/pl5501-datasheet.md:32`。
 - 版图要点：`CSP2/CSN2` Kelvin 走线、等长对称，远离 `BST/SW/HG/LG` 等噪声节点；`RCS2` 位于 VBUS 大电容与接口之间。
   - 依据：`docs/datasheets/pl5501-datasheet.md:265`。
+  - 放置（靠近谁）：`RF/CF` 低通网络靠近 PL5501 的 `CSP2/CSN2` 引脚放置；分流电阻两端不额外并跨接电容（避免影响平均限流环动态）。
+    - 依据：`docs/datasheets/pl5501-datasheet.md:190`、`:265`。
 - 与 SW2303 协同：SW2303 口端限流配置为 5 A；PL5501 设定约 5.7 A（RCS2=7 mΩ）作为电源级上限，避免双环冲突（量产前按瞬态/热校准微调 `RCS2`）。
 
 ### 6.2 FB2 分压与 SW2303 协同
