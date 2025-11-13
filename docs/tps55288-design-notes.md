@@ -60,6 +60,19 @@
 - 连接关系与布局关键点对应数据手册的“Layout Guidelines”与引脚功能章节：见 `docs/datasheets/tps55288-datasheet.md:42`–`50`（高频环路与取样走线）与 `docs/datasheets/tps55288-datasheet.md:196`–`202`（Buck 栅极驱动供电/能力）。
 - 仓库附带参考网表（仅用于对照与交叉验证设计连线，不作为量产原理图约束）：`docs/netlists/tps55288-demo-2025-11-07.enet`。
 
+### 1.3 I2C 地址与配置（本项目固定）
+
+- TPS55288（7-bit）：固定 `0x74`
+  - 依据：器件支持 `0x74/0x75`；本板 `MODE` 引脚拉地（见网表 “U1.15 MODE → GND via R5=0Ω”），且寄存器 `I2CADD` 缺省为 0，故在未改写寄存器时地址为 `0x74`。
+  - 总线：`SDA_TPS/SCL_TPS`（与同域 SW2303 共总线）。
+  - 参考：`docs/datasheets/tps55288-datasheet.md`、`docs/netlists/netlist-review-2025-11-11.md`
+- SW2303（7-bit）：固定 `0x3C`
+  - 用途：协议控制器（与 TPS55288 同域），I2C 时序示例从地址 `0x3C`。
+  - 总线：`SDA_TPS/SCL_TPS`。
+  - 参考：`docs/datasheets/sw2303/sw2303-datasheet.md`
+
+ 
+
 ## 2. 外置 MOSFET 设计要点与候选
 
 ### 2.1 关键工况与初算
